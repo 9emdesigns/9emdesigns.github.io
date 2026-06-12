@@ -1,0 +1,16 @@
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
+      }
+      main {
+        width: 100dvw;
+        height: 100dvh;
+        position: relative;
+        top: 0;
+        border:3px solid red;
+
+      }
+     

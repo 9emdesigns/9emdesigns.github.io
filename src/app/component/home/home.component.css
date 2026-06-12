@@ -1,0 +1,48 @@
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
+      }
+      main {
+        width: 100dvw;
+        height: 80dvh;
+        /* border: 1px solid green;*/
+        position: relative;
+        top: 0;
+      }
+
+      div {
+        width: 100%;
+        height: 150px;
+        background-color: aqua;
+        mix-blend-mode: hard-light;
+        position: absolute;
+        bottom: -70px;
+      }
+
+      section {
+        /* Subtract 40px total (20px left + 20px right, 20px top + 20px bottom) */
+        width: calc(100% - 50px);
+        height: calc(100% - 50px);
+        /* border: 1px solid blue;*/
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+
+      .images {
+        filter: saturate(30%);
+        mix-blend-mode: luminosity;
+        position: absolute;
+        bottom: -70px;
+        background-image: url("/images/dude_looking_up.webp");
+        background-position: 0 -100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        width: 100%;
+        height: 397px;
+      
+      }
