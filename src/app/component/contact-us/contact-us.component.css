@@ -1,52 +1,424 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Antonio-light";
+}
+main {
+  width: 100dvw;
+  height: 80dvh;
+  position: relative;
+  top: 0;
+}
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        background-color: rgb(110, 94, 82);
-      }
-      main {
-        width: 100dvw;
-        height: 100dvh;
-        /* border: 1px solid green;*/
-        position: relative;
-        top: 0;
-      }
-      /*  section {
-        width: 100%;
-        height: 100%;
-        margin: 20px;
-        border: 1px solid blue;
-        position: absolute;
-        top: 0px;
-      } */
+.separator {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(110, 160, 197);
+  mix-blend-mode: hard-light;
+  position: absolute;
+  bottom: -40px;
+}
 
-      div {
-        width: 100%;
-        height: 230px;
-        background-color: aqua;
-        mix-blend-mode: hard-light;
-        position: absolute;
-        bottom: 20px;
-      }
+.contactUs {
+  position: absolute;
+  bottom: 260px;
+  background-color: transparent;
+  width: 100%;
+  & h1 {
+    position: absolute;
+    right: 0px;
+    bottom: 97px;
+    font-size: 14.5vw;
+    color: rgb(255, 255, 255);
+    font-family: "Antonio-regular", sans-serif;
+    font-weight: 400;
+    mix-blend-mode: overlay;
+    will-change: mix-blend-mode;
+  }
+}
 
-      section {
-        /* Subtract 40px total (20px left + 20px right, 20px top + 20px bottom) */
-        width: calc(100% - 40px);
-        height: calc(100% - 20px);
-        /* border: 1px solid blue;*/
-        position: absolute;
-        top: 20px;
-        left: 20px;
-      }
+.quickFAQ {
+  font-family: "Antonio-light", sans-serif;
+  font-weight: 100;
+  font-size: 4vw;
+  color: snow;
+  position: absolute;
+  bottom: 600px;
+  left: 0px;
+  background-color: transparent;
+}
 
-      images {
-        filter: saturate(30%);
-        mix-blend-mode: luminosity;
-        position: absolute;
-        bottom: 20px;
-        background-image: url('/images/dude_looking_up.webp');
-        width: 50%;
-        height: 500px;
-      
-      }
+:host button[mat-flat-button]:hover {
+  background-color: rgb(127, 16, 191);
+  color: snow;
+}
+:host button[mat-flat-button] {
+  background-color: rgb(164, 208, 112);
+  color: rgb(0, 0, 0);
+  font-size: 10.5pt;
+  width: 210px;
+}
+
+:host mat-expansion-panel {
+  display: block;
+  width: 35%;
+  padding: 5px;
+
+  background-color: rgb(174, 198, 145);
+  color: rgb(0, 0, 0);
+  position: relative;
+  bottom: -200px;
+}
+
+:host mat-panel-description {
+  color: rgb(0, 0, 0);
+  padding: 12px;
+}
+
+.main_btn {
+  position: absolute;
+  right: 0px;
+  bottom: 370px;
+}
+
+.icons ul > li {
+  margin: 20px;
+  list-style-type: none;
+  position: relative;
+  bottom: -160px;
+  right: -790px;
+  display: flex;
+  align-items: center;
+  font-family: "Antonio-light";
+  color: snow;
+
+  a:link {
+    color: rgb(164, 208, 112);
+    text-decoration: none;
+  }
+  a:visited {
+    color: aquamarine;
+    text-decoration: none;
+  }
+  a:hover {
+    color: snow;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  a:active {
+    color: aquamarine;
+    text-decoration: none;
+  }
+}
+
+.whatsapp {
+  fill: rgb(164, 208, 112);
+  padding-right: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.phone {
+  fill: rgb(164, 208, 112);
+  padding-right: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.mail {
+  fill: rgb(164, 208, 112);
+  padding-right: 20px;
+  width: 60px;
+  height: 60px;
+}
+.feature_image {
+  background-image: url("/images/dude_standing_at_wall.webp");
+  width: calc(30% - 49px);
+  aspect-ratio: 111 / 111;
+  height: auto;
+  background-size: 325%;
+  background-position: 13% 12%;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  background-color: rgb(164, 208, 112);
+  position: absolute;
+  right: 255px;
+  bottom: -70px;
+  isolation: isolate;
+}
+
+.body p {
+  font-family: "Antonio-light";
+  font-size: 14pt;
+  line-height: 20pt;
+  text-align: justify;
+  word-spacing: 5px;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 48px;
+  right: 893px;
+  width: 25dvw;
+  height: auto;
+}
+
+section {
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* ==========================================================================
+     Media Query Breakpoints
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Mobile Devices (375px - 440px)
+   ========================================================================== */
+@media screen and (min-width: 375px) and (max-width: 440px) {
+  /* Target: Small to large modern smartphones */
+
+  .panel {
+    display: none !important;
+  }
+  .separator {
+    display: none;
+  }
+  .contactUs {
+    position: absolute;
+    bottom: 250px;
+    background-color: transparent;
+    width: 100%;
+    & h1 {
+      position: absolute;
+      right: 0px;
+      bottom: 345px;
+      font-size: 80pt;
+      color: rgb(255, 255, 255);
+      font-family: "Antonio-regular", sans-serif;
+      font-weight: 400;
+      mix-blend-mode: overlay;
+      will-change: mix-blend-mode;
+    }
+  }
+  .quickFAQ {
+    display: none;
+  }
+  .main_btn {
+    position: absolute;
+    left: 105px;
+    bottom: 320px;
+  }
+
+  .icons ul > li {
+    margin: 20px;
+    list-style-type: none;
+    position: relative;
+    bottom: -80px;
+    left: 70px;
+    display: flex;
+    align-items: center;
+    font-family: "Antonio-light";
+    color: snow;
+    background-color: transparent;
+
+    a:link {
+      color: rgb(164, 208, 112);
+      text-decoration: none;
+    }
+    a:visited {
+      color: aquamarine;
+      text-decoration: none;
+    }
+    a:hover {
+      color: snow;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    a:active {
+      color: aquamarine;
+      text-decoration: none;
+    }
+  }
+
+  .whatsapp {
+    fill: rgb(164, 208, 112);
+    padding-right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .phone {
+    fill: rgb(164, 208, 112);
+    padding-right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .mail {
+    fill: rgb(164, 208, 112);
+    padding-right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .feature_image {
+    background-image: url("/images/dude_standing_at_wall.webp");
+    width: 100%;
+    height: 50%;
+    background-size: 325%;
+    background-position: 13% 12%;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-color: rgb(164, 208, 112);
+    position: absolute;
+    right: 0px;
+    bottom: -70px;
+    isolation: isolate;
+  }
+}
+
+/*  ==========================================================================
+   2. Tablets: iPad & Galaxy Tab (820px - 1200px)
+   ========================================================================== */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /*Target: Both iPad and Galaxy Tab in portrait/landscape within this range*/
+  main {
+    width: 100dvw;
+    height: 84dvh;
+    position: relative;
+    top: 0;
+  }
+
+  .panel {
+    display: inline-block;
+    z-index: 10;
+    position: relative;
+    top: -90px;
+  }
+  .separator {
+    display: none;
+  }
+  .contactUs {
+    position: absolute;
+    bottom: 250px;
+    background-color: transparent;
+    width: 100%;
+    & h1 {
+      position: absolute;
+      left: 0px;
+      bottom: -50px;
+      font-size: 33vw;
+      color: rgb(255, 255, 255);
+      font-family: "Antonio-regular", sans-serif;
+      font-weight: 400;
+      mix-blend-mode: overlay;
+      will-change: mix-blend-mode;
+    }
+  }
+  .quickFAQ {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 20px;
+  }
+  .main_btn {
+    position: absolute;
+    right: 120px;
+    bottom: 740px;
+    width: 350px !important;
+    height: 80px !important;
+    font-size: 1.2em !important;
+  }
+
+  .icons ul > li {
+    margin: 20px;
+    list-style-type: none;
+    position: relative;
+    bottom: -125px;
+    left: 590px;
+    display: flex;
+    align-items: center;
+    font-family: "Antonio-light";
+    color: snow;
+    background-color: transparent;
+
+    a:link {
+      color: rgb(164, 208, 112);
+      text-decoration: none;
+    }
+    a:visited {
+      color: aquamarine;
+      text-decoration: none;
+    }
+    a:hover {
+      color: snow;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    a:active {
+      color: aquamarine;
+      text-decoration: none;
+    }
+  }
+
+  .whatsapp {
+    fill: rgb(164, 208, 112);
+    padding-right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .phone {
+    fill: rgb(164, 208, 112);
+    padding-right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .mail {
+    fill: rgb(164, 208, 112);
+    padding-right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .feature_image {
+    background-image: url("/images/dude_standing_at_wall.webp");
+    width: 100%;
+    height: 695px;
+    background-size: 325%;
+    background-position: 13% 12%;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-color: rgb(164, 208, 112);
+    position: absolute;
+    right: 0px;
+    bottom: -70px;
+    isolation: isolate;
+  }
+}
+
+/* iPad specific workaround (Targets Apple's WebKit behavior) */
+@media screen and (min-width: 820px) and (max-width: 1200px) and (-webkit-touch-callout: none) {
+  /* Target: iPad specifically */
+}
+
+/* Galaxy Tab specific workaround (Targets standard touch devices that aren't iOS) */
+@media screen and (min-width: 820px) and (max-width: 1200px) and (pointer: coarse) and (pointer: fine) {
+  /* Target: Galaxy Tab / Android Tablets specifically */
+}
+
+/* ==========================================================================
+   3. Half Safari Page (Exactly 828px)
+   ========================================================================== */
+@media screen and (width: 828px) {
+  /* Target: Safari split-screen / half page on standard Mac displays */
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  /* Target: Standard laptops, MacBook Air/Pro base resolutions */
+}

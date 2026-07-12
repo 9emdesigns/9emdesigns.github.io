@@ -1,52 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-family: "Antonio-regular", sans-serif;
+  color: snow;
+}
+main {
+  width: 100dvw;
+  height: 80dvh;
+  position: relative;
+  top: 0;
+}
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        background-color: rgb(110, 94, 82);
-      }
-      main {
-        width: 100dvw;
-        height: 100dvh;
-        /* border: 1px solid green;*/
-        position: relative;
-        top: 0;
-      }
-      /*  section {
-        width: 100%;
-        height: 100%;
-        margin: 20px;
-        border: 1px solid blue;
-        position: absolute;
-        top: 0px;
-      } */
+.divider {
+  width: 100%;
+  height: 115px;
+  background-color: rgb(164, 208, 112);
+  mix-blend-mode: hard-light;
+  position: absolute;
+  bottom: -70px;
+}
 
-      div {
-        width: 100%;
-        height: 230px;
-        background-color: aqua;
-        mix-blend-mode: hard-light;
-        position: absolute;
-        bottom: 20px;
-      }
+.aboutUs {
+  position: absolute;
+  bottom: 421px;
+  background-color: transparent;
+  width: 100%;
+  & h1 {
+    position: absolute;
+    right: 38px;
+    bottom: 97px;
+    font-size: 8.15vw;
+    color: rgb(255, 255, 255);
+    font-family: "Antonio-light", sans-serif;
+    mix-blend-mode: overlay;
+    will-change: mix-blend-mode;
+  }
+}
 
-      section {
-        /* Subtract 40px total (20px left + 20px right, 20px top + 20px bottom) */
-        width: calc(100% - 40px);
-        height: calc(100% - 20px);
-        /* border: 1px solid blue;*/
-        position: absolute;
-        top: 20px;
-        left: 20px;
-      }
+.comm {
+  font-family: "Antonio-light";
+  font-size: 4.4vw;
+  color: snow;
+  position: absolute;
+  bottom: 540px;
+  left: 400px;
+}
 
-      images {
-        filter: saturate(30%);
-        mix-blend-mode: luminosity;
-        position: absolute;
-        bottom: 20px;
-        background-image: url('/images/dude_looking_up.webp');
-        width: 50%;
-        height: 500px;
-      
-      }
+.purple {
+  color: rgb(70, 34, 85);
+}
+
+.feature_image {
+  background-image: url("/images/dude_looking_up.webp");
+  width: calc(37.5% - 49px);
+  aspect-ratio: 511 / 511;
+  height: auto;
+  background-size: 325%;
+  background-position: 53% 32%;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  background-color: rgb(95, 168, 211);
+  position: absolute;
+  right: 255px;
+  bottom: -70px;
+  isolation: isolate;
+}
+
+.body p {
+  font-family: "Antonio-light";
+  font-size: 14pt;
+  line-height: 20pt;
+  text-align: justify;
+  word-spacing: 5px;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 48px;
+  right: 893px;
+  width: 25dvw;
+  height: auto;
+}
+
+section {
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* ==========================================================================
+     Media Query Breakpoints
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Mobile Devices (375px - 440px)
+   ========================================================================== */
+@media screen and (min-width: 375px) and (max-width: 440px) {
+  /* Target: Small to large modern smartphones */
+  .comm {
+    display: none;
+  }
+  .divider {
+    display: none;
+  }
+  .letter {
+    display: none;
+  }
+  .aboutUs {
+    position: absolute;
+    bottom: 421px;
+    background-color: transparent;
+    width: 100%;
+    & h1 {
+      position: absolute;
+      right: 8px;
+      bottom: -200px;
+      font-size: 15vw;
+      color: rgb(255, 255, 255);
+      font-family: "Antonio-light", sans-serif;
+      mix-blend-mode: overlay;
+      will-change: mix-blend-mode;
+    }
+  }
+  .purple {
+    color: rgb(255, 255, 255);
+  }
+
+  .feature_image {
+    background-image: url("/images/dude_looking_up.webp");
+    width: 100%;
+    aspect-ratio: 511 / 511;
+    height: auto;
+    background-size: 325%;
+    background-position: 53% 32%;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-color: rgb(144, 52, 183);
+    position: absolute;
+    right: 0px;
+    bottom: -70px;
+    isolation: isolate;
+  }
+
+  .body p {
+    font-family: "Antonio-light";
+    font-size: 14pt;
+    line-height: 20pt;
+    text-align: justify;
+    word-spacing: 5px;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 330px;
+    right: 0px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*  ==========================================================================
+   2. Tablets: iPad & Galaxy Tab (820px - 1200px)
+   ========================================================================== */
+@media screen and (min-width: 820px) and (max-width: 1200px) {
+  /* Target: Both iPad and Galaxy Tab in portrait/landscape within this range */
+  .comm {
+    display: none;
+  }
+  .divider {
+    display: none;
+  }
+  .letter {
+    display: inline-block;
+  }
+  .aboutUs {
+    position: absolute;
+    bottom: 650px;
+    background-color: transparent;
+    width: 100%;
+    & h1 {
+      position: absolute;
+      right: 2px;
+      bottom: -200px;
+      font-size: 17vw;
+      color: rgb(255, 255, 255);
+      font-family: "Antonio-light", sans-serif;
+      mix-blend-mode: overlay;
+      will-change: mix-blend-mode;
+    }
+  }
+  .purple {
+    color: rgb(164, 208, 112);
+  }
+
+  .feature_image {
+    background-image: url("/images/dude_looking_up.webp");
+    width: 100%;
+    height: 50%;
+    background-size: 325%;
+    background-position: 53% 32%;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-color: rgb(144, 52, 183);
+    position: absolute;
+    right: 0px;
+    bottom: -130px;
+    isolation: isolate;
+  }
+
+  .body p {
+    font-family: "Antonio-light";
+    font-size: 22pt;
+    line-height: 30pt;
+    text-align: justify;
+    word-spacing: 5px;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 700px;
+    right: 0px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* iPad specific workaround (Targets Apple's WebKit behavior) */
+@media screen and (min-width: 820px) and (max-width: 1200px) and (-webkit-touch-callout: none) {
+  /* Target: iPad specifically */
+}
+
+/* Galaxy Tab specific workaround (Targets standard touch devices that aren't iOS) */
+@media screen and (min-width: 820px) and (max-width: 1200px) and (pointer: coarse) and (pointer: fine) {
+  /* Target: Galaxy Tab / Android Tablets specifically */
+}
+
+/* ==========================================================================
+   3. Half Safari Page (Exactly 828px)
+   ========================================================================== */
+@media screen and (width: 828px) {
+  /* Target: Safari split-screen / half page on standard Mac displays */
+}
+
+/* ==========================================================================
+   4. Generic Laptop (1366px - 1440px)
+   ========================================================================== */
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  /* Target: Standard laptops, MacBook Air/Pro base resolutions */
+}

@@ -1,52 +1,234 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-family: "Antonio-regular", sans-serif;
+}
+main {
+  width: 100dvw;
+  height: 80dvh;
+  position: relative;
+  top: 0;
+}
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        background-color: rgb(110, 94, 82);
-      }
-      main {
-        width: 100dvw;
-        height: 100dvh;
-        /* border: 1px solid green;*/
-        position: relative;
-        top: 0;
-      }
-      /*  section {
-        width: 100%;
-        height: 100%;
-        margin: 20px;
-        border: 1px solid blue;
-        position: absolute;
-        top: 0px;
-      } */
+.small_divider {
+  width: 100%;
+  height: 20px;
+  background-color: rgb(176, 237, 203);
+  mix-blend-mode: hard-light;
+  position: absolute;
+  bottom: -70px;
+}
 
-      div {
-        width: 100%;
-        height: 230px;
-        background-color: aqua;
-        mix-blend-mode: hard-light;
-        position: absolute;
-        bottom: 20px;
-      }
+.divider {
+  width: 100%;
+  height: 284px;
+  position: absolute;
+  bottom: -50px;
+  background-color: rgb(95, 168, 211);
+  mix-blend-mode: hard-light;
+}
 
-      section {
-        /* Subtract 40px total (20px left + 20px right, 20px top + 20px bottom) */
-        width: calc(100% - 40px);
-        height: calc(100% - 20px);
-        /* border: 1px solid blue;*/
-        position: absolute;
-        top: 20px;
-        left: 20px;
-      }
+.aboutUs {
+  position: absolute;
+  bottom: 421px;
+  background-color: transparent;
+  width: 100%;
+  & h1 {
+    position: absolute;
+    right: -5px;
+    font-size: 10vw;
+    color: rgb(255, 255, 255);
+    font-family: "Antonio-light", sans-serif;
+    mix-blend-mode: overlay;
+    will-change: mix-blend-mode;
+  }
+}
 
-      images {
-        filter: saturate(30%);
-        mix-blend-mode: luminosity;
-        position: absolute;
-        bottom: 20px;
-        background-image: url('/images/dude_looking_up.webp');
-        width: 50%;
-        height: 500px;
-      
-      }
+.feature_image {
+  background-image: url("/images/dude_framing_for_design.webp");
+  width: calc(37.5% - 49px);
+  aspect-ratio: 533 / 722;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  background-color: rgb(164, 208, 112);
+  isolation: isolate;
+}
+
+.body p {
+  font-family: "Antonio-light";
+  font-size: 14pt;
+  line-height: 18pt;
+  text-align: justify;
+  word-spacing: 5px;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 490px;
+  right: 0px;
+  width: 37dvw;
+  height: auto;
+}
+
+section {
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/*====================================================================
+Media Queries
+=====================================================================*/
+
+/* ==========================================================================
+   1. Mobile Devices (375px - 440px)
+   ========================================================================== */
+@media screen and (min-width: 375px) and (max-width: 440px) {
+  /* Target: Small to large modern smartphones */
+  .small_divider {
+    display: none;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .body p {
+    font-family: "Antonio-light";
+    font-size: 14pt;
+    line-height: 18pt;
+    text-align: justify;
+    word-spacing: 5px;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    position: relative;
+    top: -70px;
+    height: auto;
+  }
+
+  .aboutUs {
+    position: absolute;
+    bottom: 333px;
+    left: -10px;
+    background-color: transparent;
+    width: 100%;
+    h1 {
+      position: absolute;
+      right: -5px;
+      font-size: 28vw;
+      color: rgb(255, 255, 255);
+      font-family: "Antonio-light", sans-serif;
+      mix-blend-mode: overlay;
+      will-change: mix-blend-mode;
+    }
+  }
+
+  .feature_image {
+    background-image: url("/images/dude_framing_for_design.webp");
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-color: rgb(164, 208, 112);
+    position: absolute;
+    bottom: -27px;
+    isolation: isolate;
+  }
+  .hide_text {
+    display: none;
+  }
+}
+
+/*  ==========================================================================
+   2. Tablets: iPad & Galaxy Tab (820px - 1200px)
+   ========================================================================== */
+@media screen and (min-width: 820px) and (max-width: 1200px) {
+  /*Target: Both iPad and Galaxy Tab in portrait/landscape within this range */
+  .small_divider {
+    display: none;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .body p {
+    font-family: "Antonio-light";
+    font-size: 16pt;
+    line-height: 28pt;
+    text-align: justify;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    position: relative;
+    top: -40px;
+    height: auto;
+  }
+
+  .aboutUs {
+    position: absolute;
+    bottom: 849px;
+    left: -10px;
+    background-color: transparent;
+    width: 100%;
+    h1 {
+      position: absolute;
+      right: -30px;
+      font-size: 32.9vw;
+      color: rgb(255, 255, 255);
+      font-family: "Antonio-light", sans-serif;
+      mix-blend-mode: overlay;
+      will-change: mix-blend-mode;
+    }
+  }
+
+  .feature_image {
+    background-image: url("/images/dude_framing_for_design.webp");
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-color: rgb(164, 208, 112);
+    position: absolute;
+    bottom: -130px;
+    isolation: isolate;
+  }
+  .hide_text {
+    display: block;
+  }
+}
+
+/* iPad specific workaround (Targets Apple's WebKit behavior) */
+@media screen and (min-width: 820px) and (max-width: 1200px) and (-webkit-touch-callout: none) {
+  /* Target: iPad specifically */
+}
+
+/* Galaxy Tab specific workaround (Targets standard touch devices that aren't iOS) */
+@media screen and (min-width: 820px) and (max-width: 1200px) and (pointer: coarse) and (pointer: fine) {
+  /* Target: Galaxy Tab / Android Tablets specifically */
+}
+
+/* ==========================================================================
+   3. Half Safari Page (Exactly 828px)
+   ========================================================================== */
+@media screen and (width: 828px) {
+  /* Target: Safari split-screen / half page on standard Mac displays */
+}
+
+/* ==========================================================================
+   4. Generic Laptop (1366px - 1440px)
+   ========================================================================== */
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  /* Target: Standard laptops, MacBook Air/Pro base resolutions */
+}

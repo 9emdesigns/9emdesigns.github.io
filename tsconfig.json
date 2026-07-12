@@ -3,7 +3,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": "./src", // Specifies the root folder of your source files
     "outDir": "./dist", // Redirects output structure to the directory
     "strict": true,
     "noImplicitOverride": true,

@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Antonio-light", sans-serif;
+  font-size: 14pt;
+  line-height: 18pt;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 70px auto;
+  padding: 20px;
+}
+
+h2 {
+  position: relative;
+  left: 240px;
+  margin-bottom: 30px;
+  color: rgb(164, 208, 112);
+  font-family: "Antonio-regular", sans-serif;
+  font-size: 24pt;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  column-gap: 20px;
+  row-gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group:has(textarea) {
+  align-items: start;
+}
+
+.form-group label {
+  text-align: right;
+  color: rgb(164, 208, 112);
+}
+
+.form-group:has(textarea) label {
+  padding-top: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 13pt;
+  font-family: inherit;
+  border: 1px solid rgb(164, 208, 112);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: snow;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: rgb(164, 208, 112);
+  box-shadow: 0 0 8px rgba(137, 250, 198, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.form-group select option {
+  background-color: rgb(80, 69, 60);
+  color: snow;
+}
+
+.form-group .error {
+  grid-column: 2;
+  color: #ff6b6b;
+  font-size: 11pt;
+  margin-top: 2px;
+}
+
+button {
+  width: 200px;
+  margin: 10px auto 0;
+  padding: 12px;
+  background-color: rgb(164, 208, 112);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 6px;
+  font-family: "Antonio-regular", sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+button:hover {
+  background-color: rgb(127, 16, 191);
+  color: snow;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: rgba(164, 208, 112, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-group {
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+  }
+
+  .form-group label {
+    text-align: left;
+  }
+
+  .form-group .error {
+    grid-column: 1;
+  }
+}
+/* ==========================================================================
+     Media Query Breakpoints
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Mobile Devices (375px - 440px)
+   ========================================================================== */
+@media screen and (min-width: 375px) and (max-width: 440px) {
+  /* Target: Small to large modern smartphones */
+  main {
+    height: 80dvh;
+    width: 90dvw;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 90dvw;
+    gap: 20px;
+    margin: 0;
+  }
+  .form-container {
+    width: 100dvw;
+    height: 80dvh;
+    max-width: 800px;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 5vw;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
+
+/*  ==========================================================================
+   2. Tablets: iPad & Galaxy Tab (820px - 1200px)
+   ========================================================================== */
+@media screen and (min-width: 820px) and (max-width: 1200px) {
+  /* Target: Both iPad and Galaxy Tab in portrait/landscape within this range */
+  main {
+    height: 80dvh;
+    width: 90dvw;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 90dvw;
+    gap: 20px;
+    margin: 0;
+  }
+  .form-container {
+    width: 100dvw;
+    height: 80dvh;
+    max-width: 800px;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 5vw;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
+
+/* iPad specific workaround (Targets Apple's WebKit behavior) */
+@media screen and (min-width: 820px) and (max-width: 1200px) and (-webkit-touch-callout: none) {
+  /* Target: iPad specifically */
+}
+
+/* Galaxy Tab specific workaround (Targets standard touch devices that aren't iOS) */
+@media screen and (min-width: 820px) and (max-width: 1200px) and (pointer: coarse) and (pointer: fine) {
+  /* Target: Galaxy Tab / Android Tablets specifically */
+}
+
+/* ==========================================================================
+   3. Half Safari Page (Exactly 828px)
+   ========================================================================== */
+@media screen and (width: 828px) {
+  /* Target: Safari split-screen / half page on standard Mac displays */
+}
+
+/* ==========================================================================
+   4. Generic Laptop (1366px - 1440px)
+   ========================================================================== */
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  /* Target: Standard laptops, MacBook Air/Pro base resolutions */
+}

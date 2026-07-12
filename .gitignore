@@ -1,10 +1,9 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-
 # Compiled output
 dist/
 tmp/
 out-tsc/
 bazel-out/
+# docs/ is intentionally NOT ignored — it's the GitHub Pages output (ng build production)
 
 # Node
 node_modules/
