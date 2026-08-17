@@ -1,0 +1,481 @@
+{
+  "metadata": {
+    "exportedAt": "2026-07-27T01:21:58.880Z",
+    "componentName": "MacBook Pro 14\" - 3",
+    "totalElements": 33,
+    "nestingDepth": 11,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)",
+      "color-rgb(95, 168, 211)": "rgb(95, 168, 211)",
+      "color-rgb(143, 209, 106)": "rgb(143, 209, 106)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)",
+      "color-rgb(0, 0, 0)": "rgb(0, 0, 0)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-190": "190px",
+          "size-53": "53px",
+          "size-100": "100px",
+          "size-14": "14px",
+          "size-20": "20px"
+        },
+        "weights": {
+          "weight-400": "400",
+          "weight-300": "300"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "macbook-pro-14----3",
+    "type": "FRAME",
+    "size": {
+      "w": 1512,
+      "h": 982
+    },
+    "styles": {
+      "bg": "rgb(104, 94, 84)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "frame-10",
+        "type": "FRAME",
+        "size": {
+          "w": 314,
+          "h": 315
+        },
+        "styles": {
+          "bg": "rgb(95, 168, 211)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        }
+      },
+      {
+        "name": "frame-9",
+        "type": "FRAME",
+        "size": {
+          "w": 314,
+          "h": 315
+        },
+        "styles": {
+          "bg": "rgb(95, 168, 211)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        }
+      },
+      {
+        "name": "frame-6",
+        "type": "FRAME",
+        "size": {
+          "w": 315,
+          "h": 315
+        },
+        "styles": {
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "veroll-sterling-g3he6o_e1ts-unsplash-2",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 868,
+              "h": 579
+            }
+          }
+        ]
+      },
+      {
+        "name": "whatwedo",
+        "type": "TEXT",
+        "size": {
+          "w": 750,
+          "h": 284
+        },
+        "content": "WhatWeDo",
+        "styles": {
+          "text": {
+            "family": "Antonio",
+            "size": 190,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "frame-4",
+        "type": "FRAME",
+        "size": {
+          "w": 1413,
+          "h": 151
+        },
+        "styles": {
+          "bg": "rgb(143, 209, 106)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        }
+      },
+      {
+        "name": "group-6",
+        "type": "GROUP",
+        "size": {
+          "w": 334,
+          "h": 181
+        },
+        "children": [
+          {
+            "name": "communication",
+            "type": "TEXT",
+            "size": {
+              "w": 315,
+              "h": 58
+            },
+            "content": "Communication",
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "text": {
+                "family": "Antonio",
+                "size": 53,
+                "weight": "400",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "visual",
+            "type": "TEXT",
+            "size": {
+              "w": 334,
+              "h": 160
+            },
+            "content": "Visual",
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "text": {
+                "family": "Antonio",
+                "size": 100,
+                "weight": "400",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "at-9em-design--we-don-t-just-design-for-you--we-design-for-the-people-who-matter-most-to-your-business--our-collaborative-approach-builds-a-unique-bridge-between-your-vision--your-brand--and-your-ultimate-customer--by-actively-looping-both-you-and-your-target-audience-into-our-creative-process--we-eliminate-guesswork-and-ensure-every-piece-of-branding-and-marketing-we-touch-is-grounded-in-real-world-relevance--we-believe-that-exceptional-design-only-happens-when-deep-collaboration-meets-sharp--audience-first-insights--this-dual-perspective-methodology-allows-us-to-build-powerful-design-systems--brand-identities--and-digital-experiences-that-do-more-than-just-look-stunning-they-perform--by-aligning-consumer-expectations-with-your-overarching-business-goals--we-create-intentional--high-impact-solutions-engineered-to-drive-measurable-roi--at-9em-design--we-transform-creative-strategy-into-a-powerful-engine-for-your-company-s-growth--delivering-a-final-product-that-is-precisely-on-target-and-built-to-scale-",
+        "type": "TEXT",
+        "size": {
+          "w": 668,
+          "h": 191
+        },
+        "content": "At 9em design, we don’t just design for you; we design for the people who matter most to your business. Our collaborative approach builds a unique bridge between your vision, your brand, and your ultimate customer. By actively looping both you and your target audience into our creative process, we eliminate guesswork and ensure every piece of branding and marketing we touch is grounded in real-world relevance. We believe that exceptional design only happens when deep collaboration meets sharp, audience-first insights.\nThis dual-perspective methodology allows us to build powerful design systems, brand identities, and digital experiences that do more than just look stunning—they perform. By aligning consumer expectations with your overarching business goals, we create intentional, high-impact solutions engineered to drive measurable ROI. At 9em design, we transform creative strategy into a powerful engine for your company's growth, delivering a final product that is precisely on target and built to scale.",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Antonio",
+            "size": 14,
+            "weight": "300",
+            "align": "justified"
+          }
+        }
+      },
+      {
+        "name": "group-3",
+        "type": "GROUP",
+        "size": {
+          "w": 731,
+          "h": 131
+        },
+        "children": [
+          {
+            "name": "group-2",
+            "type": "GROUP",
+            "size": {
+              "w": 267,
+              "h": 116
+            },
+            "children": [
+              {
+                "name": "home-aboutus-whatwedo-howwework",
+                "type": "TEXT",
+                "size": {
+                  "w": 114,
+                  "h": 116
+                },
+                "content": "home\naboutus\nwhatwedo\nhowwework",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 20,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "designconcept-portfolio-contact",
+                "type": "TEXT",
+                "size": {
+                  "w": 138,
+                  "h": 116
+                },
+                "content": "designconcept\nportfolio\ncontact",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 20,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "logo_9em-1",
+            "type": "FRAME",
+            "size": {
+              "w": 131,
+              "h": 131
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "group",
+                "type": "GROUP",
+                "size": {
+                  "w": 131,
+                  "h": 131
+                },
+                "children": [
+                  {
+                    "name": "group",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 131,
+                      "h": 131
+                    },
+                    "children": [
+                      {
+                        "name": "vector",
+                        "type": "VECTOR",
+                        "size": {
+                          "w": 131,
+                          "h": 131
+                        }
+                      },
+                      {
+                        "name": "group",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 131,
+                          "h": 131
+                        },
+                        "children": [
+                          {
+                            "name": "clip-path-group",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 131,
+                              "h": 131
+                            },
+                            "children": [
+                              {
+                                "name": "_clip1",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 131,
+                                  "h": 131
+                                },
+                                "children": [
+                                  {
+                                    "name": "vector",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 131,
+                                      "h": 131
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(0, 0, 0)"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "group",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 131,
+                                  "h": 131
+                                },
+                                "children": [
+                                  {
+                                    "name": "rect1",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 131,
+                                      "h": 131
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "vector",
+                                        "type": "VECTOR",
+                                        "size": {
+                                          "w": 131,
+                                          "h": 131
+                                        },
+                                        "styles": {
+                                          "bg": "rgb(104, 94, 84)"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "logo",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 69,
+                                      "h": 102
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "text1",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 38,
+                                          "h": 102
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 38,
+                                              "h": 102
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "text2",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 28,
+                                          "h": 21
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 28,
+                                              "h": 21
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "frame-5",
+        "type": "FRAME",
+        "size": {
+          "w": 315,
+          "h": 315
+        },
+        "styles": {
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "jd-mason-sz9q4b9z4u4-unsplash-1",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 1076,
+              "h": 807
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 7,
+    "texts": 6,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

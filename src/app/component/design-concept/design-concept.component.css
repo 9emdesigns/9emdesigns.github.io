@@ -1,251 +1,422 @@
+/* ==========================================================================
+   Design Concept Component Layout Styles
+   Mapped strictly to variables & breakpoints in media_Queries_breakpoints.css
+   ========================================================================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: transparent;
-  font-family: "Antonio-regular", sans-serif;
-  color: snow;
 }
-main {
+
+:host {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Parent container: locks layout within dvh/dvw bounds */
+main.design-concept-container {
   width: 100dvw;
-  height: 80dvh;
+  height: calc(100dvh - var(--header-height, 120px));
   position: relative;
   top: 0;
-}
-
-.divider {
-  width: 100%;
-  height: 115px;
-  background-color: rgb(164, 208, 112);
-  mix-blend-mode: hard-light;
-  position: absolute;
-  bottom: -70px;
-}
-
-.aboutUs {
-  position: absolute;
-  bottom: 421px;
+  overflow: hidden;
   background-color: transparent;
+}
+
+/* Inner section enforcing 20px viewport edge gaps */
+section.design-concept-section {
+  width: calc(100% - (2 * var(--viewport-gap, 20px)));
+  height: calc(100% - var(--viewport-gap, 20px));
+  position: absolute;
+  top: 0;
+  left: var(--viewport-gap, 20px);
+  right: var(--viewport-gap, 20px);
+  bottom: var(--viewport-gap, 20px);
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Character-level overlay blend mode */
+.letter {
+  mix-blend-mode: overlay;
+  will-change: mix-blend-mode;
+  display: inline-block;
+}
+
+.purple-text {
+  color: var(--color-purple-dark, rgb(70, 34, 85));
+}
+
+/* Subheading Labels */
+.communication-heading-container {
+  position: absolute;
+  top: 10px;
+  left: 360px;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.visual-subheading {
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-regular, 400);
+  font-size: clamp(40px, 6vw, 100px);
+  color: var(--color-white, rgb(255, 255, 255));
+  line-height: 0.9;
+}
+
+.communication-subheading {
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-light, 300);
+  font-size: clamp(24px, 3.5vw, 53px);
+  color: var(--color-white, rgb(255, 255, 255));
+  line-height: 1;
+}
+
+/* Structural Accent Bars container */
+.accent-bars-container {
   width: 100%;
-  & h1 {
-    position: absolute;
-    right: 38px;
-    bottom: 97px;
-    font-size: 8.15vw;
-    color: rgb(255, 255, 255);
-    font-family: "Antonio-light", sans-serif;
-    mix-blend-mode: overlay;
-    will-change: mix-blend-mode;
-  }
-}
-
-.comm {
-  font-family: "Antonio-light";
-  font-size: 4.4vw;
-  color: snow;
   position: absolute;
-  bottom: 540px;
-  left: 400px;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.purple {
-  color: rgb(70, 34, 85);
+.tv-layout-wrapper {
+  display: none;
 }
 
-.feature_image {
-  background-image: url("/images/dude_looking_up.webp");
-  width: calc(37.5% - 49px);
-  aspect-ratio: 511 / 511;
-  height: auto;
-  background-size: 325%;
-  background-position: 53% 32%;
-  background-repeat: no-repeat;
-  background-blend-mode: luminosity;
-  background-color: rgb(95, 168, 211);
+/* ==========================================================================
+   Base / Laptop Viewport Layout (MacBook Pro 14": min-width: 1366px)
+   ========================================================================== */
+.image-wrapper {
+  width: 37.5%;
+  height: calc(100% - 85px);
   position: absolute;
+  top: 0;
   right: 255px;
-  bottom: -70px;
+  z-index: 1;
+}
+
+.background-image-element {
+  filter: saturate(30%);
+  mix-blend-mode: luminosity;
+  background-blend-mode: luminosity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/dude_looking_up.webp");
+  background-color: var(--color-accent-blue, rgb(110, 160, 197));
+  background-position: 53% 32%;
+  background-size: 325%;
+  background-repeat: no-repeat;
+  z-index: 0;
   isolation: isolate;
 }
 
-.body p {
-  font-family: "Antonio-light";
-  font-size: 14pt;
-  line-height: 20pt;
-  text-align: justify;
-  word-spacing: 5px;
-  font-weight: 100;
-  color: rgb(255, 255, 255);
+.text-content {
   position: absolute;
-  bottom: 48px;
-  right: 893px;
+  bottom: 100px;
+  left: 0;
   width: 25dvw;
-  height: auto;
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-light, 300);
+  font-size: var(--font-size-body, 14px);
+  line-height: 1.45;
+  color: var(--color-white, rgb(255, 255, 255));
+  text-align: justify;
+  word-spacing: 2px;
+  z-index: 5;
+  margin: 0;
 }
 
-section {
-  width: calc(100% - 50px);
-  height: calc(100% - 50px);
+.text-content .paragraph-second {
+  margin-top: 0.8em;
+}
+
+.accent-bar-secondary {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 83px;
+  background-color: var(--color-lime-alt, rgb(164, 208, 112));
+  mix-blend-mode: hard-light;
+  z-index: 2;
+}
+
+.accent-bar-primary {
+  display: none;
+}
+
+.design-concept-title {
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-regular, 400);
+  color: var(--color-white, rgb(255, 255, 255));
+  font-size: clamp(100px, 8.15vw, 150px);
+  line-height: 0.85;
+  position: absolute;
+  bottom: 140px;
+  right: 0;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  letter-spacing: -0.02em;
 }
 
 /* ==========================================================================
-     Media Query Breakpoints
+   1. Mobile Viewport (iPhone 13 Mini: < 820px)
    ========================================================================== */
+@media screen and (max-width: 819px) {
+  main.design-concept-container {
+    height: calc(100dvh - var(--header-height, 120px));
+  }
 
-/* ==========================================================================
-   1. Mobile Devices (375px - 440px)
-   ========================================================================== */
-@media screen and (min-width: 375px) and (max-width: 440px) {
-  /* Target: Small to large modern smartphones */
-  .comm {
-    display: none;
+  .accent-bars-container,
+  .communication-heading-container,
+  .tv-layout-wrapper {
+    display: none !important;
   }
-  .divider {
-    display: none;
-  }
-  .letter {
-    display: none;
-  }
-  .aboutUs {
+
+  .text-content {
     position: absolute;
-    bottom: 421px;
-    background-color: transparent;
+    top: 0;
+    left: 0;
     width: 100%;
-    & h1 {
-      position: absolute;
-      right: 8px;
-      bottom: -200px;
-      font-size: 15vw;
-      color: rgb(255, 255, 255);
-      font-family: "Antonio-light", sans-serif;
-      mix-blend-mode: overlay;
-      will-change: mix-blend-mode;
-    }
-  }
-  .purple {
-    color: rgb(255, 255, 255);
+    font-size: var(--font-size-body, 14px);
+    line-height: 1.35;
+    color: var(--color-white, rgb(255, 255, 255));
+    z-index: 5;
+    margin-top: 0;
+    bottom: auto;
   }
 
-  .feature_image {
+  .text-content .paragraph-second {
+    display: none;
+  }
+
+  .image-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 48%;
+    z-index: 1;
+  }
+
+  .background-image-element {
     background-image: url("/images/dude_looking_up.webp");
-    width: 100%;
-    aspect-ratio: 511 / 511;
-    height: auto;
-    background-size: 325%;
-    background-position: 53% 32%;
-    background-repeat: no-repeat;
-    background-blend-mode: luminosity;
-    background-color: rgb(144, 52, 183);
-    position: absolute;
-    right: 0px;
-    bottom: -70px;
-    isolation: isolate;
+    background-color: var(--color-accent-purple, rgb(151, 71, 255));
+    background-size: cover;
+    background-position: center top;
   }
 
-  .body p {
-    font-family: "Antonio-light";
-    font-size: 14pt;
-    line-height: 20pt;
-    text-align: justify;
-    word-spacing: 5px;
-    font-weight: 100;
-    color: rgb(255, 255, 255);
+  .design-concept-title {
     position: absolute;
-    bottom: 330px;
-    right: 0px;
+    bottom: 15%;
+    right: 0;
     width: 100%;
-    height: auto;
+    font-size: 15vw;
+    line-height: 0.85;
+    color: var(--color-white, rgb(255, 255, 255));
+    text-align: right;
+    z-index: 10;
+    margin: 0;
+  }
+
+  .purple-text {
+    color: var(--color-white, rgb(255, 255, 255));
   }
 }
 
-/*  ==========================================================================
-   2. Tablets: iPad & Galaxy Tab (820px - 1200px)
+/* ==========================================================================
+   2. Tablet Viewport (iPad Pro 11": 820px to 1365px)
    ========================================================================== */
-@media screen and (min-width: 820px) and (max-width: 1200px) {
-  /* Target: Both iPad and Galaxy Tab in portrait/landscape within this range */
-  .comm {
-    display: none;
-  }
-  .divider {
-    display: none;
-  }
-  .letter {
-    display: inline-block;
-  }
-  .aboutUs {
-    position: absolute;
-    bottom: 650px;
-    background-color: transparent;
-    width: 100%;
-    & h1 {
-      position: absolute;
-      right: 2px;
-      bottom: -200px;
-      font-size: 17vw;
-      color: rgb(255, 255, 255);
-      font-family: "Antonio-light", sans-serif;
-      mix-blend-mode: overlay;
-      will-change: mix-blend-mode;
-    }
-  }
-  .purple {
-    color: rgb(164, 208, 112);
+@media screen and (min-width: 820px) and (max-width: 1365px) {
+  main.design-concept-container {
+    height: calc(100dvh - var(--header-height, 120px));
   }
 
-  .feature_image {
-    background-image: url("/images/dude_looking_up.webp");
+  .accent-bars-container,
+  .communication-heading-container,
+  .tv-layout-wrapper {
+    display: none !important;
+  }
+
+  .text-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.45;
+    color: var(--color-white, rgb(255, 255, 255));
+    z-index: 5;
+    margin-top: 0;
+    bottom: auto;
+  }
+
+  .text-content .paragraph-second {
+    display: none;
+  }
+
+  .design-concept-title {
+    position: absolute;
+    top: 280px;
+    right: 0;
+    width: 100%;
+    font-size: 17vw;
+    line-height: 0.85;
+    color: var(--color-white, rgb(255, 255, 255));
+    text-align: right;
+    z-index: 10;
+    bottom: auto;
+  }
+
+  .purple-text {
+    color: var(--color-lime-alt, rgb(164, 208, 112));
+  }
+
+  .image-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     height: 50%;
-    background-size: 325%;
-    background-position: 53% 32%;
-    background-repeat: no-repeat;
-    background-blend-mode: luminosity;
-    background-color: rgb(144, 52, 183);
-    position: absolute;
-    right: 0px;
-    bottom: -130px;
-    isolation: isolate;
+    z-index: 1;
   }
 
-  .body p {
-    font-family: "Antonio-light";
-    font-size: 22pt;
-    line-height: 30pt;
-    text-align: justify;
-    word-spacing: 5px;
-    font-weight: 100;
-    color: rgb(255, 255, 255);
-    position: absolute;
-    bottom: 700px;
-    right: 0px;
+  .background-image-element {
+    background-image: url("/images/dude_looking_up.webp");
+    background-color: var(--color-accent-purple, rgb(151, 71, 255));
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* ==========================================================================
+   3. Desktop Linux Viewport Overrides (Desktop 5 Linux: min-width: 1440px)
+   ========================================================================== */
+@media screen and (min-width: 1440px) and (max-width: 3839px) {
+  .background-image-element {
+    background-color: var(--color-blue-mid, rgb(77, 145, 196));
+  }
+
+  .image-wrapper {
+    height: calc(100% - 257px);
+  }
+
+  .accent-bar-secondary {
+    height: 257px;
+    bottom: 0;
+    background-color: var(--color-purple-dark, rgb(70, 34, 85));
+    mix-blend-mode: normal;
+  }
+
+  .design-concept-title {
+    bottom: 140px;
+    color: var(--color-white, rgb(255, 255, 255));
+  }
+}
+
+/* ==========================================================================
+   4. 4K Smart TV & Ultra-wide Displays (TV: min-width: 3840px)
+   ========================================================================== */
+@media screen and (min-width: 3840px) {
+  main.design-concept-container {
+    height: calc(100dvh - var(--header-height, 240px));
+  }
+
+  section.design-concept-section {
+    width: calc(100% - (2 * var(--viewport-gap, 60px)));
+    height: calc(100% - var(--viewport-gap, 60px));
+    left: var(--viewport-gap, 60px);
+    right: var(--viewport-gap, 60px);
+    bottom: var(--viewport-gap, 60px);
+  }
+
+  .image-wrapper,
+  .accent-bars-container,
+  .text-content,
+  .communication-heading-container {
+    display: none !important;
+  }
+
+  .tv-layout-wrapper {
+    display: flex !important;
     width: 100%;
-    height: auto;
+    height: 100%;
+    z-index: 1;
   }
-}
 
-/* iPad specific workaround (Targets Apple's WebKit behavior) */
-@media screen and (min-width: 820px) and (max-width: 1200px) and (-webkit-touch-callout: none) {
-  /* Target: iPad specifically */
-}
+  .tv-left-column {
+    width: 32%;
+    height: 100%;
+    position: relative;
+    background-color: var(--color-accent-purple, rgb(151, 71, 255));
+  }
 
-/* Galaxy Tab specific workaround (Targets standard touch devices that aren't iOS) */
-@media screen and (min-width: 820px) and (max-width: 1200px) and (pointer: coarse) and (pointer: fine) {
-  /* Target: Galaxy Tab / Android Tablets specifically */
-}
+  .tv-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/dude_looking_up.webp");
+    background-color: var(--color-accent-purple, rgb(151, 71, 255));
+    background-blend-mode: luminosity;
+    mix-blend-mode: luminosity;
+    filter: saturate(30%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-/* ==========================================================================
-   3. Half Safari Page (Exactly 828px)
-   ========================================================================== */
-@media screen and (width: 828px) {
-  /* Target: Safari split-screen / half page on standard Mac displays */
-}
+  .tv-right-column {
+    width: 68%;
+    height: 100%;
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
+    position: relative;
+  }
 
-/* ==========================================================================
-   4. Generic Laptop (1366px - 1440px)
-   ========================================================================== */
-@media screen and (min-width: 1366px) and (max-width: 1440px) {
-  /* Target: Standard laptops, MacBook Air/Pro base resolutions */
+  .tv-text-content {
+    position: absolute;
+    top: 80px;
+    left: 60px;
+    right: 60px;
+    width: auto;
+    font-family: var(--font-family-antonio, "Antonio", sans-serif);
+    font-weight: var(--font-weight-light, 300);
+    font-size: 51px;
+    line-height: 1.45;
+    color: var(--color-dark, rgb(30, 30, 30));
+    text-align: justify;
+    z-index: 5;
+  }
+
+  .tv-text-content .paragraph-second {
+    margin-top: 1em;
+  }
+
+  .design-concept-title {
+    display: block !important;
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    right: auto;
+    z-index: 10;
+    font-size: 460px;
+    line-height: 0.85;
+    color: var(--color-dark, rgb(30, 30, 30));
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+  }
 }

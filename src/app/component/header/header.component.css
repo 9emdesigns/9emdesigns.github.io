@@ -4,25 +4,30 @@
   padding: 0;
 }
 
+/* 1. Use flexbox to separate logo and toolbar perfectly */
 .menu {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* Clean spacing on both sides */
 }
 
+/* 2. Removed the relative positioning offsets */
 .logo {
   width: 131px;
   height: 131px;
-  position: relative;
-  left: 20px;
+  display: block;
 }
+
 .toolbar {
   background-color: transparent;
 }
 
-/* Strictly locks the header height and handles alignment */
+/* 3. Stripped out 'left' and 'position' hacks */
 .custom-toolbar {
-  position: relative;
-  top: 0px;
-  left: 625px;
+  position: absolute;
+  left: 600px;
   background-color: transparent;
   height: 181px;
   min-height: 131px;
@@ -49,7 +54,6 @@
 
 /* Plain CSS targeting the Angular Material buttons inside the columns */
 .menu-column [mat-button] {
-  /*font-family: "Antonio-light";*/
   font-size: 14pt;
   font-weight: 400;
   color: #ffffff;
@@ -77,94 +81,53 @@
 }
 
 /*================================================================
-Media Queries
+Media Queries (Cleaned up from layout shifts)
 =================================================================*/
-/* ==========================================================================
-   1. Mobile Devices (375px - 440px)
-   ========================================================================== */
-@media screen and (min-width: 375px) and (max-width: 440px) {
-  /* Strictly locks the header height and handles alignment */
+
+/* Mobile Devices (320px - 440px) */
+@media screen and (min-width: 320px) and (max-width: 440px) {
+  .menu {
+    height: 125px;
+    padding: 0 10px;
+  }
 
   .logo {
-    width: 66px;
-    height: 66px;
-    position: relative;
-    left: 20px;
-    top: 12px;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
   }
 
   .custom-toolbar {
-    position: relative;
-    top: -27px;
-    left: 15px;
+    position: absolute;
+    left: 90px;
+    top: 10px;
     background-color: transparent;
-    height: 181px;
-    min-height: 131px;
-    max-height: 181px;
-    width: 350px;
+    height: auto !important;
+    min-height: unset;
+    max-height: unset;
+    width: calc(100% - 95px);
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    overflow: visible;
+  }
+
+  .menu-container {
+    gap: 20px;
   }
 
   .menu-column [mat-button] {
-    /*font-family: "Antonio-light";*/
-    font-size: 15.3pt;
+    font-size: 14pt !important;
+    line-height: 16pt;
     font-weight: 400;
     color: #ffffff;
     padding: 0;
-    height: 24px;
-    line-height: 18pt;
+    height: 26px;
     min-width: unset;
     transition: background-color 0.2s ease;
     text-decoration: none;
   }
-
-  /* Target: Small to large modern smartphones */
-}
-
-/*  ==========================================================================
-   2. Tablets: iPad & Galaxy Tab (820px - 1200px)
-   ========================================================================== */
-@media screen and (min-width: 820px) and (max-width: 1200px) {
-  /*Target: Both iPad and Galaxy Tab in portrait/landscape within this range */
-  .custom-toolbar {
-    position: relative;
-    top: -27px;
-    left: 325px;
-    background-color: transparent;
-    height: 181px;
-    min-height: 131px;
-    max-height: 181px;
-    width: 350px;
-    box-sizing: border-box;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-  }
-}
-
-/* iPad specific workaround (Targets Apple's WebKit behavior) */
-@media screen and (min-width: 820px) and (max-width: 1200px) and (-webkit-touch-callout: none) {
-  /* Target: iPad specifically */
-}
-
-/* Galaxy Tab specific workaround (Targets standard touch devices that aren't iOS) */
-@media screen and (min-width: 820px) and (max-width: 1200px) and (pointer: coarse) and (pointer: fine) {
-  /* Target: Galaxy Tab / Android Tablets specifically */
-}
-
-/* ==========================================================================
-   3. Half Safari Page (Exactly 828px)
-   ========================================================================== */
-@media screen and (width: 828px) {
-  /* Target: Safari split-screen / half page on standard Mac displays */
-}
-
-/* ==========================================================================
-   4. Generic Laptop (1366px - 1440px)
-   ========================================================================== */
-@media screen and (min-width: 1366px) and (max-width: 1440px) {
-  /* Target: Standard laptops, MacBook Air/Pro base resolutions */
 }

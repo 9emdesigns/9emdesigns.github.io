@@ -1,0 +1,375 @@
+{
+  "metadata": {
+    "exportedAt": "2026-07-27T01:22:09.906Z",
+    "componentName": "MacBook Pro 14\" - 4",
+    "totalElements": 26,
+    "nestingDepth": 11,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)",
+      "color-rgb(164, 208, 112)": "rgb(164, 208, 112)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)",
+      "color-rgb(0, 0, 0)": "rgb(0, 0, 0)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-150": "150px",
+          "size-10": "10px",
+          "size-53": "53px",
+          "size-20": "20px"
+        },
+        "weights": {
+          "weight-400": "400",
+          "weight-300": "300"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "macbook-pro-14----4",
+    "type": "FRAME",
+    "size": {
+      "w": 1512,
+      "h": 982
+    },
+    "styles": {
+      "bg": "rgb(104, 94, 84)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "frame-5",
+        "type": "FRAME",
+        "size": {
+          "w": 428,
+          "h": 428
+        },
+        "styles": {
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        }
+      },
+      {
+        "name": "howwework",
+        "type": "TEXT",
+        "size": {
+          "w": 750,
+          "h": 284
+        },
+        "content": "HowWeWork",
+        "styles": {
+          "text": {
+            "family": "Antonio",
+            "size": 150,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "frame-4",
+        "type": "FRAME",
+        "size": {
+          "w": 1420,
+          "h": 63
+        },
+        "styles": {
+          "bg": "rgb(164, 208, 112)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        }
+      },
+      {
+        "name": "every-great-story-starts-with-a-spark-of-ambition--picture-an-entrepreneur-sitting-at-a-desk-late-at-night--looking-at-a-brilliant-new-product-or-service-they-ve-built--they-know-it-s-good--they-know-the-market-needs-it--but-to-launch-it-into-the-world--they-think-they-just-need-one-small-thing--a-logo--they-treat-the-logo-like-a-golden-ticket--if-they-can-just-get-a-nice-icon--everything-else-will-magically-fall-into-place--this-is-where-the-protagonist-hits-an-invisible-wall--a-logo-in-isolation-is-like-an-beautiful-steering-wheel-without-a-car-attached-to-it--when-a-small-or-medium-sized-business-invests-in-just-a-standalone-logo--they-quickly-realize-the-harsh-truth-of-modern-marketing--the-logo-looks-great-on-a-business-card--but-doesn-t-scale-on-a-mobile-device--the-colors-don-t-translate-well-to-a-website-layout--the-messaging-feels-disconnected-when-they-try-to-run-a-social-media-ad--suddenly--that-affordable-quick-fix-turns-into-a-fragmented--stressful-puzzle--they-are-forced-to-juggle-a-developer-for-the-website--a-copywriter-for-the-text--and-a-designer-for-the-graphics--the-budget-spirals--the-timeline-stretches--and-the-user-experience-becomes-completely-fractured--the-end-user-the-very-customer-they-are-trying-to-reach-gets-confused-and-walks-away--at-9emdesign--we-looked-at-this-broken-cycle-and-asked-a-fundamental-question--why-should-small-and-medium-businesses-have-to-compromise-between-affordability-and-a-cohesive--world-class-user-experience--we-believe-that-great-design-isn-t-a-luxury-reserved-for-massive-corporations-with-endless-budgets--it-is-a-fundamental-tool-for-growth--our-purpose-is-to-bridge-the-gap-between-creative-artistry-and-technical-execution--ensuring-that-your-business-doesn-t-just-get-a-badge--but-an-entire-ecosystem-built-to-thrive----",
+        "type": "TEXT",
+        "size": {
+          "w": 309,
+          "h": 331
+        },
+        "content": "Every great story starts with a spark of ambition. Picture an entrepreneur sitting at a desk late at night, looking at a brilliant new product or service they’ve built. They know it’s good. They know the market needs it. But to launch it into the world, they think they just need one small thing: a logo.\nThey treat the logo like a golden ticket. If they can just get a nice icon, everything else will magically fall into place.\nThis is where the protagonist hits an invisible wall. A logo in isolation is like an beautiful steering wheel without a car attached to it.\nWhen a small or medium-sized business invests in just a standalone logo, they quickly realize the harsh truth of modern marketing:\nThe logo looks great on a business card, but doesn't scale on a mobile device.\nThe colors don't translate well to a website layout.\nThe messaging feels disconnected when they try to run a social media ad.\nSuddenly, that affordable quick-fix turns into a fragmented, stressful puzzle. They are forced to juggle a developer for the website, a copywriter for the text, and a designer for the graphics. The budget spirals, the timeline stretches, and the user experience becomes completely fractured. The end-user—the very customer they are trying to reach—gets confused and walks away.\nAt 9emdesign, we looked at this broken cycle and asked a fundamental question: Why should small and medium businesses have to compromise between affordability and a cohesive, world-class user experience?\nWe believe that great design isn't a luxury reserved for massive corporations with endless budgets. It is a fundamental tool for growth. Our purpose is to bridge the gap between creative artistry and technical execution, ensuring that your business doesn't just get a badge, but an entire ecosystem built to thrive.@!!",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Antonio",
+            "size": 10,
+            "weight": "300",
+            "align": "justified"
+          }
+        }
+      },
+      {
+        "name": "communication",
+        "type": "TEXT",
+        "size": {
+          "w": 315,
+          "h": 58
+        },
+        "content": "Communication",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Antonio",
+            "size": 53,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "group-3",
+        "type": "GROUP",
+        "size": {
+          "w": 731,
+          "h": 131
+        },
+        "children": [
+          {
+            "name": "group-2",
+            "type": "GROUP",
+            "size": {
+              "w": 267,
+              "h": 116
+            },
+            "children": [
+              {
+                "name": "home-aboutus-whatwedo-howwework",
+                "type": "TEXT",
+                "size": {
+                  "w": 114,
+                  "h": 116
+                },
+                "content": "home\naboutus\nwhatwedo\nhowwework",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 20,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "designconcept-portfolio-contact",
+                "type": "TEXT",
+                "size": {
+                  "w": 138,
+                  "h": 116
+                },
+                "content": "designconcept\nportfolio\ncontact",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 20,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "logo_9em-1",
+            "type": "FRAME",
+            "size": {
+              "w": 131,
+              "h": 131
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "group",
+                "type": "GROUP",
+                "size": {
+                  "w": 131,
+                  "h": 131
+                },
+                "children": [
+                  {
+                    "name": "group",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 131,
+                      "h": 131
+                    },
+                    "children": [
+                      {
+                        "name": "vector",
+                        "type": "VECTOR",
+                        "size": {
+                          "w": 131,
+                          "h": 131
+                        }
+                      },
+                      {
+                        "name": "group",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 131,
+                          "h": 131
+                        },
+                        "children": [
+                          {
+                            "name": "clip-path-group",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 131,
+                              "h": 131
+                            },
+                            "children": [
+                              {
+                                "name": "_clip1",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 131,
+                                  "h": 131
+                                },
+                                "children": [
+                                  {
+                                    "name": "vector",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 131,
+                                      "h": 131
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(0, 0, 0)"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "group",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 131,
+                                  "h": 131
+                                },
+                                "children": [
+                                  {
+                                    "name": "rect1",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 131,
+                                      "h": 131
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "vector",
+                                        "type": "VECTOR",
+                                        "size": {
+                                          "w": 131,
+                                          "h": 131
+                                        },
+                                        "styles": {
+                                          "bg": "rgb(104, 94, 84)"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "logo",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 69,
+                                      "h": 102
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "text1",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 38,
+                                          "h": 102
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 38,
+                                              "h": 102
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "text2",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 28,
+                                          "h": 21
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 28,
+                                              "h": 21
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 4,
+    "texts": 5,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

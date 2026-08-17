@@ -1,24 +1,74 @@
-<main>
-  <section>
-    <div class="_9em">
-      <h1 class="_9em_laptop">9emdesign</h1>
-      <div class="_9em_mob">
-        <h1 class="letters">9em</h1>
-        <h1 class="letters">des</h1>
-        <h1 class="letters">ign</h1>
-      </div>
-      <div class="_9em_tablet">
-        <h1 class="letters_tablet01">9em</h1>
-        <h1 class="letters_tablet02">design</h1>
-      </div>
+<main class="home-container">
+  <section class="hero-section" aria-label="Hero Section">
+    <!-- Desktop & TV Title Layout (1 line) -->
+    <h1 class="title-desktop-tv">
+      <span class="letter">9</span>
+      <span class="letter">e</span>
+      <span class="letter">m</span>
+      <span class="letter">d</span>
+      <span class="letter">e</span>
+      <span class="letter">s</span>
+      <span class="letter">i</span>
+      <span class="letter">g</span>
+      <span class="letter">n</span>
+    </h1>
 
-      <h2 class="hello">Hello</h2>
-      <div class="hero"></div>
-      <div class="bar"></div>
-      <div class="image_cont">
-        <div class="images">&nbsp;</div>
-      </div>
-      <!--  <div>&nbsp;</div> -->
+    <!-- Tablet Title Layout (2 lines) -->
+    <div class="title-tablet" aria-hidden="true">
+      <h1 class="row-1">
+        <span class="letter">9</span>
+        <span class="letter">e</span>
+        <span class="letter">m</span>
+      </h1>
+      <h1 class="row-2">
+        <span class="letter">d</span>
+        <span class="letter">e</span>
+        <span class="letter">s</span>
+        <span class="letter">i</span>
+        <span class="letter">g</span>
+        <span class="letter">n</span>
+      </h1>
+    </div>
+
+    <!-- Mobile Title Layout (3 lines) -->
+    <div class="title-mobile" aria-hidden="true">
+      <h1 class="row-1">
+        <span class="letter">9</span>
+        <span class="letter">e</span>
+        <span class="letter">m</span>
+      </h1>
+      <h1 class="row-2">
+        <span class="letter">d</span>
+        <span class="letter">e</span>
+        <span class="letter">s</span>
+      </h1>
+      <h1 class="row-3">
+        <span class="letter">i</span>
+        <span class="letter">g</span>
+        <span class="letter">n</span>
+      </h1>
+    </div>
+
+    <!-- Subheading Hello (Desktop, TV) -->
+    <h2 class="hello-subheading">Hello</h2>
+
+    <!-- Decorative & Structural Content Blocks (Frame 4 & Frame 3 from JSON) -->
+    <article class="hero-block-container">
+      <div class="hero-block"></div>
+      <div class="accent-bar"></div>
+    </article>
+
+    <!-- Hero Image Container Layer (Mobile, Tablet, Desktop) -->
+    <aside class="image-wrapper">
+      <div class="background-image-element" aria-label="Dude looking up background image"></div>
+    </aside>
+
+    <!-- TV Specific Ultra-Wide Layout -->
+    <div class="tv-layout-wrapper">
+      <aside class="tv-left-column">
+        <div class="tv-background-image" aria-label="Dude standing at wall background image"></div>
+      </aside>
+      <section class="tv-right-column"></section>
     </div>
   </section>
 </main>

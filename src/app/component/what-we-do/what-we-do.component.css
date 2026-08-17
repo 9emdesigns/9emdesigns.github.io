@@ -1,310 +1,449 @@
+/* ==========================================================================
+   What We Do Component Layout Styles
+   Mapped strictly to variables & breakpoints in media_Queries_breakpoints.css
+   ========================================================================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-main {
+
+:host {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Parent container: locks layout within dvh/dvw bounds */
+main.what-we-do-container {
   width: 100dvw;
-  height: 84dvh;
+  height: calc(100dvh - var(--header-height, 120px));
   position: relative;
   top: 0;
-}
-
-.purple {
-  color: rgb(70, 34, 85);
+  overflow: hidden;
   background-color: transparent;
 }
 
-.visual {
-  font-family: "Antonio-light";
-  font-size: 6.8em;
+/* Inner section enforcing 20px viewport edge gaps */
+section.what-we-do-section {
+  width: calc(100% - (2 * var(--viewport-gap, 20px)));
+  height: calc(100% - var(--viewport-gap, 20px));
   position: absolute;
-  right: 58px;
-  bottom: 650px;
-  color: rgb(255, 255, 255);
+  top: 0;
+  left: var(--viewport-gap, 20px);
+  right: var(--viewport-gap, 20px);
+  bottom: var(--viewport-gap, 20px);
+  z-index: 0;
+  overflow: hidden;
 }
 
-.comm {
-  font-family: "Antonio-light";
-  font-size: 3.35em;
-  position: absolute;
-  right: -3px;
-  bottom: 605px;
+/* Character/Text level overlay blend mode */
+.letter-overlay {
+  mix-blend-mode: overlay;
+  will-change: mix-blend-mode;
+  display: inline;
+}
+
+.purple-text {
+  color: var(--color-purple-dark, rgb(70, 34, 85));
   background-color: transparent;
-  color: rgb(255, 255, 255);
 }
 
-.divider {
+.tv-layout-wrapper {
+  display: none;
+}
+
+/* Subheading text styling */
+.headings-group {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 6;
+  text-align: right;
+  pointer-events: none;
+}
+
+.subtitle-visual {
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-light, 300);
+  font-size: clamp(60px, 6.8vw, 100px);
+  color: var(--color-white, rgb(255, 255, 255));
+  line-height: 1;
+  margin: 0;
+}
+
+.subtitle-comm {
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-light, 300);
+  font-size: clamp(30px, 3.35vw, 53px);
+  color: var(--color-white, rgb(255, 255, 255));
+  line-height: 1;
+  margin: 0;
+}
+
+/* Main title styling with blend mode overlay */
+.title-wrapper {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.main-title {
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-regular, 400);
+  font-size: clamp(100px, 15vw, 220px);
+  line-height: 0.85;
+  color: var(--color-white, rgb(255, 255, 255));
+  mix-blend-mode: overlay;
+  will-change: mix-blend-mode;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main narrative text body */
+.text-content {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 45%;
+  font-family: var(--font-family-roboto, "Roboto", sans-serif);
+  font-weight: var(--font-weight-light, 300);
+  font-size: var(--font-size-body, 14px);
+  line-height: 1.45;
+  color: var(--color-white, rgb(255, 255, 255));
+  text-align: justify;
+  z-index: 5;
+  margin: 0;
+}
+
+/* Feature image containers with luminosity blend mode */
+.feature-image-1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: calc(20.5% - 10px);
+  height: 180px;
+  z-index: 1;
+}
+
+.image-framing {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 151px;
-  position: absolute;
-  bottom: 0px;
-  background-color: rgb(164, 208, 112);
-  mix-blend-mode: hard-light;
-}
-
-.howwework {
-  position: absolute;
-  bottom: 421px;
-  background-color: transparent;
-  width: 100%;
-  & h1 {
-    position: absolute;
-    left: -13px;
-    bottom: -322px;
-    font-size: 10vw;
-    color: rgb(255, 255, 255);
-    font-family: "Antonio-light", sans-serif;
-    background-color: transparent;
-    mix-blend-mode: overlay;
-    will-change: mix-blend-mode;
-  }
-}
-
-.feature_image1 {
+  height: 100%;
   background-image: url("/images/dude_framing_for_design.webp");
-  width: calc(20.5% - 49px);
-  aspect-ratio: 100 / 100;
-  height: auto;
+  background-color: var(--color-blue-sky, rgb(95, 168, 211));
+  background-blend-mode: luminosity;
+  mix-blend-mode: luminosity;
+  filter: saturate(30%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-blend-mode: luminosity;
-  background-color: #5fa8d3;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
 }
 
-.feature_image2 {
+.feature-image-2 {
+  position: absolute;
+  bottom: 0;
+  right: 260px;
+  width: calc(20.5% - 10px);
+  height: 180px;
+  z-index: 1;
+}
+
+.image-standing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("/images/dude_standing_at_wall.webp");
-  width: calc(20.5% - 49px);
-  aspect-ratio: 100 / 100;
-  height: auto;
-  background-size: 300% auto;
-  background-position: -90px -90px;
-  background-repeat: no-repeat;
+  background-color: var(--color-blue-sky, rgb(95, 168, 211));
   background-blend-mode: luminosity;
-  background-color: #5fa8d3;
-  position: absolute;
-  right: 355px;
-  bottom: 0px;
-  isolation: isolate;
+  mix-blend-mode: luminosity;
+  filter: saturate(30%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.body p {
-  font-family: "Antonio-light";
-  font-size: 14pt;
-  line-height: 18pt;
-  text-align: justify;
-  word-spacing: 5px;
-  font-weight: 100;
-  color: rgb(255, 255, 255);
+.accent-bar-primary {
   position: absolute;
-  bottom: 325px;
-  right: 0px;
-  width: 37dvw;
-  height: auto;
-  background-color: transparent;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 151px;
+  background-color: var(--color-lime, rgb(164, 208, 112));
+  mix-blend-mode: hard-light;
+  z-index: 2;
+  pointer-events: none;
 }
 
-section {
-  width: calc(100% - 40px);
-  height: calc(100% - 20px);
-  position: absolute;
-  top: 20px;
-  left: 20px;
+.accent-bar-secondary {
+  display: none;
 }
-/*====================================================================
-Media Queries
-====================================================================*/
+
 /* ==========================================================================
-   1. Mobile Devices (375px - 440px)
+   1. Mobile Viewport Layout (iPhone 13 Mini: < 820px)
    ========================================================================== */
-@media screen and (min-width: 375px) and (max-width: 440px) {
-  /* Target: Small to large modern smartphones */
-  main {
-    width: 100dvw;
-    height: 80dvh;
+@media screen and (max-width: 819px) {
+  main.what-we-do-container {
+    height: calc(100dvh - var(--header-height, 120px));
+  }
+
+  .headings-group,
+  .feature-image-1,
+  .accent-bar-primary,
+  .accent-bar-secondary,
+  .tv-layout-wrapper {
+    display: none !important;
+  }
+
+  .text-content {
     position: relative;
     top: 0;
-  }
-
-  .visual {
-    display: none;
-  }
-
-  .comm {
-    display: none;
-  }
-
-  .divider {
-    display: none;
-  }
-
-  .text {
-    display: none;
-  }
-
-  .body p {
-    font-family: "Antonio-light";
-    font-size: 14pt;
-    line-height: 18pt;
-    text-align: justify;
-    word-spacing: 5px;
-    font-weight: 100;
-    color: rgb(255, 255, 255);
-    position: absolute;
-    bottom: 320px;
-    right: 0px;
+    right: auto;
     width: 100%;
-    height: auto;
-    background-color: transparent;
-  }
-  .purple {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-  }
-  .feature_image1 {
-    display: none;
-  }
-  .howwework {
-    position: absolute;
-    bottom: 421px;
-    background-color: transparent;
-    width: 100%;
-    & h1 {
-      position: absolute;
-      left: 3px;
-      bottom: -225px;
-      font-size: 23vw;
-      color: rgb(255, 255, 255);
-      font-family: "Antonio-light", sans-serif;
-      background-color: transparent;
-      mix-blend-mode: overlay;
-      will-change: mix-blend-mode;
-    }
-  }
-  .feature_image2 {
-    background-image: url("/images/dude_standing_at_wall.webp");
-    width: calc(416px - 49px);
-    aspect-ratio: 100 / 100;
-    height: 334px;
-    background-size: 300% auto;
-    background-position: -90px -90px;
-    background-repeat: no-repeat;
-    background-blend-mode: luminosity;
-    background-color: #5fa8d3;
-    position: absolute;
-    left: 0px;
-    bottom: -30px;
-    isolation: isolate;
-  }
-}
-
-/*  ==========================================================================
-   2. Tablets: iPad & Galaxy Tab (820px - 1200px)
-   ========================================================================== */
-@media screen and (min-width: 820px) and (max-width: 1200px) {
-  /* Target: Both iPad and Galaxy Tab in portrait/landscape within this range */
-  main {
-    width: 100dvw;
-    height: 80dvh;
-    position: relative;
-    top: 0;
+    font-size: var(--font-size-body, 14px);
+    line-height: 1.35;
+    color: var(--color-white, rgb(255, 255, 255));
+    z-index: 5;
+    margin: 0;
   }
 
-  .visual {
-    display: none;
-  }
-
-  .comm {
-    display: none;
-  }
-
-  .divider {
-    display: none;
-  }
-
-  .text {
+  .feature-image-2 {
     display: block;
-  }
-
-  .body p {
-    font-family: "Antonio-light";
-    font-size: 20pt;
-    line-height: 28pt;
-    text-align: justify;
-    word-spacing: 5px;
-    font-weight: 100;
-    color: rgb(255, 255, 255);
     position: absolute;
-    bottom: 755px;
-    right: 0px;
-    width: 100%;
-    height: auto;
-    background-color: transparent;
-  }
-  .purple {
-    color: rgb(164, 208, 112);
-    background-color: transparent;
-  }
-  .feature_image1 {
-    display: none;
-  }
-  .howwework {
-    position: absolute;
-    bottom: 400px;
-    background-color: transparent;
-    width: 100%;
-    & h1 {
-      position: absolute;
-      left: -4px;
-      bottom: 10px;
-      font-size: 25vw;
-      color: rgb(255, 255, 255);
-      font-family: "Antonio-light", sans-serif;
-      background-color: transparent;
-      mix-blend-mode: overlay;
-      will-change: mix-blend-mode;
-    }
-  }
-  .feature_image2 {
-    background-image: url("/images/dude_standing_at_wall.webp");
+    bottom: -20px;
+    right: 0;
     width: 100%;
     height: 50%;
+    z-index: 1;
+  }
+
+  .image-standing {
+    background-image: url("/images/dude_looking_up.webp");
+    background-color: var(--color-blue-sky, rgb(95, 168, 211));
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .title-wrapper {
+    position: absolute;
+    bottom: 18%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .main-title {
+    font-size: 19vw;
+    line-height: 0.85;
+    color: var(--color-white, rgb(255, 255, 255));
+    text-align: left;
+  }
+
+  .purple-text {
+    color: var(--color-white, rgb(255, 255, 255));
+  }
+}
+
+/* ==========================================================================
+   2. Tablet Viewport Layout (iPad Pro 11": 820px to 1365px)
+   ========================================================================== */
+@media screen and (min-width: 820px) and (max-width: 1365px) {
+  main.what-we-do-container {
+    height: calc(100dvh - var(--header-height, 120px));
+  }
+
+  .headings-group,
+  .feature-image-1,
+  .accent-bar-primary,
+  .accent-bar-secondary,
+  .tv-layout-wrapper {
+    display: none !important;
+  }
+
+  .text-content {
+    position: relative;
+    top: 0;
+    right: auto;
+    width: 100%;
+    font-size: 17px;
+    line-height: 1.45;
+    color: var(--color-white, rgb(255, 255, 255));
+    z-index: 5;
+    margin: 0;
+  }
+
+  .feature-image-2 {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48%;
+    z-index: 1;
+  }
+
+  .image-standing {
+    background-image: url("/images/dude_looking_up.webp");
+    background-color: var(--color-blue-sky, rgb(95, 168, 211));
+    background-size: cover;
+    background-position: center;
+  }
+
+  .title-wrapper {
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .main-title {
+    font-size: 21.8vw;
+    line-height: 0.85;
+    color: var(--color-white, rgb(255, 255, 255));
+    text-align: left;
+  }
+
+  .purple-text {
+    color: var(--color-lime-alt, rgb(164, 208, 112));
+  }
+}
+
+/* ==========================================================================
+   3. Desktop Linux Viewport Overrides (Desktop 3 Linux: min-width: 1440px)
+   ========================================================================== */
+@media screen and (min-width: 1440px) and (max-width: 3839px) {
+  .accent-bar-primary {
+    display: none;
+  }
+
+  .accent-bar-secondary {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 236px;
+    background-color: var(--color-blue-mid, rgb(77, 145, 196));
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .feature-image-1 {
+    width: 37%;
+    height: calc(100% - 250px);
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: auto;
+  }
+
+  .image-framing {
+    background-image: url("/images/dude_standing_at_wall.webp");
+    background-color: var(--color-accent-purple, rgb(151, 71, 255));
+  }
+
+  .feature-image-2 {
+    display: none;
+  }
+
+  .main-title {
+    font-size: 150px;
+  }
+
+  .title-wrapper {
+    bottom: 120px;
+  }
+
+  .purple-text {
+    color: var(--color-accent-purple, rgb(151, 71, 255));
+  }
+}
+
+/* ==========================================================================
+   4. 4K Smart TV & Ultra-wide Displays (TV: min-width: 3840px)
+   ========================================================================== */
+@media screen and (min-width: 3840px) {
+  main.what-we-do-container {
+    height: calc(100dvh - var(--header-height, 240px));
+  }
+
+  section.what-we-do-section {
+    display: none !important;
+  }
+
+  .tv-layout-wrapper {
+    display: flex !important;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .tv-left-column {
+    width: 32%;
+    height: 100%;
+    position: relative;
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
+  }
+
+  .tv-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/dude_looking_up.webp");
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
+    background-blend-mode: luminosity;
+    mix-blend-mode: luminosity;
+    filter: saturate(30%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-blend-mode: luminosity;
-    background-color: rgb(95, 168, 211);
+  }
+
+  .tv-right-column {
+    width: 68%;
+    height: 100%;
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
+    position: relative;
+    padding: 60px;
+  }
+
+  .tv-text-content {
     position: absolute;
-    bottom: -110px;
-    left: 0px;
-    isolation: isolate;
+    top: 80px;
+    left: 60px;
+    right: 60px;
+    font-family: var(--font-family-antonio, "Antonio", sans-serif);
+    font-weight: var(--font-weight-light, 300);
+    font-size: 38px;
+    line-height: 1.45;
+    color: var(--color-dark, rgb(30, 30, 30));
+    text-align: justify;
+    z-index: 5;
+  }
+
+  .tv-main-title {
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    z-index: 10;
+    font-family: var(--font-family-antonio, "Antonio", sans-serif);
+    font-size: var(--font-size-logo-9em, 635px);
+    line-height: 0.85;
+    color: var(--color-dark, rgb(30, 30, 30));
+    mix-blend-mode: overlay;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
   }
 }
 
-/* iPad specific workaround (Targets Apple's WebKit behavior) */
-@media screen and (min-width: 820px) and (max-width: 1200px) and (-webkit-touch-callout: none) {
-  /* Target: iPad specifically */
-}
-
-/* Galaxy Tab specific workaround (Targets standard touch devices that aren't iOS) */
-@media screen and (min-width: 820px) and (max-width: 1200px) and (pointer: coarse) and (pointer: fine) {
-  /* Target: Galaxy Tab / Android Tablets specifically */
-}
-
-/* ==========================================================================
-   3. Half Safari Page (Exactly 828px)
-   ========================================================================== */
-@media screen and (width: 828px) {
-  /* Target: Safari split-screen / half page on standard Mac displays */
-}
-
-/* ==========================================================================
-   4. Generic Laptop (1366px - 1440px)
-   ========================================================================== */
-@media screen and (min-width: 1366px) and (max-width: 1440px) {
-  /* Target: Standard laptops, MacBook Air/Pro base resolutions */
-}

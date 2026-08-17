@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "exportedAt": "2026-07-27T01:27:38.137Z",
+    "componentName": "Desktop - 5- linux",
+    "totalElements": 29,
+    "nestingDepth": 11,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)",
+      "color-rgb(0, 0, 0)": "rgb(0, 0, 0)",
+      "color-rgb(77, 145, 196)": "rgb(77, 145, 196)",
+      "color-rgb(70, 34, 85)": "rgb(70, 34, 85)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-20": "20px",
+          "size-130": "130px",
+          "size-14": "14px",
+          "size-53": "53px",
+          "size-100": "100px"
+        },
+        "weights": {
+          "weight-400": "400",
+          "weight-300": "300"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "desktop---5--linux",
+    "type": "FRAME",
+    "size": {
+      "w": 1440,
+      "h": 1024
+    },
+    "styles": {
+      "bg": "rgb(104, 94, 84)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "group-3",
+        "type": "GROUP",
+        "size": {
+          "w": 731,
+          "h": 131
+        },
+        "children": [
+          {
+            "name": "group-2",
+            "type": "GROUP",
+            "size": {
+              "w": 267,
+              "h": 116
+            },
+            "children": [
+              {
+                "name": "home-aboutus-whatwedo-howwework",
+                "type": "TEXT",
+                "size": {
+                  "w": 114,
+                  "h": 116
+                },
+                "content": "home\naboutus\nwhatwedo\nhowwework",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 20,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "designconcept-portfolio-contact",
+                "type": "TEXT",
+                "size": {
+                  "w": 138,
+                  "h": 116
+                },
+                "content": "designconcept\nportfolio\ncontact",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 20,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "logo_9em-1",
+            "type": "FRAME",
+            "size": {
+              "w": 131,
+              "h": 131
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "group",
+                "type": "GROUP",
+                "size": {
+                  "w": 131,
+                  "h": 131
+                },
+                "children": [
+                  {
+                    "name": "group",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 131,
+                      "h": 131
+                    },
+                    "children": [
+                      {
+                        "name": "vector",
+                        "type": "VECTOR",
+                        "size": {
+                          "w": 131,
+                          "h": 131
+                        }
+                      },
+                      {
+                        "name": "group",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 131,
+                          "h": 131
+                        },
+                        "children": [
+                          {
+                            "name": "clip-path-group",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 131,
+                              "h": 131
+                            },
+                            "children": [
+                              {
+                                "name": "_clip1",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 131,
+                                  "h": 131
+                                },
+                                "children": [
+                                  {
+                                    "name": "vector",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 131,
+                                      "h": 131
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(0, 0, 0)"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "group",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 131,
+                                  "h": 131
+                                },
+                                "children": [
+                                  {
+                                    "name": "rect1",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 131,
+                                      "h": 131
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "vector",
+                                        "type": "VECTOR",
+                                        "size": {
+                                          "w": 131,
+                                          "h": 131
+                                        },
+                                        "styles": {
+                                          "bg": "rgb(104, 94, 84)"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "logo",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 69,
+                                      "h": 102
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "text1",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 38,
+                                          "h": 102
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 38,
+                                              "h": 102
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "text2",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 28,
+                                          "h": 21
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 28,
+                                              "h": 21
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "frame-5",
+        "type": "FRAME",
+        "size": {
+          "w": 533,
+          "h": 722
+        },
+        "styles": {
+          "bg": "rgb(77, 145, 196)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "veroll-sterling-g3he6o_e1ts-unsplash-1",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 3014,
+              "h": 1738
+            }
+          }
+        ]
+      },
+      {
+        "name": "frame-4",
+        "type": "FRAME",
+        "size": {
+          "w": 1400,
+          "h": 257
+        },
+        "styles": {
+          "bg": "rgb(70, 34, 85)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        }
+      },
+      {
+        "name": "designconcept",
+        "type": "TEXT",
+        "size": {
+          "w": 750,
+          "h": 188
+        },
+        "content": "DesignConcept",
+        "styles": {
+          "text": {
+            "family": "Antonio",
+            "size": 130,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "at-9emdesign--our-branding-and-marketing-concept-is-deeply-rooted-in-an-audience-first-philosophy--we-believe-that-exceptional-design-shouldn-t-center-on-a-brand-s-ego--but-rather-on-the-real-people-that-brand-serves--by-shifting-the-focus-entirely-to-your-customers-the-individuals-interacting-with-your-product-or-service-we-intentionally-craft-experiences-that-resonate-with-their-specific-needs--desires--and-behaviors--every-strategy-we-build-and-every-visual-asset-we-create-is-engineered-to-foster-an-intuitive--meaningful-connection-between-your-business-and-the-people-who-matter-most-to-your-growth--to-achieve-this--we-champion-a-refined--minimalist-aesthetic-that-strips-away-unnecessary-visual-noise-and-distractions--by-prioritizing-clarity-over-clutter--we-allow-the-intrinsic-value-of-your-product-or-service-to-take-center-stage--this-deliberate-restraint-allows-us-to-seamlessly-guide-the-customer-through-a-clean--purposeful-journey--transforming-overwhelming-choices-into-a-transparent-experience--ultimately--our-design-framework-empowers-your-audience-with-the-exact-clarity-they-need-to-make-confident--well-informed-decisions-",
+        "type": "TEXT",
+        "size": {
+          "w": 425,
+          "h": 331
+        },
+        "content": "At 9emdesign, our branding and marketing concept is deeply rooted in an audience-first philosophy. We believe that exceptional design shouldn’t center on a brand’s ego, but rather on the real people that brand serves. By shifting the focus entirely to your customers—the individuals interacting with your product or service—we intentionally craft experiences that resonate with their specific needs, desires, and behaviors. Every strategy we build and every visual asset we create is engineered to foster an intuitive, meaningful connection between your business and the people who matter most to your growth.\nTo achieve this, we champion a refined, minimalist aesthetic that strips away unnecessary visual noise and distractions. By prioritizing clarity over clutter, we allow the intrinsic value of your product or service to take center stage. This deliberate restraint allows us to seamlessly guide the customer through a clean, purposeful journey, transforming overwhelming choices into a transparent experience. Ultimately, our design framework empowers your audience with the exact clarity they need to make confident, well-informed decisions.",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Antonio",
+            "size": 14,
+            "weight": "300",
+            "align": "justified"
+          }
+        }
+      },
+      {
+        "name": "group-6",
+        "type": "GROUP",
+        "size": {
+          "w": 334,
+          "h": 181
+        },
+        "children": [
+          {
+            "name": "communication",
+            "type": "TEXT",
+            "size": {
+              "w": 315,
+              "h": 58
+            },
+            "content": "Communication",
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "text": {
+                "family": "Antonio",
+                "size": 53,
+                "weight": "400",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "visual",
+            "type": "TEXT",
+            "size": {
+              "w": 334,
+              "h": 160
+            },
+            "content": "Visual",
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "text": {
+                "family": "Antonio",
+                "size": 100,
+                "weight": "400",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 4,
+    "texts": 6,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

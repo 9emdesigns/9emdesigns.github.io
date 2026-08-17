@@ -148,7 +148,7 @@ button:disabled {
 /* ==========================================================================
    1. Mobile Devices (375px - 440px)
    ========================================================================== */
-@media screen and (min-width: 375px) and (max-width: 440px) {
+@media screen and (min-width: 393px) and (max-width: 440px) {
   /* Target: Small to large modern smartphones */
   main {
     height: 80dvh;
@@ -217,14 +217,14 @@ button:disabled {
 }
 
 /* Galaxy Tab specific workaround (Targets standard touch devices that aren't iOS) */
-@media screen and (min-width: 820px) and (max-width: 1200px) and (pointer: coarse) and (pointer: fine) {
+@media screen and (min-width: 820px) and (max-width: 1200px) and (pointer: fine) {
   /* Target: Galaxy Tab / Android Tablets specifically */
 }
 
 /* ==========================================================================
    3. Half Safari Page (Exactly 828px)
    ========================================================================== */
-@media screen and (width: 828px) {
+@media screen and (max-width: 900px) and (pointer: fine) {
   /* Target: Safari split-screen / half page on standard Mac displays */
 }
 

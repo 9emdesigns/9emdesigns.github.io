@@ -1,0 +1,103 @@
+:root {
+  /* --- Color Tokens --- */
+  --color-black: rgb(0, 0, 0);
+  --color-white: rgb(255, 255, 255);
+  --color-body-bg: rgb(80, 69, 60);
+  --color-bg-primary: rgb(104, 94, 84);
+  --color-text-neon: rgb(137, 250, 198);
+  --color-accent-green: rgb(143, 209, 106);
+  --color-accent-blue: rgb(110, 160, 197);
+  --color-accent-mint: rgb(176, 237, 203);
+  --color-accent-purple: rgb(151, 71, 255);
+  --color-lime: rgb(164, 208, 111);
+  --color-lime-alt: rgb(164, 208, 112);
+  --color-blue-mid: rgb(77, 145, 196);
+  --color-blue-sky: rgb(95, 168, 211);
+  --color-purple-dark: rgb(70, 34, 85);
+  --color-grey-light: rgb(217, 217, 217);
+  --color-grey-alt: rgb(218, 218, 218);
+  --color-dark: rgb(30, 30, 30);
+
+  /* --- Typography Tokens --- */
+  --font-family-antonio: "Antonio", sans-serif;
+  --font-family-fredoka: "Fredoka", sans-serif;
+  --font-family-roboto: "Roboto", sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* --- Layout & Spacing Tokens (Base: Mobile-First) --- */
+  --viewport-gap: 20px;
+  --header-height: 120px;
+  --max-content-width: 100%;
+
+  /* --- Component-Specific Tokens (Mobile-First Defaults) --- */
+  --logo-size: 65px;
+  --font-size-logo-9em: 16px;
+  --font-size-hello: 40px;
+  --font-size-nav: 20px;
+  --font-size-body: 14px;
+}
+
+/* ==========================================================================
+   1. Mobile Devices (iPhone 13 Mini: 390px - 440px)
+   ========================================================================== */
+@media screen and (min-width: 390px) {
+  :root {
+    --logo-size: 65px;
+    --font-size-logo-9em: 16px;
+    --font-size-hello: 40px;
+    --font-size-nav: 20px;
+    --font-size-body: 14px;
+  }
+}
+
+/* ==========================================================================
+   2. Tablets: iPad & Galaxy Tab (820px - 1200px / iPad Pro 11": 834px)
+   ========================================================================== */
+@media screen and (min-width: 820px) {
+  :root {
+    --logo-size: 131px;
+    --font-size-logo-9em: 16px;
+    --font-size-hello: 40px;
+    --font-size-nav: 20px;
+    --font-size-body: 14px;
+    --viewport-gap: 20px;
+    --max-content-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   3. Standard Desktop (Laptops/Desktops: 1366px - 1512px)
+   ========================================================================== */
+@media screen and (min-width: 1366px) {
+  :root {
+    --logo-size: 131px;
+    --font-size-logo-9em: 300px;
+    --font-size-hello: 40px;
+    --font-size-nav: 20px;
+    --font-size-body: 14px;
+    --viewport-gap: 20px;
+    --max-content-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   4. 4K Smart TV & Ultra-Wide Displays (TV: 3840px+)
+   ========================================================================== */
+@media screen and (min-width: 3840px) {
+  :root {
+    /* Explicit Scaling for Large Screen Readability */
+    --viewport-gap: 60px;
+    --header-height: 240px;
+    --max-content-width: 3600px;
+
+    /* Scaled Component & Typography Variables */
+    --logo-size: 234px;
+    --font-size-logo-9em: 635px;
+    --font-size-hello: 710px;
+    --font-size-nav: 40px;
+    --font-size-body: 28px;
+  }
+}

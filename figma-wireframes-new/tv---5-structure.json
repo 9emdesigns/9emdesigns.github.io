@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "exportedAt": "2026-07-27T01:28:37.327Z",
+    "componentName": "TV - 5",
+    "totalElements": 26,
+    "nestingDepth": 11,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)",
+      "color-rgb(151, 71, 255)": "rgb(151, 71, 255)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)",
+      "color-rgb(0, 0, 0)": "rgb(0, 0, 0)",
+      "color-rgb(137, 250, 198)": "rgb(137, 250, 198)",
+      "color-rgb(30, 30, 30)": "rgb(30, 30, 30)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-40": "40px",
+          "size-51": "51px",
+          "size-460": "460px"
+        },
+        "weights": {
+          "weight-400": "400",
+          "weight-300": "300"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "tv---5",
+    "type": "FRAME",
+    "size": {
+      "w": 3840,
+      "h": 2160
+    },
+    "styles": {
+      "bg": "rgb(104, 94, 84)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "frame-5",
+        "type": "FRAME",
+        "size": {
+          "w": 1233,
+          "h": 1856
+        },
+        "styles": {
+          "bg": "rgb(151, 71, 255)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "nhlakancubeportraits-person-4096071-3",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 4583,
+              "h": 3055
+            }
+          }
+        ]
+      },
+      {
+        "name": "group-3",
+        "type": "GROUP",
+        "size": {
+          "w": 1306,
+          "h": 224
+        },
+        "children": [
+          {
+            "name": "group-2",
+            "type": "GROUP",
+            "size": {
+              "w": 767,
+              "h": 198
+            },
+            "children": [
+              {
+                "name": "home-aboutus-whatwedo-howwework",
+                "type": "TEXT",
+                "size": {
+                  "w": 328,
+                  "h": 198
+                },
+                "content": "home\naboutus\nwhatwedo\nhowwework",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 40,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "designconcept-portfolio-contact",
+                "type": "TEXT",
+                "size": {
+                  "w": 397,
+                  "h": 198
+                },
+                "content": "designconcept\nportfolio\ncontact",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 40,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "logo_9em-1",
+            "type": "FRAME",
+            "size": {
+              "w": 234,
+              "h": 224
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "group",
+                "type": "GROUP",
+                "size": {
+                  "w": 234,
+                  "h": 224
+                },
+                "children": [
+                  {
+                    "name": "group",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 234,
+                      "h": 224
+                    },
+                    "children": [
+                      {
+                        "name": "vector",
+                        "type": "VECTOR",
+                        "size": {
+                          "w": 234,
+                          "h": 224
+                        }
+                      },
+                      {
+                        "name": "group",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 234,
+                          "h": 224
+                        },
+                        "children": [
+                          {
+                            "name": "clip-path-group",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 234,
+                              "h": 224
+                            },
+                            "children": [
+                              {
+                                "name": "_clip1",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 234,
+                                  "h": 224
+                                },
+                                "children": [
+                                  {
+                                    "name": "vector",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 234,
+                                      "h": 224
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(0, 0, 0)"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "group",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 234,
+                                  "h": 224
+                                },
+                                "children": [
+                                  {
+                                    "name": "rect1",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 234,
+                                      "h": 224
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "vector",
+                                        "type": "VECTOR",
+                                        "size": {
+                                          "w": 234,
+                                          "h": 224
+                                        },
+                                        "styles": {
+                                          "bg": "rgb(104, 94, 84)"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "logo",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 123,
+                                      "h": 175
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "text1",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 69,
+                                          "h": 175
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 69,
+                                              "h": 175
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "text2",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 50,
+                                          "h": 35
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 50,
+                                              "h": 35
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "frame-4",
+        "type": "FRAME",
+        "size": {
+          "w": 2607,
+          "h": 1856
+        },
+        "styles": {
+          "bg": "rgb(137, 250, 198)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "at-9emdesign--our-branding-and-marketing-concept-is-deeply-rooted-in-an-audience-first-philosophy--we-believe-that-exceptional-design-shouldn-t-center-on-a-brand-s-ego--but-rather-on-the-real-people-that-brand-serves--by-shifting-the-focus-entirely-to-your-customers-the-individuals-interacting-with-your-product-or-service-we-intentionally-craft-experiences-that-resonate-with-their-specific-needs--desires--and-behaviors--every-strategy-we-build-and-every-visual-asset-we-create-is-engineered-to-foster-an-intuitive--meaningful-connection-between-your-business-and-the-people-who-matter-most-to-your-growth--to-achieve-this--we-champion-a-refined--minimalist-aesthetic-that-strips-away-unnecessary-visual-noise-and-distractions--by-prioritizing-clarity-over-clutter--we-allow-the-intrinsic-value-of-your-product-or-service-to-take-center-stage--this-deliberate-restraint-allows-us-to-seamlessly-guide-the-customer-through-a-clean--purposeful-journey--transforming-overwhelming-choices-into-a-transparent-experience--ultimately--our-design-framework-empowers-your-audience-with-the-exact-clarity-they-need-to-make-confident--well-informed-decisions-",
+            "type": "TEXT",
+            "size": {
+              "w": 1416,
+              "h": 1165
+            },
+            "content": "At 9emdesign, our branding and marketing concept is deeply rooted in an audience-first philosophy. We believe that exceptional design shouldn’t center on a brand’s ego, but rather on the real people that brand serves. By shifting the focus entirely to your customers—the individuals interacting with your product or service—we intentionally craft experiences that resonate with their specific needs, desires, and behaviors. Every strategy we build and every visual asset we create is engineered to foster an intuitive, meaningful connection between your business and the people who matter most to your growth.\nTo achieve this, we champion a refined, minimalist aesthetic that strips away unnecessary visual noise and distractions. By prioritizing clarity over clutter, we allow the intrinsic value of your product or service to take center stage. This deliberate restraint allows us to seamlessly guide the customer through a clean, purposeful journey, transforming overwhelming choices into a transparent experience. Ultimately, our design framework empowers your audience with the exact clarity they need to make confident, well-informed decisions.",
+            "styles": {
+              "bg": "rgb(30, 30, 30)",
+              "text": {
+                "family": "Antonio",
+                "size": 51,
+                "weight": "300",
+                "align": "justified"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "designconcept",
+        "type": "TEXT",
+        "size": {
+          "w": 2464,
+          "h": 420
+        },
+        "content": "DesignConcept",
+        "styles": {
+          "bg": "rgb(104, 94, 84)",
+          "text": {
+            "family": "Antonio",
+            "size": 460,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 4,
+    "texts": 4,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

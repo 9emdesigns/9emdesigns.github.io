@@ -1,0 +1,131 @@
+<main>
+  <section>
+    <h2 class="quickFAQ">QuickFAQ</h2>
+    <div class="feature_image">
+      <div class="contactUs">
+        <h1>Contact</h1>
+      </div>
+    </div>
+    <button class="main_btn" mat-flat-button routerLink="/service_form">
+      Service Qoutation Form
+    </button>
+
+    <div class="panel">
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-description>
+              What businesses does 9emdesign serve?
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>
+            <b>Answer</b> We proudly build affordable, high impact branding and
+            marketing solutions that are specifically tailored for small to
+            medium sized businesses. <br /><br />
+            <button mat-flat-button routerLink="/service_form">
+              Service Qoutation Form
+            </button>
+          </p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-description>
+              What are our core design philosophy?
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>
+            <b>Answer</b> Our core branding and marketing concept is deeply
+            rooted in an audience first philosophy focusing entirely on your
+            ultimate customer. <br /><br />
+            <button mat-flat-button routerLink="/service_form">
+              Service Qoutation Form
+            </button>
+          </p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-description>
+              What style does the studio champion?
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>
+            <b>Answer</b> We champion a refined minimalist aesthetic that
+            deliberately strips away unnecessary visual noise and distractions
+            to prioritize absolute user clarity. <br /><br />
+            <button mat-flat-button routerLink="/service_form">
+              Service Qoutation Form
+            </button>
+          </p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-description>
+              Why is a standalone logo insufficient?
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>
+            <b>Answer</b> A standalone logo in isolation easily looks great on
+            business cards but completely fails to scale on modern mobile
+            devices and work well on social media. <br /><br />
+            <button mat-flat-button routerLink="/service_form">
+              Service Qoutation Form
+            </button>
+          </p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </section>
+  <div class="icons">
+    <ul>
+      <li>
+        <svg
+          class="whatsapp"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM24.791 8.7998C16.9249 8.7998 10.5227 15.2018 10.5195 23.0703C10.5185 25.5855 11.1759 28.0408 12.4248 30.2051L10.4004 37.5996L17.9658 35.6152C20.0502 36.7521 22.3968 37.3517 24.7852 37.3525H24.791C32.6594 37.3493 39.0593 30.9478 39.0625 23.0811C39.0639 19.2681 37.58 15.6827 34.8857 12.9854C32.1914 10.288 28.6086 8.80147 24.791 8.7998Z"
+          />
+          <path
+            d="M24.7954 11.2104C27.9636 11.2115 30.9426 12.4469 33.1821 14.689C35.4215 16.931 36.654 19.9112 36.6528 23.0806C36.6502 29.6209 31.3291 34.9417 24.7915 34.9419H24.7866C22.6582 34.9411 20.5706 34.3692 18.7495 33.2886L18.3159 33.0317L13.8267 34.2095L15.0249 29.8325L14.7427 29.3833C13.5554 27.4949 12.9283 25.312 12.9292 23.0708C12.9319 16.5311 18.2528 11.2106 24.7954 11.2104ZM19.7388 16.48C19.5011 16.48 19.1144 16.5693 18.7876 16.9263C18.4607 17.2833 17.5396 18.146 17.5396 19.9009C17.5396 21.6558 18.817 23.351 18.9956 23.5894C19.1739 23.8274 21.5103 27.4295 25.0874 28.9741C25.9379 29.3414 26.6018 29.5608 27.1196 29.7251C27.9737 29.9965 28.7514 29.9585 29.3657 29.8667C30.0509 29.7644 31.4757 29.0033 31.773 28.1704C32.0698 27.3376 32.07 26.6238 31.981 26.4751C31.8919 26.3264 31.6539 26.2376 31.2974 26.0591C30.9409 25.8806 29.1883 25.0183 28.8608 24.8989C28.5341 24.78 28.2958 24.7198 28.0581 25.0767C27.8204 25.4336 27.1372 26.2371 26.9292 26.4751C26.7212 26.7129 26.5132 26.7425 26.1567 26.564C25.7998 26.3854 24.6512 26.0089 23.2896 24.7944C22.2297 23.849 21.5133 22.6819 21.3052 22.3247C21.0972 21.9677 21.2829 21.774 21.4614 21.5962C21.6218 21.4364 21.8184 21.1803 21.9966 20.9722C22.1747 20.7642 22.2343 20.615 22.353 20.3774C22.4718 20.1394 22.4128 19.9309 22.3237 19.7524C22.2346 19.574 21.5214 17.8192 21.2241 17.105C20.9349 16.4102 20.6412 16.5035 20.4224 16.4927C20.2147 16.4822 19.9764 16.48 19.7388 16.48Z"
+          />
+        </svg>
+        <a href="tel:59996777274">+(5999)6777274</a>
+      </li>
+      <li>
+        <svg
+          class="phone"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM16.7881 12C16.2395 12.1273 15.6877 12.2422 15.1416 12.3867C14.461 12.5704 13.9348 12.9823 13.5137 13.543C12.9774 14.2653 12.622 15.0732 12.3379 15.918C12.022 16.8535 11.9166 17.8041 12.0684 18.791C12.2006 19.6629 12.4942 20.4789 12.793 21.3018C13.2852 22.6657 13.8293 24.0026 14.5908 25.2441C15.759 27.1568 17.2044 28.8375 18.8232 30.3779C20.1015 31.59 21.4828 32.6746 23.001 33.5732C24.6737 34.5602 26.4908 35.2121 28.335 35.7803C29.29 36.079 30.2845 36.1594 31.2812 35.9365C32.3783 35.6916 33.4098 35.293 34.333 34.6465C34.6659 34.409 34.9959 34.1147 35.2285 33.7793C35.7844 32.9712 35.9442 32.0307 35.998 31.0732C36.0176 30.733 35.9025 30.4854 35.6162 30.3164C35.0848 29.998 34.5578 29.6645 34.0166 29.3535C33.0076 28.7731 31.9395 28.2907 30.9844 27.6074C30.8963 27.5439 30.7887 27.5001 30.6885 27.4512C30.3285 27.2699 29.9853 27.299 29.6719 27.5635C29.5176 27.6908 29.3588 27.8233 29.2266 27.9727C28.6756 28.5922 28.1413 29.2164 27.5879 29.8311C26.9928 30.4947 26.6942 30.5682 25.9277 30.1348C25.1148 29.6744 24.3089 29.1924 23.5352 28.666C21.527 27.3068 19.9375 25.543 18.6934 23.4688C18.3579 22.9079 18.0542 22.3348 17.748 21.7617C17.5497 21.3871 17.6252 21.0321 17.9189 20.748C18.2961 20.3856 18.698 20.0446 19.085 19.6895C19.5477 19.2659 20.028 18.8519 20.4639 18.4062C20.7697 18.0953 20.7798 17.7037 20.5742 17.3145C20.4738 17.143 20.3705 16.9664 20.2627 16.7949C20.1452 16.6138 20.0056 16.4424 19.9053 16.2539C19.5135 15.5511 19.1462 14.8361 18.7471 14.1406C18.4018 13.5382 18.0363 12.9501 17.6738 12.3623C17.5122 12.0957 17.2629 12.0244 16.9717 12.0488C16.9154 12.0562 16.859 12.0562 16.7881 12Z"
+          />
+        </svg>
+        <a href="tel:59996777274">+(5999)6777274</a>
+      </li>
+      <li>
+        <svg
+          class="mail"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM35.8545 20.1602C35.8545 20.1602 26.3893 25.293 24.334 25.293C22.462 25.2922 12.8544 20.1814 12.8154 20.1602L12.7998 31.6797C12.7998 32.7394 13.661 33.5995 14.7217 33.5996H33.9473C35.0098 33.5994 35.8701 32.7394 35.8701 31.6797L35.8545 20.1602ZM14.7217 14.4004C13.66 14.4005 12.7998 15.2606 12.7998 16.3203V17.1758C12.8204 17.1874 22.4601 22.6525 24.334 22.6533C26.2966 22.6533 35.8302 17.294 35.8545 17.2803L35.8701 16.3203C35.8701 15.2606 35.0098 14.4006 33.9473 14.4004H14.7217Z"
+          />
+        </svg>
+        <a href="mailto:9emdesign@gmail.com">9emdesign&#64;gmail.com</a>
+      </li>
+    </ul>
+  </div>
+  <div class="separator">&nbsp;</div>
+</main>

@@ -1,0 +1,413 @@
+{
+  "metadata": {
+    "exportedAt": "2026-07-27T01:23:01.792Z",
+    "componentName": "iPhone 13 mini - 1",
+    "totalElements": 28,
+    "nestingDepth": 11,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)",
+      "color-rgb(110, 160, 197)": "rgb(110, 160, 197)",
+      "color-rgb(143, 209, 106)": "rgb(143, 209, 106)",
+      "color-rgb(176, 237, 203)": "rgb(176, 237, 203)",
+      "color-rgb(151, 71, 255)": "rgb(151, 71, 255)",
+      "color-rgb(0, 0, 0)": "rgb(0, 0, 0)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)"
+    },
+    "fonts": {
+      "fredoka": {
+        "family": "Fredoka",
+        "sizes": {
+          "size-40": "40px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      },
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-20": "20px",
+          "size-16": "16px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "iphone-13-mini---1",
+    "type": "FRAME",
+    "size": {
+      "w": 390,
+      "h": 844
+    },
+    "styles": {
+      "bg": "rgb(104, 94, 84)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "frame-4",
+        "type": "FRAME",
+        "size": {
+          "w": 1420,
+          "h": 360
+        },
+        "styles": {
+          "bg": "rgb(110, 160, 197)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "hello",
+            "type": "TEXT",
+            "size": {
+              "w": 98,
+              "h": 91
+            },
+            "content": "Hello",
+            "styles": {
+              "bg": "rgb(143, 209, 106)",
+              "text": {
+                "family": "Fredoka",
+                "size": 40,
+                "weight": "400",
+                "align": "center"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "frame-2",
+        "type": "FRAME",
+        "size": {
+          "w": 1420,
+          "h": 397
+        },
+        "styles": {
+          "bg": "rgb(151, 71, 255)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "frame-1",
+            "type": "FRAME",
+            "size": {
+              "w": 1423,
+              "h": 470
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "nhlakancubeportraits-person-4096071-1",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 719,
+                  "h": 644
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "logo_9em-1",
+        "type": "FRAME",
+        "size": {
+          "w": 65,
+          "h": 65
+        },
+        "styles": {
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "group",
+            "type": "GROUP",
+            "size": {
+              "w": 65,
+              "h": 65
+            },
+            "children": [
+              {
+                "name": "group",
+                "type": "GROUP",
+                "size": {
+                  "w": 65,
+                  "h": 65
+                },
+                "children": [
+                  {
+                    "name": "vector",
+                    "type": "VECTOR",
+                    "size": {
+                      "w": 65,
+                      "h": 65
+                    }
+                  },
+                  {
+                    "name": "group",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 65,
+                      "h": 65
+                    },
+                    "children": [
+                      {
+                        "name": "clip-path-group",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 65,
+                          "h": 65
+                        },
+                        "children": [
+                          {
+                            "name": "_clip1",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 65,
+                              "h": 65
+                            },
+                            "children": [
+                              {
+                                "name": "vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 65,
+                                  "h": 65
+                                },
+                                "styles": {
+                                  "bg": "rgb(0, 0, 0)"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "group",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 65,
+                              "h": 65
+                            },
+                            "children": [
+                              {
+                                "name": "rect1",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 65,
+                                  "h": 65
+                                },
+                                "children": [
+                                  {
+                                    "name": "vector",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 65,
+                                      "h": 65
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(104, 94, 84)"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "logo",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 34,
+                                  "h": 51
+                                },
+                                "children": [
+                                  {
+                                    "name": "text1",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 19,
+                                      "h": 51
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "group",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 19,
+                                          "h": 51
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "vector",
+                                            "type": "VECTOR",
+                                            "size": {
+                                              "w": 19,
+                                              "h": 51
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(143, 209, 106)"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "text2",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 14,
+                                      "h": 10
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "group",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 14,
+                                          "h": 10
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 14,
+                                              "h": 10
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "group-2",
+        "type": "GROUP",
+        "size": {
+          "w": 259,
+          "h": 116
+        },
+        "children": [
+          {
+            "name": "home-aboutus-whatwedo-howwework",
+            "type": "TEXT",
+            "size": {
+              "w": 111,
+              "h": 116
+            },
+            "content": "home\naboutus\nwhatwedo\nhowwework",
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "text": {
+                "family": "Antonio",
+                "size": 20,
+                "weight": "400",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "name": "designconcept-portfolio-contact",
+            "type": "TEXT",
+            "size": {
+              "w": 134,
+              "h": 116
+            },
+            "content": "designconcept\nportfolio\ncontact",
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "text": {
+                "family": "Antonio",
+                "size": 20,
+                "weight": "400",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "9em-des-ign",
+        "type": "TEXT",
+        "size": {
+          "w": 444,
+          "h": 371
+        },
+        "content": "9em des ign",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Antonio",
+            "size": 16,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 5,
+    "texts": 4,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

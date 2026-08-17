@@ -1,0 +1,378 @@
+{
+  "metadata": {
+    "exportedAt": "2026-07-27T01:24:40.198Z",
+    "componentName": "iPad Pro 11\" - 2",
+    "totalElements": 26,
+    "nestingDepth": 11,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)",
+      "color-rgb(143, 209, 106)": "rgb(143, 209, 106)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)",
+      "color-rgb(0, 0, 0)": "rgb(0, 0, 0)",
+      "color-rgb(164, 208, 112)": "rgb(164, 208, 112)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-20": "20px",
+          "size-250": "250px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      },
+      "roboto": {
+        "family": "Roboto",
+        "sizes": {
+          "size-18": "18px"
+        },
+        "weights": {
+          "weight-300": "300"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "ipad-pro-11----2",
+    "type": "FRAME",
+    "size": {
+      "w": 834,
+      "h": 1194
+    },
+    "styles": {
+      "bg": "rgb(104, 94, 84)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "frame-12",
+        "type": "FRAME",
+        "size": {
+          "w": 1418,
+          "h": 374
+        },
+        "styles": {
+          "bg": "rgb(143, 209, 106)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "frame-1",
+            "type": "FRAME",
+            "size": {
+              "w": 1557,
+              "h": 594
+            },
+            "styles": {
+              "bg": "rgb(143, 209, 106)",
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "veroll-sterling-g3he6o_e1ts-unsplash-1",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 2082,
+                  "h": 1200
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "group-3",
+        "type": "GROUP",
+        "size": {
+          "w": 731,
+          "h": 131
+        },
+        "children": [
+          {
+            "name": "group-2",
+            "type": "GROUP",
+            "size": {
+              "w": 267,
+              "h": 116
+            },
+            "children": [
+              {
+                "name": "home-aboutus-whatwedo-howwework",
+                "type": "TEXT",
+                "size": {
+                  "w": 114,
+                  "h": 116
+                },
+                "content": "home\naboutus\nwhatwedo\nhowwework",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 20,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "designconcept-portfolio-contact",
+                "type": "TEXT",
+                "size": {
+                  "w": 138,
+                  "h": 116
+                },
+                "content": "designconcept\nportfolio\ncontact",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 20,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "logo_9em-1",
+            "type": "FRAME",
+            "size": {
+              "w": 131,
+              "h": 131
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "group",
+                "type": "GROUP",
+                "size": {
+                  "w": 131,
+                  "h": 131
+                },
+                "children": [
+                  {
+                    "name": "group",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 131,
+                      "h": 131
+                    },
+                    "children": [
+                      {
+                        "name": "vector",
+                        "type": "VECTOR",
+                        "size": {
+                          "w": 131,
+                          "h": 131
+                        }
+                      },
+                      {
+                        "name": "group",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 131,
+                          "h": 131
+                        },
+                        "children": [
+                          {
+                            "name": "clip-path-group",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 131,
+                              "h": 131
+                            },
+                            "children": [
+                              {
+                                "name": "_clip1",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 131,
+                                  "h": 131
+                                },
+                                "children": [
+                                  {
+                                    "name": "vector",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 131,
+                                      "h": 131
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(0, 0, 0)"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "group",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 131,
+                                  "h": 131
+                                },
+                                "children": [
+                                  {
+                                    "name": "rect1",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 131,
+                                      "h": 131
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "vector",
+                                        "type": "VECTOR",
+                                        "size": {
+                                          "w": 131,
+                                          "h": 131
+                                        },
+                                        "styles": {
+                                          "bg": "rgb(104, 94, 84)"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "logo",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 69,
+                                      "h": 102
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "text1",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 38,
+                                          "h": 102
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 38,
+                                              "h": 102
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "text2",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 28,
+                                          "h": 21
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 28,
+                                              "h": 21
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "at-9emdesign--we-build-affordable--high-impact-branding-and-marketing-solutions-specifically-tailored-for-small-to-medium-sized-businesses--our-studio-is-driven-by-a-customer-first-philosophy--utilizing-user-centered-design-and-agile-methodologies-to-ensure-every-asset-we-create-resonates-deeply-with-your-target-audience--we-specialize-in-bringing-our-clients-full-circle-transforming-foundational-concepts-into-complete-digital-ecosystems--even-if-you-come-to-us-simply-needing-a-standalone-logo--we-look-at-the-bigger-picture-to-show-you-how-that-single-spark-can-seamlessly-evolve-into-a-comprehensive--cost-effective-branding-and-marketing-package-that-elevates-your-business--our-process-is-entirely-collaborative--transparent--and-built-around-a-frictionless-customer-journey-from-start-to-finish--by-using-iterative-feedback-loops--we-guide-you-step-by-step-through-the-design-evolution--mapping-the-path-from-an-initial-visual-identity-straight-through-to-a-fully-finished--high-performing-website--this-agile-approach-eliminates-agency-friction-and-ensures-your-voice-is-heard-at-every-milestone--ultimately--we-bridge-the-gap-between-initial-strategy-and-final-product--equipping-your-business-with-a-unified--professional-market-presence-that-is-ready-to-scale-",
+        "type": "TEXT",
+        "size": {
+          "w": 710,
+          "h": 393
+        },
+        "content": "At 9emdesign, we build affordable, high-impact branding and marketing solutions specifically tailored for small to medium-sized businesses. Our studio is driven by a customer-first philosophy, utilizing user-centered design and agile methodologies to ensure every asset we create resonates deeply with your target audience. We specialize in bringing our clients full circle—transforming foundational concepts into complete digital ecosystems. Even if you come to us simply needing a standalone logo, we look at the bigger picture to show you how that single spark can seamlessly evolve into a comprehensive, cost-effective branding and marketing package that elevates your business.\nOur process is entirely collaborative, transparent, and built around a frictionless customer journey from start to finish. By using iterative feedback loops, we guide you step-by-step through the design evolution, mapping the path from an initial visual identity straight through to a fully finished, high-performing website. This agile approach eliminates agency friction and ensures your voice is heard at every milestone. Ultimately, we bridge the gap between initial strategy and final product, equipping your business with a unified, professional market presence that is ready to scale.",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Roboto",
+            "size": 18,
+            "weight": "300",
+            "align": "justified"
+          }
+        }
+      },
+      {
+        "name": "aboutus",
+        "type": "TEXT",
+        "size": {
+          "w": 750,
+          "h": 284
+        },
+        "content": "AboutUs",
+        "styles": {
+          "bg": "rgb(164, 208, 112)",
+          "text": {
+            "family": "Antonio",
+            "size": 250,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 4,
+    "texts": 4,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

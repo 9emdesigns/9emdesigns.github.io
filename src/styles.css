@@ -1,33 +1,73 @@
 @import "@angular/material/prebuilt-themes/cyan-orange.css";
+@import "../public/styles/media_Queries_breakpoints.css";
+
+/* Unified Antonio Font Family */
+@font-face {
+  font-family: "Antonio";
+  src:
+    url("assets/fonts/Antonio-Regular.woff2") format("woff2"),
+    url("assets/fonts/Antonio-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
-  font-family: "Antonio-regular";
-  src: url("/assets/fonts/Antonio-Regular.ttf") format("truetype");
+  font-family: "Antonio";
+  src:
+    url("assets/fonts/Antonio-Light.woff2") format("woff2"),
+    url("assets/fonts/Antonio-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "Antonio";
+  src:
+    url("assets/fonts/Antonio-Bold.woff2") format("woff2"),
+    url("assets/fonts/Antonio-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Legacy Font Family Mappings for Backward Compatibility */
+@font-face {
+  font-family: "Antonio-regular";
+  src:
+    url("assets/fonts/Antonio-Regular.woff2") format("woff2"),
+    url("assets/fonts/Antonio-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Antonio-light";
-  src: url("/assets/fonts/Antonio-Light.ttf") format("truetype");
-
+  src:
+    url("assets/fonts/Antonio-Light.woff2") format("woff2"),
+    url("assets/fonts/Antonio-Light.ttf") format("truetype");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Antonio-bold";
-  src: url("/assets/fonts/Antonio-Bold.ttf") format("truetype");
-
+  src:
+    url("assets/fonts/Antonio-Bold.woff2") format("woff2"),
+    url("assets/fonts/Antonio-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Fredoka";
-  src: url("/assets/fonts/Fredoka.ttf") format("truetype");
-
+  src:
+    url("assets/fonts/Fredoka.woff2") format("woff2"),
+    url("assets/fonts/Fredoka.ttf") format("truetype");
   font-style: normal;
   font-display: swap;
 }

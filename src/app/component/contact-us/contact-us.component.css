@@ -1,424 +1,499 @@
+/* ==========================================================================
+   Contact Us Component Layout Styles
+   Mapped strictly to variables & breakpoints in media_Queries_breakpoints.css
+   ========================================================================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Antonio-light";
 }
-main {
+
+:host {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Parent container: locks layout within dvh/dvw bounds */
+main.contact-container {
   width: 100dvw;
-  height: 80dvh;
+  height: calc(100dvh - var(--header-height, 120px));
   position: relative;
   top: 0;
-}
-
-.separator {
-  width: 100%;
-  height: 150px;
-  background-color: rgb(110, 160, 197);
-  mix-blend-mode: hard-light;
-  position: absolute;
-  bottom: -40px;
-}
-
-.contactUs {
-  position: absolute;
-  bottom: 260px;
-  background-color: transparent;
-  width: 100%;
-  & h1 {
-    position: absolute;
-    right: 0px;
-    bottom: 97px;
-    font-size: 14.5vw;
-    color: rgb(255, 255, 255);
-    font-family: "Antonio-regular", sans-serif;
-    font-weight: 400;
-    mix-blend-mode: overlay;
-    will-change: mix-blend-mode;
-  }
-}
-
-.quickFAQ {
-  font-family: "Antonio-light", sans-serif;
-  font-weight: 100;
-  font-size: 4vw;
-  color: snow;
-  position: absolute;
-  bottom: 600px;
-  left: 0px;
+  overflow: hidden;
   background-color: transparent;
 }
 
-:host button[mat-flat-button]:hover {
-  background-color: rgb(127, 16, 191);
-  color: snow;
+/* Inner section enforcing 20px viewport edge gaps */
+section.contact-section {
+  width: calc(100% - (2 * var(--viewport-gap, 20px)));
+  height: calc(100% - var(--viewport-gap, 20px));
+  position: absolute;
+  top: 0;
+  left: var(--viewport-gap, 20px);
+  right: var(--viewport-gap, 20px);
+  bottom: var(--viewport-gap, 20px);
+  z-index: 0;
+  overflow: hidden;
 }
-:host button[mat-flat-button] {
-  background-color: rgb(164, 208, 112);
-  color: rgb(0, 0, 0);
-  font-size: 10.5pt;
-  width: 210px;
+
+/* Character-level overlay blend mode */
+.letter {
+  mix-blend-mode: overlay;
+  will-change: mix-blend-mode;
+  display: inline-block;
+}
+
+/* Structural Accent Bars container */
+.accent-bars-container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.accent-bar-primary {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 156px;
+  background-color: var(--color-purple-dark, rgb(70, 34, 85));
+  z-index: 2;
+}
+
+.tv-layout-wrapper {
+  display: none;
+}
+
+/* ==========================================================================
+   Base / Laptop Viewport Layout (MacBook Pro 14": min-width: 1366px)
+   ========================================================================== */
+.image-wrapper {
+  width: 42%;
+  height: calc(100% - 156px);
+  position: absolute;
+  top: 0;
+  right: 180px;
+  z-index: 1;
+}
+
+.background-image-element {
+  filter: saturate(30%);
+  mix-blend-mode: luminosity;
+  background-blend-mode: luminosity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/dude_standing_at_wall.webp");
+  background-color: var(--color-lime-alt, rgb(164, 208, 112));
+  background-position: 13% 12%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.contact-title {
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-regular, 400);
+  color: var(--color-white, rgb(255, 255, 255));
+  font-size: clamp(120px, 15vw, 225px);
+  line-height: 0.85;
+  position: absolute;
+  bottom: 180px;
+  right: 0;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  letter-spacing: -0.02em;
+}
+
+/* Quick FAQ Heading & Panel Container */
+.faq-container {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 38%;
+  z-index: 5;
+}
+
+.quick-faq-heading {
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-light, 300);
+  font-size: clamp(28px, 3.5vw, 48px);
+  color: var(--color-white, rgb(255, 255, 255));
+  margin-bottom: 12px;
+}
+
+.panel {
+  width: 100%;
 }
 
 :host mat-expansion-panel {
   display: block;
-  width: 35%;
-  padding: 5px;
-
-  background-color: rgb(174, 198, 145);
-  color: rgb(0, 0, 0);
-  position: relative;
-  bottom: -200px;
+  width: 100%;
+  margin-bottom: 8px;
+  background-color: var(--color-accent-mint, rgb(176, 237, 203));
+  color: var(--color-black, rgb(0, 0, 0));
+  border-radius: 4px;
 }
 
 :host mat-panel-description {
-  color: rgb(0, 0, 0);
-  padding: 12px;
+  color: var(--color-black, rgb(0, 0, 0));
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-size: 15px;
+  font-weight: var(--font-weight-regular, 400);
 }
 
-.main_btn {
+:host button[mat-flat-button] {
+  background-color: var(--color-lime-alt, rgb(164, 208, 112));
+  color: var(--color-black, rgb(0, 0, 0));
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular, 400);
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+:host button[mat-flat-button]:hover {
+  background-color: var(--color-purple-dark, rgb(70, 34, 85));
+  color: var(--color-white, rgb(255, 255, 255));
+}
+
+/* Service Quotation Action Button */
+.main-btn {
   position: absolute;
-  right: 0px;
-  bottom: 370px;
+  top: 15px;
+  right: 0;
+  z-index: 10;
+  height: 48px;
+  padding: 0 24px;
 }
 
-.icons ul > li {
-  margin: 20px;
-  list-style-type: none;
-  position: relative;
-  bottom: -160px;
-  right: -790px;
+/* Contact Details / Icons list */
+.contact-details {
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+  z-index: 10;
+}
+
+.contact-info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-info-list li {
   display: flex;
   align-items: center;
-  font-family: "Antonio-light";
-  color: snow;
-
-  a:link {
-    color: rgb(164, 208, 112);
-    text-decoration: none;
-  }
-  a:visited {
-    color: aquamarine;
-    text-decoration: none;
-  }
-  a:hover {
-    color: snow;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-  a:active {
-    color: aquamarine;
-    text-decoration: none;
-  }
+  gap: 16px;
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-light, 300);
+  font-size: 16px;
+  color: var(--color-white, rgb(255, 255, 255));
 }
 
-.whatsapp {
-  fill: rgb(164, 208, 112);
-  padding-right: 20px;
-  width: 60px;
-  height: 60px;
+.contact-info-list svg {
+  fill: var(--color-lime-alt, rgb(164, 208, 112));
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
 }
 
-.phone {
-  fill: rgb(164, 208, 112);
-  padding-right: 20px;
-  width: 60px;
-  height: 60px;
+.contact-info-list a:link,
+.contact-info-list a:visited {
+  color: var(--color-lime-alt, rgb(164, 208, 112));
+  text-decoration: none;
 }
 
-.mail {
-  fill: rgb(164, 208, 112);
-  padding-right: 20px;
-  width: 60px;
-  height: 60px;
-}
-.feature_image {
-  background-image: url("/images/dude_standing_at_wall.webp");
-  width: calc(30% - 49px);
-  aspect-ratio: 111 / 111;
-  height: auto;
-  background-size: 325%;
-  background-position: 13% 12%;
-  background-repeat: no-repeat;
-  background-blend-mode: luminosity;
-  background-color: rgb(164, 208, 112);
-  position: absolute;
-  right: 255px;
-  bottom: -70px;
-  isolation: isolate;
+.contact-info-list a:hover {
+  color: var(--color-white, rgb(255, 255, 255));
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-.body p {
-  font-family: "Antonio-light";
-  font-size: 14pt;
-  line-height: 20pt;
-  text-align: justify;
-  word-spacing: 5px;
-  font-weight: 100;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  bottom: 48px;
-  right: 893px;
-  width: 25dvw;
-  height: auto;
-}
-
-section {
-  width: calc(100% - 50px);
-  height: calc(100% - 50px);
-  position: absolute;
-  top: 20px;
-  left: 20px;
+.contact-info-list a:active {
+  color: var(--color-text-neon, rgb(137, 250, 198));
 }
 
 /* ==========================================================================
-     Media Query Breakpoints
+   1. Mobile Viewport (iPhone 13 Mini: < 820px)
    ========================================================================== */
+@media screen and (max-width: 819px) {
+  main.contact-container {
+    height: calc(100dvh - var(--header-height, 120px));
+  }
 
-/* ==========================================================================
-   1. Mobile Devices (375px - 440px)
-   ========================================================================== */
-@media screen and (min-width: 375px) and (max-width: 440px) {
-  /* Target: Small to large modern smartphones */
-
-  .panel {
+  .faq-container,
+  .accent-bars-container,
+  .tv-layout-wrapper {
     display: none !important;
   }
-  .separator {
-    display: none;
-  }
-  .contactUs {
+
+  .image-wrapper {
     position: absolute;
-    bottom: 250px;
-    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    & h1 {
-      position: absolute;
-      right: 0px;
-      bottom: 345px;
-      font-size: 80pt;
-      color: rgb(255, 255, 255);
-      font-family: "Antonio-regular", sans-serif;
-      font-weight: 400;
-      mix-blend-mode: overlay;
-      will-change: mix-blend-mode;
-    }
-  }
-  .quickFAQ {
-    display: none;
-  }
-  .main_btn {
-    position: absolute;
-    left: 105px;
-    bottom: 320px;
+    height: 48%;
+    z-index: 1;
   }
 
-  .icons ul > li {
-    margin: 20px;
-    list-style-type: none;
-    position: relative;
-    bottom: -80px;
-    left: 70px;
-    display: flex;
-    align-items: center;
-    font-family: "Antonio-light";
-    color: snow;
-    background-color: transparent;
-
-    a:link {
-      color: rgb(164, 208, 112);
-      text-decoration: none;
-    }
-    a:visited {
-      color: aquamarine;
-      text-decoration: none;
-    }
-    a:hover {
-      color: snow;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-    a:active {
-      color: aquamarine;
-      text-decoration: none;
-    }
-  }
-
-  .whatsapp {
-    fill: rgb(164, 208, 112);
-    padding-right: 20px;
-    width: 60px;
-    height: 60px;
-  }
-
-  .phone {
-    fill: rgb(164, 208, 112);
-    padding-right: 20px;
-    width: 60px;
-    height: 60px;
-  }
-
-  .mail {
-    fill: rgb(164, 208, 112);
-    padding-right: 20px;
-    width: 60px;
-    height: 60px;
-  }
-
-  .feature_image {
+  .background-image-element {
     background-image: url("/images/dude_standing_at_wall.webp");
-    width: 100%;
-    height: 50%;
-    background-size: 325%;
-    background-position: 13% 12%;
-    background-repeat: no-repeat;
-    background-blend-mode: luminosity;
-    background-color: rgb(164, 208, 112);
+    background-color: var(--color-accent-green, rgb(143, 209, 106));
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .contact-title {
     position: absolute;
-    right: 0px;
-    bottom: -70px;
-    isolation: isolate;
-  }
-}
-
-/*  ==========================================================================
-   2. Tablets: iPad & Galaxy Tab (820px - 1200px)
-   ========================================================================== */
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  /*Target: Both iPad and Galaxy Tab in portrait/landscape within this range*/
-  main {
-    width: 100dvw;
-    height: 84dvh;
-    position: relative;
-    top: 0;
-  }
-
-  .panel {
-    display: inline-block;
+    bottom: 42%;
+    right: 0;
+    width: 100%;
+    font-size: 20vw;
+    line-height: 0.85;
+    color: var(--color-white, rgb(255, 255, 255));
+    text-align: right;
     z-index: 10;
-    position: relative;
-    top: -90px;
-  }
-  .separator {
-    display: none;
-  }
-  .contactUs {
-    position: absolute;
-    bottom: 250px;
-    background-color: transparent;
-    width: 100%;
-    & h1 {
-      position: absolute;
-      left: 0px;
-      bottom: -50px;
-      font-size: 33vw;
-      color: rgb(255, 255, 255);
-      font-family: "Antonio-regular", sans-serif;
-      font-weight: 400;
-      mix-blend-mode: overlay;
-      will-change: mix-blend-mode;
-    }
-  }
-  .quickFAQ {
-    display: block;
-    position: absolute;
-    left: 0px;
-    top: 20px;
-  }
-  .main_btn {
-    position: absolute;
-    right: 120px;
-    bottom: 740px;
-    width: 350px !important;
-    height: 80px !important;
-    font-size: 1.2em !important;
+    margin: 0;
   }
 
-  .icons ul > li {
-    margin: 20px;
-    list-style-type: none;
+  .main-btn {
     position: relative;
-    bottom: -125px;
-    left: 590px;
+    top: 10px;
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
+  .contact-details {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 100%;
     display: flex;
-    align-items: center;
-    font-family: "Antonio-light";
-    color: snow;
-    background-color: transparent;
-
-    a:link {
-      color: rgb(164, 208, 112);
-      text-decoration: none;
-    }
-    a:visited {
-      color: aquamarine;
-      text-decoration: none;
-    }
-    a:hover {
-      color: snow;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-    a:active {
-      color: aquamarine;
-      text-decoration: none;
-    }
+    justify-content: center;
+    z-index: 10;
   }
 
-  .whatsapp {
-    fill: rgb(164, 208, 112);
-    padding-right: 20px;
-    width: 60px;
-    height: 60px;
+  .contact-info-list {
+    gap: 12px;
   }
 
-  .phone {
-    fill: rgb(164, 208, 112);
-    padding-right: 20px;
-    width: 60px;
-    height: 60px;
+  .contact-info-list li {
+    font-size: 14px;
   }
 
-  .mail {
-    fill: rgb(164, 208, 112);
-    padding-right: 20px;
-    width: 60px;
-    height: 60px;
+  .contact-info-list svg {
+    width: 32px;
+    height: 32px;
   }
-
-  .feature_image {
-    background-image: url("/images/dude_standing_at_wall.webp");
-    width: 100%;
-    height: 695px;
-    background-size: 325%;
-    background-position: 13% 12%;
-    background-repeat: no-repeat;
-    background-blend-mode: luminosity;
-    background-color: rgb(164, 208, 112);
-    position: absolute;
-    right: 0px;
-    bottom: -70px;
-    isolation: isolate;
-  }
-}
-
-/* iPad specific workaround (Targets Apple's WebKit behavior) */
-@media screen and (min-width: 820px) and (max-width: 1200px) and (-webkit-touch-callout: none) {
-  /* Target: iPad specifically */
-}
-
-/* Galaxy Tab specific workaround (Targets standard touch devices that aren't iOS) */
-@media screen and (min-width: 820px) and (max-width: 1200px) and (pointer: coarse) and (pointer: fine) {
-  /* Target: Galaxy Tab / Android Tablets specifically */
 }
 
 /* ==========================================================================
-   3. Half Safari Page (Exactly 828px)
+   2. Tablet Viewport (iPad Pro 11": 820px to 1365px)
    ========================================================================== */
-@media screen and (width: 828px) {
-  /* Target: Safari split-screen / half page on standard Mac displays */
+@media screen and (min-width: 820px) and (max-width: 1365px) {
+  main.contact-container {
+    height: calc(100dvh - var(--header-height, 120px));
+  }
+
+  .accent-bars-container,
+  .tv-layout-wrapper {
+    display: none !important;
+  }
+
+  .faq-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    z-index: 5;
+  }
+
+  .contact-title {
+    position: relative;
+    width: 100%;
+    font-size: 28vw;
+    line-height: 0.85;
+    color: var(--color-white, rgb(255, 255, 255));
+    text-align: right;
+    margin-top: 10px;
+    z-index: 10;
+    bottom: auto;
+    right: auto;
+  }
+
+  .image-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 44%;
+    z-index: 1;
+  }
+
+  .background-image-element {
+    background-image: url("/images/dude_standing_at_wall.webp");
+    background-color: var(--color-accent-green, rgb(143, 209, 106));
+    background-size: cover;
+    background-position: center;
+  }
+
+  .main-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 54px;
+    font-size: 16px;
+  }
+
+  .contact-details {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10;
+  }
 }
 
-@media screen and (min-width: 1366px) and (max-width: 1440px) {
-  /* Target: Standard laptops, MacBook Air/Pro base resolutions */
+/* ==========================================================================
+   3. Desktop Linux Viewport Overrides (Desktop 2: min-width: 1440px)
+   ========================================================================== */
+@media screen and (min-width: 1440px) and (max-width: 3839px) {
+  .background-image-element {
+    background-color: var(--color-accent-green, rgb(143, 209, 106));
+  }
+
+  .image-wrapper {
+    height: calc(100% - 156px);
+  }
+
+  .accent-bar-primary {
+    height: 156px;
+    bottom: 0;
+    background-color: var(--color-purple-dark, rgb(70, 34, 85));
+  }
+
+  .contact-title {
+    bottom: 180px;
+    color: var(--color-white, rgb(255, 255, 255));
+  }
+}
+
+/* ==========================================================================
+   4. 4K Smart TV & Ultra-wide Displays (TV: min-width: 3840px)
+   ========================================================================== */
+@media screen and (min-width: 3840px) {
+  main.contact-container {
+    height: calc(100dvh - var(--header-height, 240px));
+  }
+
+  section.contact-section {
+    width: calc(100% - (2 * var(--viewport-gap, 60px)));
+    height: calc(100% - var(--viewport-gap, 60px));
+    left: var(--viewport-gap, 60px);
+    right: var(--viewport-gap, 60px);
+    bottom: var(--viewport-gap, 60px);
+  }
+
+  .image-wrapper,
+  .accent-bars-container,
+  .faq-container,
+  .contact-details,
+  .main-btn {
+    display: none !important;
+  }
+
+  .tv-layout-wrapper {
+    display: flex !important;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .tv-left-column {
+    width: 32%;
+    height: 100%;
+    position: relative;
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
+  }
+
+  .tv-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/dude_standing_at_wall.webp");
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
+    background-blend-mode: luminosity;
+    mix-blend-mode: luminosity;
+    filter: saturate(30%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .tv-right-column {
+    width: 68%;
+    height: 100%;
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tv-contact-info {
+    position: relative;
+    z-index: 5;
+    color: var(--color-dark, rgb(30, 30, 30));
+    font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  }
+
+  .tv-contact-info h2 {
+    font-size: 80px;
+    font-weight: var(--font-weight-regular, 400);
+    margin-bottom: 40px;
+  }
+
+  .tv-info-list {
+    list-style: none;
+    font-size: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .tv-btn {
+    height: 100px !important;
+    font-size: 36px !important;
+    padding: 0 60px !important;
+  }
+
+  .contact-title {
+    display: block !important;
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    z-index: 10;
+    font-size: var(--font-size-logo-9em, 635px);
+    line-height: 0.85;
+    color: var(--color-dark, rgb(30, 30, 30));
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+  }
 }
