@@ -109,7 +109,7 @@ section.design-concept-section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("images/dude_looking_up.webp");
+  background-image: url("../../../../public/images/dude_looking_up.webp");
   background-color: var(--color-accent-purple, rgb(110, 160, 197));
   background-position: 53% 32%;
   background-size: 325%;
@@ -210,7 +210,7 @@ section.design-concept-section {
   }
 
   .background-image-element {
-    background-image: url("images/dude_looking_up.webp");
+    background-image: url("../../../../public/images/dude_looking_up.webp");
     background-color: var(--color-accent-purple, rgb(151, 71, 255));
     background-size: cover;
     background-position: center top;
@@ -299,7 +299,7 @@ section.design-concept-section {
   }
 
   .background-image-element {
-    background-image: url("images/dude_looking_up.webp");
+    background-image: url("../../../../public/images/dude_looking_up.webp");
     background-color: var(--color-accent-purple, rgb(151, 71, 255));
     background-size: cover;
     background-position: center;
@@ -389,7 +389,7 @@ section.design-concept-section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("images/dude_looking_up.webp");
+    background-image: url("../../../../public/images/dude_looking_up.webp");
     background-color: var(--color-accent-purple, rgb(151, 71, 255));
     background-blend-mode: luminosity;
     filter: saturate(30%);

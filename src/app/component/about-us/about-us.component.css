@@ -80,7 +80,7 @@ section.about-section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/images/dude_framing_for_design.webp");
+  background-image: url("../../../../public/images/dude_framing_for_design.webp");
   background-color: var(--color-lime-alt, rgb(164, 208, 112));
   background-position: center;
   background-size: cover;
@@ -185,7 +185,7 @@ section.about-section {
   }
 
   .background-image-element {
-    background-image: url("/images/dude_framing_for_design.webp");
+    background-image: url("../../../../public/images/dude_framing_for_design.webp");
     background-color: var(--color-accent-green, rgb(143, 209, 106));
     background-size: cover;
     background-position: center top;
@@ -262,7 +262,7 @@ section.about-section {
   }
 
   .background-image-element {
-    background-image: url("images/dude_framing_for_design.webp");
+    background-image: url("../../../../public/images/dude_framing_for_design.webp");
     background-color: var(--color-accent-green, rgb(143, 209, 106));
     background-size: cover;
     background-position: center;
@@ -340,7 +340,7 @@ section.about-section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("images/dude_looking_up.webp");
+    background-image: url("../../../../public/images/dude_looking_up.webp");
     background-color: var(--color-text-neon, rgb(137, 250, 198));
     background-blend-mode: luminosity;
     mix-blend-mode: luminosity;
