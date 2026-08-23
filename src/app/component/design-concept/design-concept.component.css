@@ -36,23 +36,24 @@ section.design-concept-section {
   bottom: var(--viewport-gap, 20px);
   z-index: 0;
   overflow: hidden;
+  isolation: isolate;
 }
 
 /* Character-level overlay blend mode */
 .letter {
   mix-blend-mode: overlay;
-  will-change: mix-blend-mode;
   display: inline-block;
 }
 
 .purple-text {
   color: var(--color-purple-dark, rgb(70, 34, 85));
+  z-index: 2 !important;
 }
 
 /* Subheading Labels */
 .communication-heading-container {
   position: absolute;
-  top: 10px;
+  bottom: 715px;
   left: 360px;
   z-index: 6;
   pointer-events: none;
@@ -80,7 +81,7 @@ section.design-concept-section {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: auto;
   pointer-events: none;
 }
 
@@ -102,26 +103,24 @@ section.design-concept-section {
 
 .background-image-element {
   filter: saturate(30%);
-  mix-blend-mode: luminosity;
   background-blend-mode: luminosity;
   position: absolute;
-  top: 0;
+  top: 255px;
   left: 0;
   width: 100%;
   height: 100%;
   background-image: url("/images/dude_looking_up.webp");
-  background-color: var(--color-accent-blue, rgb(110, 160, 197));
+  background-color: var(--color-accent-purple, rgb(110, 160, 197));
   background-position: 53% 32%;
   background-size: 325%;
   background-repeat: no-repeat;
   z-index: 0;
-  isolation: isolate;
 }
 
 .text-content {
   position: absolute;
-  bottom: 100px;
-  left: 0;
+  bottom: 375px;
+  left: 360px;
   width: 25dvw;
   font-family: var(--font-family-antonio, "Antonio", sans-serif);
   font-weight: var(--font-weight-light, 300);
@@ -144,13 +143,13 @@ section.design-concept-section {
   left: 0;
   width: 100%;
   height: 83px;
-  background-color: var(--color-lime-alt, rgb(164, 208, 112));
+  background-color: var(--color-lime-alt, rgb(164, 208, 112)) !important;
   mix-blend-mode: hard-light;
   z-index: 2;
 }
 
 .accent-bar-primary {
-  display: none;
+  display: none !important;
 }
 
 .design-concept-title {
@@ -202,7 +201,7 @@ section.design-concept-section {
 
   .image-wrapper {
     position: absolute;
-    bottom: 0;
+    top: 150px;
     left: 0;
     right: 0;
     width: 100%;
@@ -219,8 +218,8 @@ section.design-concept-section {
 
   .design-concept-title {
     position: absolute;
-    bottom: 15%;
-    right: 0;
+    bottom: 250px;
+    right: 30px;
     width: 100%;
     font-size: 15vw;
     line-height: 0.85;
@@ -241,6 +240,10 @@ section.design-concept-section {
 @media screen and (min-width: 820px) and (max-width: 1365px) {
   main.design-concept-container {
     height: calc(100dvh - var(--header-height, 120px));
+    width: calc(100dvw + (2 * var(--viewport-gap, 40px)));
+    position: relative;
+    top: 47px;
+    left: -20px;
   }
 
   .accent-bars-container,
@@ -260,6 +263,7 @@ section.design-concept-section {
     z-index: 5;
     margin-top: 0;
     bottom: auto;
+    padding: 0 20px;
   }
 
   .text-content .paragraph-second {
@@ -268,15 +272,16 @@ section.design-concept-section {
 
   .design-concept-title {
     position: absolute;
-    top: 280px;
-    right: 0;
+    top: 490px;
+    right: 10px;
     width: 100%;
-    font-size: 17vw;
+    font-size: 18vw;
     line-height: 0.85;
     color: var(--color-white, rgb(255, 255, 255));
     text-align: right;
     z-index: 10;
     bottom: auto;
+    padding: 0 20px;
   }
 
   .purple-text {
@@ -285,7 +290,7 @@ section.design-concept-section {
 
   .image-wrapper {
     position: absolute;
-    bottom: 0;
+    top: 230px;
     left: 0;
     right: 0;
     width: 100%;
@@ -316,12 +321,27 @@ section.design-concept-section {
   .accent-bar-secondary {
     height: 257px;
     bottom: 0;
-    background-color: var(--color-purple-dark, rgb(70, 34, 85));
-    mix-blend-mode: normal;
+    background-color: var(--color-lime-alt, rgb(164, 208, 112));
+    mix-blend-mode: hard-light;
   }
-
+  .text-content {
+    position: absolute;
+    bottom: 300px;
+    left: 160px;
+    width: 30dvw;
+    font-family: var(--font-family-antonio, "Antonio", sans-serif);
+    font-weight: var(--font-weight-light, 300);
+    font-size: var(--font-size-body, 14px);
+    line-height: 1.45;
+    color: var(--color-white, rgb(255, 255, 255));
+    text-align: justify;
+    word-spacing: 2px;
+    z-index: 5;
+    margin: 0;
+  }
   .design-concept-title {
-    bottom: 140px;
+    bottom: 720px;
+    left: 835px;
     color: var(--color-white, rgb(255, 255, 255));
   }
 }
@@ -372,7 +392,6 @@ section.design-concept-section {
     background-image: url("/images/dude_looking_up.webp");
     background-color: var(--color-accent-purple, rgb(151, 71, 255));
     background-blend-mode: luminosity;
-    mix-blend-mode: luminosity;
     filter: saturate(30%);
     background-size: cover;
     background-position: center;
@@ -409,7 +428,7 @@ section.design-concept-section {
     display: block !important;
     position: absolute;
     bottom: 40px;
-    left: 60px;
+    left: 1250px;
     right: auto;
     z-index: 10;
     font-size: 460px;
@@ -418,5 +437,6 @@ section.design-concept-section {
     margin: 0;
     padding: 0;
     pointer-events: none;
+    mix-blend-mode: overlay;
   }
 }

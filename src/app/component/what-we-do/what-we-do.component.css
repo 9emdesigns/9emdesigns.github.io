@@ -36,6 +36,7 @@ section.what-we-do-section {
   bottom: var(--viewport-gap, 20px);
   z-index: 0;
   overflow: hidden;
+  isolation: isolate;
 }
 
 /* Character/Text level overlay blend mode */
@@ -67,7 +68,7 @@ section.what-we-do-section {
 .subtitle-visual {
   font-family: var(--font-family-antonio, "Antonio", sans-serif);
   font-weight: var(--font-weight-light, 300);
-  font-size: clamp(60px, 6.8vw, 100px);
+  font-size: clamp(100px, 100vw, 133px);
   color: var(--color-white, rgb(255, 255, 255));
   line-height: 1;
   margin: 0;
@@ -86,7 +87,7 @@ section.what-we-do-section {
 .title-wrapper {
   position: absolute;
   bottom: 40px;
-  left: 0;
+  right: 0px;
   z-index: 10;
   pointer-events: none;
 }
@@ -106,9 +107,9 @@ section.what-we-do-section {
 /* Main narrative text body */
 .text-content {
   position: absolute;
-  top: 10px;
+  bottom: 490px;
   right: 0;
-  width: 45%;
+  width: 35%;
   font-family: var(--font-family-roboto, "Roboto", sans-serif);
   font-weight: var(--font-weight-light, 300);
   font-size: var(--font-size-body, 14px);
@@ -131,28 +132,27 @@ section.what-we-do-section {
 
 .image-framing {
   position: absolute;
-  top: 0;
+  bottom: -260px;
   left: 0;
   width: 100%;
   height: 100%;
   background-image: url("/images/dude_framing_for_design.webp");
   background-color: var(--color-blue-sky, rgb(95, 168, 211));
   background-blend-mode: luminosity;
-  mix-blend-mode: luminosity;
   filter: saturate(30%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.feature-image-2 {
+/* .feature-image-2 {
   position: absolute;
   bottom: 0;
   right: 260px;
   width: calc(20.5% - 10px);
   height: 180px;
   z-index: 1;
-}
+} */
 
 .image-standing {
   position: absolute;
@@ -233,17 +233,18 @@ section.what-we-do-section {
 
   .title-wrapper {
     position: absolute;
-    bottom: 18%;
+    bottom: 255px;
     left: 0;
     width: 100%;
     z-index: 10;
   }
 
   .main-title {
-    font-size: 19vw;
+    font-size: 23vw;
     line-height: 0.85;
     color: var(--color-white, rgb(255, 255, 255));
     text-align: left;
+    mix-blend-mode: overlay;
   }
 
   .purple-text {
@@ -257,6 +258,10 @@ section.what-we-do-section {
 @media screen and (min-width: 820px) and (max-width: 1365px) {
   main.what-we-do-container {
     height: calc(100dvh - var(--header-height, 120px));
+    width: calc(100dvw + (2 * var(--viewport-gap, 40px)));
+    position: relative;
+    top: 47px;
+    left: -20px;
   }
 
   .headings-group,
@@ -268,8 +273,8 @@ section.what-we-do-section {
   }
 
   .text-content {
-    position: relative;
-    top: 0;
+    position: absolute;
+    bottom: 650px;
     right: auto;
     width: 100%;
     font-size: 17px;
@@ -277,6 +282,7 @@ section.what-we-do-section {
     color: var(--color-white, rgb(255, 255, 255));
     z-index: 5;
     margin: 0;
+    padding: 0 20px;
   }
 
   .feature-image-2 {
@@ -298,17 +304,18 @@ section.what-we-do-section {
 
   .title-wrapper {
     position: absolute;
-    bottom: 12%;
+    bottom: 328px;
     left: 0;
     width: 100%;
     z-index: 10;
   }
 
   .main-title {
-    font-size: 21.8vw;
+    font-size: 24.5vw;
     line-height: 0.85;
     color: var(--color-white, rgb(255, 255, 255));
     text-align: left;
+    padding: 0 20px;
   }
 
   .purple-text {
@@ -332,10 +339,22 @@ section.what-we-do-section {
     width: 100%;
     height: 236px;
     background-color: var(--color-blue-mid, rgb(77, 145, 196));
+    mix-blend-mode: hard-light;
     z-index: 2;
     pointer-events: none;
   }
-
+  .text-content {
+    position: absolute;
+    bottom: 410px;
+    right: 0;
+    width: 55%;
+    font-size: 17px;
+    line-height: 1.45;
+    color: var(--color-white, rgb(255, 255, 255));
+    z-index: 5;
+    margin: 0;
+    padding: 0 20px;
+  }
   .feature-image-1 {
     width: 37%;
     height: calc(100% - 250px);
@@ -359,7 +378,7 @@ section.what-we-do-section {
   }
 
   .title-wrapper {
-    bottom: 120px;
+    bottom: 233px;
   }
 
   .purple-text {
@@ -446,4 +465,3 @@ section.what-we-do-section {
     pointer-events: none;
   }
 }
-
