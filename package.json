@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:9emdesigns.github.io": "node dist/server/server.mjs",
-    "deploy": "ng build --configuration production --base-href / && cp -r docs/browser/* docs/ && rm -rf docs/browser"
+    "deploy": "ng build --configuration production --base-href / && cp -r docs/browser/* docs/ && rm -rf docs/browser && touch docs/.nojekyll && cp docs/index.html docs/404.html"
   },
   "private": true,
   "dependencies": {
