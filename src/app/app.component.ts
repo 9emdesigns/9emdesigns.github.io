@@ -5,7 +5,7 @@ import {
   NavigationEnd,
   ActivatedRoute,
 } from '@angular/router';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { filter, map, mergeMap } from 'rxjs/operators';
 import { HeaderComponent } from './component/header/header.component';
 import { AnalyticsService } from './services/analytics.service';
@@ -24,7 +24,9 @@ export class AppComponent implements OnInit {
   private router = inject(Router);
   private activatedRoute = inject(ActivatedRoute);
   private meta = inject(Meta);
+  private titleService = inject(Title); // <-- Inject Title Service
   private analyticsService = inject(AnalyticsService);
+
   ngOnInit() {
     this.router.events
       .pipe(
@@ -36,8 +38,8 @@ export class AppComponent implements OnInit {
         // Get the clean URL path (e.g., '/blog' or '/portfolio')
         const pagePath = event.urlAfterRedirects;
 
-        // Dynamic fallback for title if you aren't using Angular's Title service yet
-        const pageTitle = document.title;
+        // SSR-safe alternative to document.title
+        const pageTitle = this.titleService.getTitle();
 
         this.analyticsService.trackPageView(pagePath, pageTitle);
       });
