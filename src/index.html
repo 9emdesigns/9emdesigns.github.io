@@ -11,10 +11,34 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/9emIcon001.png" />
 
     <!-- Font Preloads for Fast Rendering & DevTools Optimization -->
-    <link rel="preload" href="assets/fonts/Antonio-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="assets/fonts/Antonio-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="assets/fonts/Antonio-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="assets/fonts/Fredoka.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link
+      rel="preload"
+      href="assets/fonts/Antonio-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/Antonio-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/Antonio-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/Fredoka.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
 
     <!-- Speculation Rules API for Chrome DevTools Speculative Loads & Prerendering -->
     <script type="speculationrules">
@@ -22,7 +46,15 @@
         "prerender": [
           {
             "source": "list",
-            "urls": ["/", "/aboutUs", "/designConcept", "/whatWeDo", "/howWeWork", "/contactUs", "/service_form"]
+            "urls": [
+              "/",
+              "/aboutUs",
+              "/designConcept",
+              "/whatWeDo",
+              "/howWeWork",
+              "/contactUs",
+              "/service_form"
+            ]
           }
         ],
         "prefetch": [
@@ -34,6 +66,20 @@
           }
         ]
       }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7DVH2L4ERE"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-7DVH2L4ERE");
     </script>
   </head>
   <body>
