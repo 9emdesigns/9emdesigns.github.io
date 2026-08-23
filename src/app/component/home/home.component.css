@@ -133,7 +133,7 @@ section.hero-section {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-image: url("../../../../public/images/dude_standing_at_wall.webp");
+    background-image: url("../../../../public/images/dude_looking_up.webp");
     background-color: var(--color-accent-blue, rgb(110, 160, 197));
     background-position: center -40px;
     background-size: cover;
