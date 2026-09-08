@@ -1,0 +1,323 @@
+:root {
+  /* --- Color Tokens --- */
+  --color-black: rgb(0, 0, 0);
+  --color-white: rgb(255, 255, 255);
+  --color-body-bg: rgb(80, 69, 60);
+  --color-bg-primary: rgb(104, 94, 84);
+  --color-text-neon: rgb(137, 250, 198);
+  --color-accent-green: rgb(143, 209, 106);
+  --color-accent-blue: rgb(110, 160, 197);
+  --color-accent-mint: rgb(176, 237, 203);
+  --color-accent-purple: rgb(151, 71, 255);
+  --color-lime: rgb(164, 208, 111);
+  --color-lime-alt: rgb(164, 208, 112);
+  --color-blue-mid: rgb(77, 145, 196);
+  --color-blue-sky: rgb(95, 168, 211);
+  --color-purple-dark: rgb(70, 34, 85);
+  --color-grey-light: rgb(217, 217, 217);
+  --color-grey-alt: rgb(218, 218, 218);
+  --color-dark: rgb(30, 30, 30);
+
+  /* --- Typography Tokens --- */
+  --font-family-antonio: "Antonio", sans-serif;
+  --font-family-fredoka: "Fredoka", sans-serif;
+  --font-family-roboto: "Roboto", sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* --- Layout & Spacing Tokens (Base: Mobile-First Defaults < 390px) --- */
+  --viewport-gap: 16px;
+  --header-height: 110px;
+  --max-content-width: 100%;
+
+  /* --- Component-Specific Tokens (Mobile-First Defaults) --- */
+  --logo-size: 58px;
+  --font-size-logo-9em: 15px;
+  --font-size-hello: 36px;
+  --font-size-nav: 15px;
+  --nav-item-height: 24px;
+  --nav-line-height: 20px;
+  --nav-offset: 24px;
+  --nav-gap: 20px;
+  --font-size-body: 13px;
+}
+
+/* ==========================================================================
+   1. Mobile Devices (iPhone 13 Mini: 390px - 411px)
+   ========================================================================== */
+@media screen and (min-width: 390px) {
+  :root {
+    --viewport-gap: 20px;
+    --header-height: 120px;
+    --max-content-width: 100%;
+
+    --logo-size: 65px;
+    --font-size-logo-9em: 16px;
+    --font-size-hello: 40px;
+    --font-size-nav: 16px;
+    --nav-item-height: 26px;
+    --nav-line-height: 22px;
+    --nav-offset: 26px;
+    --nav-gap: 24px;
+    --font-size-body: 14px;
+  }
+}
+
+/* ==========================================================================
+   2. Samsung A51/A71 (412px - 755px)
+   ========================================================================== */
+@media screen and (min-width: 412px) {
+  :root {
+    --viewport-gap: 20px;
+    --header-height: 120px;
+    --max-content-width: 100%;
+
+    --logo-size: 68px;
+    --font-size-logo-9em: 18px;
+    --font-size-hello: 42px;
+    --font-size-nav: 17px;
+    --nav-item-height: 26px;
+    --nav-line-height: 22px;
+    --nav-offset: 26px;
+    --nav-gap: 28px;
+    --font-size-body: 14.5px;
+  }
+}
+
+/* ==========================================================================
+   3. MacBook Pro Half Screen (756px - 819px)
+   ========================================================================== */
+@media screen and (min-width: 756px) {
+  :root {
+    --viewport-gap: 20px;
+    --header-height: 120px;
+    --max-content-width: 100%;
+
+    --logo-size: 100px;
+    --font-size-logo-9em: 16px;
+    --font-size-hello: 44px;
+    --font-size-nav: 18px;
+    --nav-item-height: 28px;
+    --nav-line-height: 24px;
+    --nav-offset: 28px;
+    --nav-gap: 32px;
+    --font-size-body: 15px;
+  }
+}
+
+/* ==========================================================================
+   4. iPad 11" Portrait (820px - 851px)
+   ========================================================================== */
+@media screen and (min-width: 820px) {
+  :root {
+    --viewport-gap: 20px;
+    --header-height: 120px;
+    --max-content-width: 100%;
+
+    --logo-size: 131px;
+    --font-size-logo-9em: 16px;
+    --font-size-hello: 40px;
+    --font-size-nav: 19px;
+    --nav-item-height: 28px;
+    --nav-line-height: 24px;
+    --nav-offset: 28px;
+    --nav-gap: 36px;
+    --font-size-body: 14px;
+  }
+}
+
+/* ==========================================================================
+   5. Desktop Half Screen (852px - 1023px)
+   ========================================================================== */
+@media screen and (min-width: 852px) {
+  :root {
+    --viewport-gap: 20px;
+    --header-height: 120px;
+    --max-content-width: 100%;
+
+    --logo-size: 131px;
+    --font-size-logo-9em: 48px;
+    --font-size-hello: 48px;
+    --font-size-nav: 20px;
+    --nav-item-height: 28px;
+    --nav-line-height: 24px;
+    --nav-offset: 28px;
+    --nav-gap: 40px;
+    --font-size-body: 15px;
+  }
+}
+
+/* ==========================================================================
+   6. iPad 13" Portrait (1024px - 1199px)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+  :root {
+    --viewport-gap: 20px;
+    --header-height: 120px;
+    --max-content-width: 100%;
+
+    --logo-size: 131px;
+    --font-size-logo-9em: 120px;
+    --font-size-hello: 64px;
+    --font-size-nav: 20px;
+    --nav-item-height: 28px;
+    --nav-line-height: 24px;
+    --nav-offset: 28px;
+    --nav-gap: 40px;
+    --font-size-body: 16px;
+  }
+}
+
+/* ==========================================================================
+   7. Samsung Tab Portrait (1200px - 1365px)
+   ========================================================================== */
+@media screen and (min-width: 1200px) {
+  :root {
+    --viewport-gap: 20px;
+    --header-height: 120px;
+    --max-content-width: 100%;
+
+    --logo-size: 131px;
+    --font-size-logo-9em: 220px;
+    --font-size-hello: 72px;
+    --font-size-nav: 21px;
+    --nav-item-height: 30px;
+    --nav-line-height: 26px;
+    --nav-offset: 30px;
+    --nav-gap: 44px;
+    --font-size-body: 16px;
+  }
+}
+
+/* ==========================================================================
+   8. Standard Desktop (1366px - 1919px)
+   ========================================================================== */
+@media screen and (min-width: 1366px) {
+  :root {
+    --viewport-gap: 20px;
+    --header-height: 120px;
+    --max-content-width: 100%;
+
+    --logo-size: 131px;
+    --font-size-logo-9em: 300px;
+    --font-size-hello: 40px;
+    --font-size-nav: 22px;
+    --nav-item-height: 32px;
+    --nav-line-height: 28px;
+    --nav-offset: 32px;
+    --nav-gap: 48px;
+    --font-size-body: 14px;
+  }
+}
+
+/* ==========================================================================
+   9. TV Displays (1920px+)
+   ========================================================================== */
+@media screen and (min-width: 1920px) {
+  :root {
+    --viewport-gap: 60px;
+    --header-height: 240px;
+    --max-content-width: 3600px;
+
+    --logo-size: 234px;
+    --font-size-logo-9em: 635px;
+    --font-size-hello: 710px;
+    --font-size-nav: 38px;
+    --nav-item-height: 56px;
+    --nav-line-height: 48px;
+    --nav-offset: 56px;
+    --nav-gap: 80px;
+    --font-size-body: 28px;
+  }
+}
+
+/* ==========================================================================
+   LANDSCAPE VIEWPORTS (Mobile-First Order)
+   ========================================================================== */
+
+/* 1. Mobile Landscape: iPhone (844px) */
+@media screen and (min-width: 844px) and (orientation: landscape) {
+  :root {
+    --header-height: 90px;
+    --viewport-gap: 12px;
+    --logo-size: 55px;
+    --font-size-logo-9em: 14px;
+    --font-size-hello: 36px;
+    --font-size-nav: 14px;
+    --nav-item-height: 20px;
+    --nav-line-height: 18px;
+    --nav-offset: 20px;
+    --nav-gap: 24px;
+    --font-size-body: 13px;
+  }
+}
+
+/* 2. Mobile Landscape: Samsung A51/A71 (914px) */
+@media screen and (min-width: 914px) and (orientation: landscape) {
+  :root {
+    --header-height: 95px;
+    --viewport-gap: 14px;
+    --logo-size: 60px;
+    --font-size-logo-9em: 16px;
+    --font-size-hello: 38px;
+    --font-size-nav: 15px;
+    --nav-item-height: 22px;
+    --nav-line-height: 20px;
+    --nav-offset: 22px;
+    --nav-gap: 28px;
+    --font-size-body: 13.5px;
+  }
+}
+
+/* 3. Tablet Landscape: iPad 11" (1180px) */
+@media screen and (min-width: 1180px) and (orientation: landscape) {
+  :root {
+    --header-height: 110px;
+    --viewport-gap: 16px;
+    --logo-size: 90px;
+    --font-size-logo-9em: 80px;
+    --font-size-hello: 48px;
+    --font-size-nav: 18px;
+    --nav-item-height: 26px;
+    --nav-line-height: 22px;
+    --nav-offset: 26px;
+    --nav-gap: 36px;
+    --font-size-body: 14px;
+  }
+}
+
+/* 4. Tablet Landscape: iPad 13" (1366px) */
+@media screen and (min-width: 1366px) and (orientation: landscape) {
+  :root {
+    --header-height: 120px;
+    --viewport-gap: 20px;
+    --logo-size: 110px;
+    --font-size-logo-9em: 180px;
+    --font-size-hello: 56px;
+    --font-size-nav: 20px;
+    --nav-item-height: 28px;
+    --nav-line-height: 24px;
+    --nav-offset: 28px;
+    --nav-gap: 40px;
+    --font-size-body: 14px;
+  }
+}
+
+/* 5. Large Tablet Landscape: Galaxy Tab+ (1920px) */
+@media screen and (min-width: 1920px) and (orientation: landscape) {
+  :root {
+    --header-height: 130px;
+    --viewport-gap: 24px;
+    --logo-size: 131px;
+    --font-size-logo-9em: 300px;
+    --font-size-hello: 72px;
+    --font-size-nav: 22px;
+    --nav-item-height: 30px;
+    --nav-line-height: 26px;
+    --nav-offset: 30px;
+    --nav-gap: 48px;
+    --font-size-body: 15px;
+  }
+}
