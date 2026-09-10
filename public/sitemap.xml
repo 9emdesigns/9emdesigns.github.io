@@ -1,10 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/css" href="https://xml-sitemaps.com"?>
+<urlset xmlns="http://sitemaps.org" xmlns:xhtml="http://w3.org">
 
+  <!-- Página de Inicio (Raíz) -->
   <url>
-       <loc>https://9emdesigns.github.io/</loc>
+       <loc>https://9emdesigns.github.io</loc>
        <lastmod>2026-08-23T14:54:39+00:00</lastmod>
-       <priority>1.0000</priority>
+       <priority>1.00</priority>
   </url>
+
+  <!-- Páginas Principales de Contenido -->
+  <url>
+       <loc>https://9emdesigns.github.io/WhatWeDo</loc>
+       <lastmod>2026-08-23T14:54:39+00:00</lastmod>
+       <priority>0.80</priority>
+  </url>
+  <url>
+       <loc>https://9emdesigns.github.io/HowWeWork</loc>
+       <lastmod>2026-08-23T14:54:39+00:00</lastmod>
+       <priority>0.80</priority>
+  </url>
+  <url>
+       <loc>https://9emdesigns.github.io/designConcept</loc>
+       <lastmod>2026-08-23T14:54:39+00:00</lastmod>
+       <priority>0.80</priority>
+  </url>
+
+  <!-- Páginas Institucionales y de Contacto -->
+  <url>
+       <loc>https://9emdesigns.github.io/aboutUs</loc>
+       <lastmod>2026-08-23T14:54:39+00:00</lastmod>
+       <priority>0.80</priority>
+  </url>
+  <url>
+       <loc>https://9emdesigns.github.io/contactUs</loc>
+       <lastmod>2026-08-23T14:54:39+00:00</lastmod>
+       <priority>0.90</priority>
+  </url>
+
+  <!-- Formularios o Páginas de Utilidad -->
+  <url>
+       <loc>https://9emdesigns.github.io/service_form</loc>
+       <lastmod>2026-08-23T14:54:39+00:00</lastmod>
+       <priority>0.90</priority>
+  </url>
+
 </urlset>
