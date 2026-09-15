@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/",
+    "/aboutUs",
+    "/contactUs",
+    "/designConcept",
+    "/howWeWork",
+    "/service_form",
+    "/whatWeDo"
+  ]
+}
