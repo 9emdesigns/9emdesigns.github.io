@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "exportedAt": "2026-09-16T19:59:38.020Z",
+    "componentName": "iPhone 13--contact",
+    "totalElements": 13,
+    "nestingDepth": 4,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)",
+      "color-rgb(143, 209, 106)": "rgb(143, 209, 106)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-128": "128px",
+          "size-125": "125px",
+          "size-14": "14px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "iphone-13--contact",
+    "type": "FRAME",
+    "size": {
+      "w": 390,
+      "h": 844
+    },
+    "styles": {
+      "bg": "rgb(104, 94, 84)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "div--media--contact",
+        "type": "FRAME",
+        "size": {
+          "w": 1420,
+          "h": 397
+        },
+        "styles": {
+          "bg": "rgb(143, 209, 106)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "frame-1",
+            "type": "FRAME",
+            "size": {
+              "w": 1423,
+              "h": 470
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "contact",
+                "type": "TEXT",
+                "size": {
+                  "w": 721,
+                  "h": 284
+                },
+                "content": "Contact",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 128,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "jd-mason-sz9q4b9z4u4-unsplash-2",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 1652,
+                  "h": 1239
+                }
+              },
+              {
+                "name": "contact",
+                "type": "TEXT",
+                "size": {
+                  "w": 366,
+                  "h": 112
+                },
+                "content": "Contact",
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "text": {
+                    "family": "Antonio",
+                    "size": 125,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "wrapper--links--contact",
+        "type": "GROUP",
+        "size": {
+          "w": 203,
+          "h": 200
+        },
+        "children": [
+          {
+            "name": "mail_white",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "phone_white",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "whatsapp_white",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "-5999-6777274",
+            "type": "TEXT",
+            "size": {
+              "w": 94,
+              "h": 23
+            },
+            "content": "+5999 6777274",
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "text": {
+                "family": "Antonio",
+                "size": 14,
+                "weight": "400",
+                "align": "justified"
+              }
+            }
+          },
+          {
+            "name": "-5999-6777274",
+            "type": "TEXT",
+            "size": {
+              "w": 94,
+              "h": 23
+            },
+            "content": "+5999 6777274",
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "text": {
+                "family": "Antonio",
+                "size": 14,
+                "weight": "400",
+                "align": "justified"
+              }
+            }
+          },
+          {
+            "name": "9emdesign-gmail-com",
+            "type": "TEXT",
+            "size": {
+              "w": 131,
+              "h": 22
+            },
+            "content": "9emdesign@gmail.com",
+            "styles": {
+              "bg": "rgb(255, 255, 255)",
+              "text": {
+                "family": "Antonio",
+                "size": 14,
+                "weight": "400",
+                "align": "justified"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 3,
+    "frames": 3,
+    "texts": 5,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

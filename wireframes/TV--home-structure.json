@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "exportedAt": "2026-09-16T20:01:17.109Z",
+    "componentName": "TV--home",
+    "totalElements": 6,
+    "nestingDepth": 3,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(137, 250, 198)": "rgb(137, 250, 198)",
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)",
+      "color-rgb(217, 217, 217)": "rgb(217, 217, 217)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-318": "318px",
+          "size-355": "355px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "tv--home",
+    "type": "FRAME",
+    "size": {
+      "w": 1920,
+      "h": 1080
+    },
+    "styles": {
+      "bg": "rgb(137, 250, 198)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "div--media--home",
+        "type": "FRAME",
+        "size": {
+          "w": 617,
+          "h": 928
+        },
+        "styles": {
+          "bg": "rgb(137, 250, 198)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "veroll-sterling-g3he6o_e1ts-unsplash-1",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 1833,
+              "h": 1057
+            }
+          }
+        ]
+      },
+      {
+        "name": "9emdesign",
+        "type": "TEXT",
+        "size": {
+          "w": 1232,
+          "h": 210
+        },
+        "content": "9emdesign",
+        "styles": {
+          "bg": "rgb(104, 94, 84)",
+          "text": {
+            "family": "Antonio",
+            "size": 318,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "hello",
+        "type": "TEXT",
+        "size": {
+          "w": 632,
+          "h": 512
+        },
+        "content": "Hello",
+        "styles": {
+          "bg": "rgb(104, 94, 84)",
+          "text": {
+            "family": "Antonio",
+            "size": 355,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "rectangle-3",
+        "type": "RECTANGLE",
+        "size": {
+          "w": 69,
+          "h": 80
+        },
+        "styles": {
+          "bg": "rgb(217, 217, 217)"
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 2,
+    "texts": 2,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

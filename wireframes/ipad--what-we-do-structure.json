@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "exportedAt": "2026-09-16T20:00:08.007Z",
+    "componentName": "iPad--what-we-do",
+    "totalElements": 6,
+    "nestingDepth": 3,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)",
+      "color-rgb(95, 168, 211)": "rgb(95, 168, 211)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)",
+      "color-rgb(143, 209, 106)": "rgb(143, 209, 106)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-19": "19px",
+          "size-190": "190px"
+        },
+        "weights": {
+          "weight-300": "300",
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "ipad--what-we-do",
+    "type": "FRAME",
+    "size": {
+      "w": 834,
+      "h": 1194
+    },
+    "styles": {
+      "bg": "rgb(104, 94, 84)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "div--media--what-we-do",
+        "type": "FRAME",
+        "size": {
+          "w": 1418,
+          "h": 559
+        },
+        "styles": {
+          "bg": "rgb(95, 168, 211)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "frame-1",
+            "type": "FRAME",
+            "size": {
+              "w": 1557,
+              "h": 594
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            }
+          },
+          {
+            "name": "jd-mason-sz9q4b9z4u4-unsplash-1",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 1076,
+              "h": 807
+            }
+          }
+        ]
+      },
+      {
+        "name": "at-9em-design--we-don-t-just-design-for-you--we-design-for-the-people-who-matter-most-to-your-business--our-collaborative-approach-builds-a-unique-bridge-between-your-vision--your-brand--and-your-ultimate-customer--by-actively-looping-both-you-and-your-target-audience-into-our-creative-process--we-eliminate-guesswork-and-ensure-every-piece-of-branding-and-marketing-we-touch-is-grounded-in-real-world-relevance--we-believe-that-exceptional-design-only-happens-when-deep-collaboration-meets-sharp--audience-first-insights--this-dual-perspective-methodology-allows-us-to-build-powerful-design-systems--brand-identities--and-digital-experiences-that-do-more-than-just-look-stunning-they-perform--by-aligning-consumer-expectations-with-your-overarching-business-goals--we-create-intentional--high-impact-solutions-engineered-to-drive-measurable-roi--at-9em-design--we-transform-creative-strategy-into-a-powerful-engine-for-your-company-s-growth--delivering-a-final-product-that-is-precisely-on-target-and-built-to-scale-",
+        "type": "TEXT",
+        "size": {
+          "w": 718,
+          "h": 191
+        },
+        "content": "At 9em design, we don’t just design for you; we design for the people who matter most to your business. Our collaborative approach builds a unique bridge between your vision, your brand, and your ultimate customer. By actively looping both you and your target audience into our creative process, we eliminate guesswork and ensure every piece of branding and marketing we touch is grounded in real-world relevance. We believe that exceptional design only happens when deep collaboration meets sharp, audience-first insights.\nThis dual-perspective methodology allows us to build powerful design systems, brand identities, and digital experiences that do more than just look stunning—they perform. By aligning consumer expectations with your overarching business goals, we create intentional, high-impact solutions engineered to drive measurable ROI. At 9em design, we transform creative strategy into a powerful engine for your company's growth, delivering a final product that is precisely on target and built to scale.",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Antonio",
+            "size": 19,
+            "weight": "300",
+            "align": "justified"
+          }
+        }
+      },
+      {
+        "name": "whatwedo",
+        "type": "TEXT",
+        "size": {
+          "w": 750,
+          "h": 284
+        },
+        "content": "WhatWeDo",
+        "styles": {
+          "bg": "rgb(143, 209, 106)",
+          "text": {
+            "family": "Antonio",
+            "size": 190,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 3,
+    "texts": 2,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

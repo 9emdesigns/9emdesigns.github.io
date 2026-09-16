@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "exportedAt": "2026-09-16T20:01:24.175Z",
+    "componentName": "TV--about-us",
+    "totalElements": 5,
+    "nestingDepth": 3,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(137, 250, 198)": "rgb(137, 250, 198)",
+      "color-rgb(151, 71, 255)": "rgb(151, 71, 255)",
+      "color-rgb(30, 30, 30)": "rgb(30, 30, 30)",
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-19": "19px",
+          "size-318": "318px"
+        },
+        "weights": {
+          "weight-300": "300",
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "tv--about-us",
+    "type": "FRAME",
+    "size": {
+      "w": 1920,
+      "h": 1080
+    },
+    "styles": {
+      "bg": "rgb(137, 250, 198)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "div--media--about-us",
+        "type": "FRAME",
+        "size": {
+          "w": 617,
+          "h": 928
+        },
+        "styles": {
+          "bg": "rgb(151, 71, 255)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "nhlakancubeportraits-person-4096071-3",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 2291,
+              "h": 1528
+            }
+          }
+        ]
+      },
+      {
+        "name": "at-9emdesign--we-build-affordable--high-impact-branding-and-marketing-solutions-specifically-tailored-for-small-to-medium-sized-businesses--our-studio-is-driven-by-a-customer-first-philosophy--utilizing-user-centered-design-and-agile-methodologies-to-ensure-every-asset-we-create-resonates-deeply-with-your-target-audience--we-specialize-in-bringing-our-clients-full-circle-transforming-foundational-concepts-into-complete-digital-ecosystems--even-if-you-come-to-us-simply-needing-a-standalone-logo--we-look-at-the-bigger-picture-to-show-you-how-that-single-spark-can-seamlessly-evolve-into-a-comprehensive--cost-effective-branding-and-marketing-package-that-elevates-your-business--our-process-is-entirely-collaborative--transparent--and-built-around-a-frictionless-customer-journey-from-start-to-finish--by-using-iterative-feedback-loops--we-guide-you-step-by-step-through-the-design-evolution--mapping-the-path-from-an-initial-visual-identity-straight-through-to-a-fully-finished--high-performing-website--this-agile-approach-eliminates-agency-friction-and-ensures-your-voice-is-heard-at-every-milestone--ultimately--we-bridge-the-gap-between-initial-strategy-and-final-product--equipping-your-business-with-a-unified--professional-market-presence-that-is-ready-to-scale-",
+        "type": "TEXT",
+        "size": {
+          "w": 708,
+          "h": 402
+        },
+        "content": "At 9emdesign, we build affordable, high-impact branding and marketing solutions specifically tailored for small to medium-sized businesses. Our studio is driven by a customer-first philosophy, utilizing user-centered design and agile methodologies to ensure every asset we create resonates deeply with your target audience. We specialize in bringing our clients full circle—transforming foundational concepts into complete digital ecosystems. Even if you come to us simply needing a standalone logo, we look at the bigger picture to show you how that single spark can seamlessly evolve into a comprehensive, cost-effective branding and marketing package that elevates your business.\nOur process is entirely collaborative, transparent, and built around a frictionless customer journey from start to finish. By using iterative feedback loops, we guide you step-by-step through the design evolution, mapping the path from an initial visual identity straight through to a fully finished, high-performing website. This agile approach eliminates agency friction and ensures your voice is heard at every milestone. Ultimately, we bridge the gap between initial strategy and final product, equipping your business with a unified, professional market presence that is ready to scale.",
+        "styles": {
+          "bg": "rgb(30, 30, 30)",
+          "text": {
+            "family": "Antonio",
+            "size": 19,
+            "weight": "300",
+            "align": "justified"
+          }
+        }
+      },
+      {
+        "name": "aboutus",
+        "type": "TEXT",
+        "size": {
+          "w": 935,
+          "h": 210
+        },
+        "content": "AboutUs",
+        "styles": {
+          "bg": "rgb(104, 94, 84)",
+          "text": {
+            "family": "Antonio",
+            "size": 318,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 2,
+    "texts": 2,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

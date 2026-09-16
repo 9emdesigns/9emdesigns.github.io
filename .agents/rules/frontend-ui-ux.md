@@ -2,39 +2,43 @@
 trigger: manual
 ---
 
-Perform a total rewrite of our website's HTML and CSS components, leave all angular architecture and directives as is. based on the attached Figma wireframe png exports Make sure that these images are in the background of the parent div: nhlakancubeportraits-person-4096071-1,veroll-sterling-g3he6o_e1ts-unsplash-1,jd-mason-sz9q4b9z4u4-unsplash-1.
+**Role & Objective**
+Act as an expert frontend development agent. Your task is to refactor the HTML and CSS of a specific set of components based on the new Figma high-fidelity wireframes and their corresponding JSON data.
 
-Follow these strict constraints:
-1 Breakpoint Mapping: Reference our open media query CSS file for the exact pixel widths. Map the layout file sequences as follows:
-◦ code all png with the name “Home” into the base breakpoint
-◦ iPhone 13 mini - \*.png -> Mobile breakpoint
-◦ iPad Pro 11* - *.png -> Tablet breakpoint
-◦ MacBook Pro 14\_ - _.png and Desktop - 1 - linux_.png -> Standard Desktop breakpoint
-◦ TV - \*.png -> 4K Smart TV ultra-wide breakpoint (scale layouts, adjust max-widths, and scale typography to keep readability high on large displays).
+**Source Files**
 
-2 JSON Mapping: map the JSON files with the breakpoints for the structure and layout as follows:
+- **Location:** Read the `/wireframes/` directory.
+- **Inputs:** Utilize both the `.png` visual references and the `.json` data exports to extract accurate layouts, spacing, colors, and typography.
 
-- iphone-13-mini -\*.json
-- ipad-pro-11 -\*.json
-- macbook-pro 14\_ -\*.json
-- tv -\*.json
+**Global CSS Refactoring**
 
-2a Layout & Blending: Re-code the structural elements using CSS Grid and Flexbox to transition cleanly across all viewports. Correct overlapping text blocks using explicit CSS mix-blend-mode and background-blend-mode and absolute/relative stacking positioning to match the visual artifacts exactly. Ensure the layout execution leans toward an artistic design direction rather than defaulting to a purely rigid, system-first approach.
+1. **`media_Queries_breakpoint.css`:** Refactor this file first. Extract the new layout parameters from the Figma JSON exports and generate new CSS variables that reflect the updated responsive layouts.
 
-3 Architecture: Re-write the code into clean, scalable semantic HTML5 elements ready for Angular 18 component integration, use <main> as parent conainer in all components. Keep structural layout properties separated by responsive breakpoints.
+**Component Refactoring Rules**
+You must refactor the `.html` and `.component.css` files for the following components, strictly adhering to the architectural constraints below:
 
-4 code the html and css with breakpoints in the navigation header component the height must be 120px, make sure the font size and line height match the breakpoints use the wireframe png as guide to the header navigation.
+- `about-us.component.css`
+- `contact-us.component.css`
+- `design-concept.component.css`
+- `home.component.css`
+- `how-we-work.component.css`
+- `what-we-do.component.css`
 
-5 the letters 9emdesign on some wireframe are h1 in a container div and flex box with flex direction column.and additionally the letters all have a class letter so that they can be used a blend mode of “overlay”.
+**Exception: `email-js.component**`
 
-6 the images are in a background of a div, with a background color, and a background blend mode of “luminosity”.
+- **DO NOT** modify `email-js.component.html` under any circumstances.
+- **DO** modify `email-js.component.css`, but _only_ to refactor its media query breakpoints to align with the new variables established in `components_breakpoints.css`. Preserve all core styling.
 
-7 the texts must be positioned exactly as in the wireframes png.
+**CSS Breakpoint Architecture**
+Apply the styling from the wireframes based on the file naming conventions:
 
-8 make sure that all pages work with the prerender feature of angular, and test the function so that the pages display correct in chrome Devtools and Firefox Devtools.
+1. **Home Wireframes:** If the source wireframe has "home" in its filename, write its styles into the **base breakpoints** (the root level, outside of specific media queries, serving as the default layout) of the corresponding component's CSS file.
+2. **All Other Pages:** For wireframes corresponding to the other pages, all layout and structural CSS must be wrapped within the specific media queries defined in `components_breakpoints.css` for each respective component.
 
-9 use global dvh and dvw, so that the content does not scroll horizontally or vertically. the must be a 20px gap to the left,bottom and right between the content and the edge of the viewport, again following the wireframe png's.
+**Execution Steps**
 
-10 replace all image placeholders with images found in public/images project folder
-
-Begin by generating the core structure, then write the cascading overrides for all breakpoints, finishing with the 4K TV layer.
+1. Analyze the `/wireframes/` directory (PNGs and JSON).
+2. Update `media_Queries_breakpoint.css` with new layout variables.
+3. Refactor the HTML and base CSS for components matching "home" wireframes.
+4. Refactor the HTML and responsive CSS for the remaining components using `components_breakpoints.css`.
+5. Apply the isolated breakpoint update to `email-js.component.css`.

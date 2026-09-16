@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "exportedAt": "2026-09-16T19:58:50.407Z",
+    "componentName": "iPhone 13--home",
+    "totalElements": 7,
+    "nestingDepth": 4,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-225": "225px",
+          "size-16": "16px",
+          "size-165": "165px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "iphone-13--home",
+    "type": "FRAME",
+    "size": {
+      "w": 390,
+      "h": 844
+    },
+    "styles": {
+      "bg": "rgb(104, 94, 84)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "wrapper--media--home",
+        "type": "FRAME",
+        "size": {
+          "w": 1420,
+          "h": 397
+        },
+        "styles": {
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "div--media--home",
+            "type": "FRAME",
+            "size": {
+              "w": 1423,
+              "h": 470
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "nhlakancubeportraits-person-4096071-1",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 719,
+                  "h": 644
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ign",
+        "type": "TEXT",
+        "size": {
+          "w": 444,
+          "h": 165
+        },
+        "content": "ign",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Antonio",
+            "size": 225,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "des-",
+        "type": "TEXT",
+        "size": {
+          "w": 444,
+          "h": 165
+        },
+        "content": "des",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Antonio",
+            "size": 16,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "9em-",
+        "type": "TEXT",
+        "size": {
+          "w": 444,
+          "h": 165
+        },
+        "content": "9em",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Antonio",
+            "size": 165,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 3,
+    "texts": 3,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

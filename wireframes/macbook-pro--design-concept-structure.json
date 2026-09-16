@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "exportedAt": "2026-09-16T19:58:31.427Z",
+    "componentName": "MacBook Pro--design-concept",
+    "totalElements": 7,
+    "nestingDepth": 3,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)",
+      "color-rgb(95, 168, 211)": "rgb(95, 168, 211)",
+      "color-rgb(164, 208, 112)": "rgb(164, 208, 112)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-95": "95px",
+          "size-14": "14px",
+          "size-53": "53px"
+        },
+        "weights": {
+          "weight-400": "400",
+          "weight-300": "300"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "macbook-pro--design-concept",
+    "type": "FRAME",
+    "size": {
+      "w": 1512,
+      "h": 982
+    },
+    "styles": {
+      "bg": "rgb(104, 94, 84)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "div--media--design-concept",
+        "type": "FRAME",
+        "size": {
+          "w": 511,
+          "h": 511
+        },
+        "styles": {
+          "bg": "rgb(95, 168, 211)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "nhlakancubeportraits-person-4096071-2",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 1937,
+              "h": 1292
+            }
+          }
+        ]
+      },
+      {
+        "name": "designconcept",
+        "type": "TEXT",
+        "size": {
+          "w": 547,
+          "h": 137
+        },
+        "content": "DesignConcept",
+        "styles": {
+          "text": {
+            "family": "Antonio",
+            "size": 95,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      },
+      {
+        "name": "hero--bottom--design-concept",
+        "type": "FRAME",
+        "size": {
+          "w": 1420,
+          "h": 83
+        },
+        "styles": {
+          "bg": "rgb(164, 208, 112)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        }
+      },
+      {
+        "name": "at-9emdesign--our-branding-and-marketing-concept-is-deeply-rooted-in-an-audience-first-philosophy--we-believe-that-exceptional-design-shouldn-t-center-on-a-brand-s-ego--but-rather-on-the-real-people-that-brand-serves--by-shifting-the-focus-entirely-to-your-customers-the-individuals-interacting-with-your-product-or-service-we-intentionally-craft-experiences-that-resonate-with-their-specific-needs--desires--and-behaviors--every-strategy-we-build-and-every-visual-asset-we-create-is-engineered-to-foster-an-intuitive--meaningful-connection-between-your-business-and-the-people-who-matter-most-to-your-growth--to-achieve-this--we-champion-a-refined--minimalist-aesthetic-that-strips-away-unnecessary-visual-noise-and-distractions--by-prioritizing-clarity-over-clutter--we-allow-the-intrinsic-value-of-your-product-or-service-to-take-center-stage--this-deliberate-restraint-allows-us-to-seamlessly-guide-the-customer-through-a-clean--purposeful-journey--transforming-overwhelming-choices-into-a-transparent-experience--ultimately--our-design-framework-empowers-your-audience-with-the-exact-clarity-they-need-to-make-confident--well-informed-decisions-",
+        "type": "TEXT",
+        "size": {
+          "w": 443,
+          "h": 331
+        },
+        "content": "At 9emdesign, our branding and marketing concept is deeply rooted in an audience-first philosophy. We believe that exceptional design shouldn’t center on a brand’s ego, but rather on the real people that brand serves. By shifting the focus entirely to your customers—the individuals interacting with your product or service—we intentionally craft experiences that resonate with their specific needs, desires, and behaviors. Every strategy we build and every visual asset we create is engineered to foster an intuitive, meaningful connection between your business and the people who matter most to your growth.\nTo achieve this, we champion a refined, minimalist aesthetic that strips away unnecessary visual noise and distractions. By prioritizing clarity over clutter, we allow the intrinsic value of your product or service to take center stage. This deliberate restraint allows us to seamlessly guide the customer through a clean, purposeful journey, transforming overwhelming choices into a transparent experience. Ultimately, our design framework empowers your audience with the exact clarity they need to make confident, well-informed decisions.",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Antonio",
+            "size": 14,
+            "weight": "300",
+            "align": "justified"
+          }
+        }
+      },
+      {
+        "name": "communication",
+        "type": "TEXT",
+        "size": {
+          "w": 315,
+          "h": 58
+        },
+        "content": "Communication",
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "text": {
+            "family": "Antonio",
+            "size": 53,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 3,
+    "texts": 3,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

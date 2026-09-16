@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "exportedAt": "2026-09-16T20:01:48.053Z",
+    "componentName": "TV--contact",
+    "totalElements": 11,
+    "nestingDepth": 3,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(137, 250, 198)": "rgb(137, 250, 198)",
+      "color-rgb(151, 71, 255)": "rgb(151, 71, 255)",
+      "color-rgb(30, 30, 30)": "rgb(30, 30, 30)",
+      "color-rgb(104, 94, 84)": "rgb(104, 94, 84)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-19": "19px",
+          "size-318": "318px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "tv--contact",
+    "type": "FRAME",
+    "size": {
+      "w": 1920,
+      "h": 1080
+    },
+    "styles": {
+      "bg": "rgb(137, 250, 198)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "div--media--contact",
+        "type": "FRAME",
+        "size": {
+          "w": 617,
+          "h": 928
+        },
+        "styles": {
+          "bg": "rgb(151, 71, 255)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "veroll-sterling-g3he6o_e1ts-unsplash-1",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 2219,
+              "h": 1280
+            }
+          }
+        ]
+      },
+      {
+        "name": "wrapper--links--contact",
+        "type": "GROUP",
+        "size": {
+          "w": 265,
+          "h": 262
+        },
+        "children": [
+          {
+            "name": "mail_white",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "phone_white",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "whatsapp_white",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "-5999-6777274",
+            "type": "TEXT",
+            "size": {
+              "w": 123,
+              "h": 30
+            },
+            "content": "+5999 6777274",
+            "styles": {
+              "bg": "rgb(30, 30, 30)",
+              "text": {
+                "family": "Antonio",
+                "size": 19,
+                "weight": "400",
+                "align": "justified"
+              }
+            }
+          },
+          {
+            "name": "-5999-6777274",
+            "type": "TEXT",
+            "size": {
+              "w": 123,
+              "h": 30
+            },
+            "content": "+5999 6777274",
+            "styles": {
+              "bg": "rgb(30, 30, 30)",
+              "text": {
+                "family": "Antonio",
+                "size": 19,
+                "weight": "400",
+                "align": "justified"
+              }
+            }
+          },
+          {
+            "name": "9emdesign-gmail-com",
+            "type": "TEXT",
+            "size": {
+              "w": 171,
+              "h": 29
+            },
+            "content": "9emdesign@gmail.com",
+            "styles": {
+              "bg": "rgb(30, 30, 30)",
+              "text": {
+                "family": "Antonio",
+                "size": 19,
+                "weight": "400",
+                "align": "justified"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "contact",
+        "type": "TEXT",
+        "size": {
+          "w": 1232,
+          "h": 210
+        },
+        "content": "Contact",
+        "styles": {
+          "bg": "rgb(104, 94, 84)",
+          "text": {
+            "family": "Antonio",
+            "size": 318,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 3,
+    "frames": 2,
+    "texts": 4,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

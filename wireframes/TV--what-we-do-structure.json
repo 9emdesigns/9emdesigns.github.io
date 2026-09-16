@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "exportedAt": "2026-09-16T20:01:29.810Z",
+    "componentName": "TV--what-we-do",
+    "totalElements": 5,
+    "nestingDepth": 3,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(137, 250, 198)": "rgb(137, 250, 198)",
+      "color-rgb(151, 71, 255)": "rgb(151, 71, 255)",
+      "color-rgb(30, 30, 30)": "rgb(30, 30, 30)",
+      "color-rgb(87, 78, 69)": "rgb(87, 78, 69)"
+    },
+    "fonts": {
+      "antonio": {
+        "family": "Antonio",
+        "sizes": {
+          "size-19": "19px",
+          "size-318": "318px"
+        },
+        "weights": {
+          "weight-300": "300",
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "tv--what-we-do",
+    "type": "FRAME",
+    "size": {
+      "w": 1920,
+      "h": 1080
+    },
+    "styles": {
+      "bg": "rgb(137, 250, 198)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "frame-5",
+        "type": "FRAME",
+        "size": {
+          "w": 617,
+          "h": 928
+        },
+        "styles": {
+          "bg": "rgb(151, 71, 255)",
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "nhlakancubeportraits-person-4096071-3",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 2291,
+              "h": 1528
+            }
+          }
+        ]
+      },
+      {
+        "name": "at-9em-design--we-don-t-just-design-for-you--we-design-for-the-people-who-matter-most-to-your-business--our-collaborative-approach-builds-a-unique-bridge-between-your-vision--your-brand--and-your-ultimate-customer--by-actively-looping-both-you-and-your-target-audience-into-our-creative-process--we-eliminate-guesswork-and-ensure-every-piece-of-branding-and-marketing-we-touch-is-grounded-in-real-world-relevance--we-believe-that-exceptional-design-only-happens-when-deep-collaboration-meets-sharp--audience-first-insights--this-dual-perspective-methodology-allows-us-to-build-powerful-design-systems--brand-identities--and-digital-experiences-that-do-more-than-just-look-stunning-they-perform--by-aligning-consumer-expectations-with-your-overarching-business-goals--we-create-intentional--high-impact-solutions-engineered-to-drive-measurable-roi--at-9em-design--we-transform-creative-strategy-into-a-powerful-engine-for-your-company-s-growth--delivering-a-final-product-that-is-precisely-on-target-and-built-to-scale-",
+        "type": "TEXT",
+        "size": {
+          "w": 708,
+          "h": 309
+        },
+        "content": "At 9em design, we don’t just design for you; we design for the people who matter most to your business. Our collaborative approach builds a unique bridge between your vision, your brand, and your ultimate customer. By actively looping both you and your target audience into our creative process, we eliminate guesswork and ensure every piece of branding and marketing we touch is grounded in real-world relevance. We believe that exceptional design only happens when deep collaboration meets sharp, audience-first insights.\nThis dual-perspective methodology allows us to build powerful design systems, brand identities, and digital experiences that do more than just look stunning—they perform. By aligning consumer expectations with your overarching business goals, we create intentional, high-impact solutions engineered to drive measurable ROI. At 9em design, we transform creative strategy into a powerful engine for your company's growth, delivering a final product that is precisely on target and built to scale.",
+        "styles": {
+          "bg": "rgb(30, 30, 30)",
+          "text": {
+            "family": "Antonio",
+            "size": 19,
+            "weight": "300",
+            "align": "justified"
+          }
+        }
+      },
+      {
+        "name": "whatwedo",
+        "type": "TEXT",
+        "size": {
+          "w": 1232,
+          "h": 210
+        },
+        "content": "WhatWeDo",
+        "styles": {
+          "bg": "rgb(87, 78, 69)",
+          "text": {
+            "family": "Antonio",
+            "size": 318,
+            "weight": "400",
+            "align": "left"
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 2,
+    "texts": 2,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}
