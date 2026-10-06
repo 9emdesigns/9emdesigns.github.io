@@ -6,7 +6,7 @@
   --color-bg-primary: rgb(104, 94, 84);
   --color-text-neon: rgb(137, 250, 198);
   --color-accent-green: rgb(143, 209, 106);
-  --color-accent-blue: rgb(110, 160, 197);
+  --color-accent-blue: rgb(100, 161, 207);
   --color-accent-mint: rgb(176, 237, 203);
   --color-accent-purple: rgb(151, 71, 255);
   --color-lime: rgb(164, 208, 111);
@@ -23,7 +23,7 @@
   --font-family-fredoka: "Fredoka", sans-serif;
   --font-family-roboto: "Roboto", sans-serif;
 
-  --font-weight-light: 300;
+  --font-weight-light: 100;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 
@@ -37,7 +37,7 @@
   --font-size-logo-9em: 16px;
   --font-size-hello: 40px;
   --font-size-nav: 20px;
-  --font-size-body: 14px;
+  --font-size-body: 19px;
 }
 
 /* ==========================================================================

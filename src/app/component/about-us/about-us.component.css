@@ -1,6 +1,6 @@
 /* ==========================================================================
    About Us Component Layout Styles
-   Mapped strictly to variables & breakpoints in media_Queries_breakpoints.css
+   Mapped strictly to variables & breakpoints in media_Queries_breakpoint.css
    ========================================================================== */
 
 * {
@@ -15,17 +15,16 @@
   overflow: hidden;
 }
 
-/* Parent container: locks layout within dvh/dvw bounds */
+/* Parent container: locks layout within viewport bounds */
 main.about-container {
   width: 100dvw;
   height: calc(100dvh - var(--header-height, 120px));
   position: relative;
-  top: 0;
   overflow: hidden;
-  background-color: transparent;
+  background-color: var(--color-bg);
 }
 
-/* Inner section enforcing 20px viewport edge gaps */
+/* Inner section enforcing viewport edge gaps */
 section.about-section {
   width: calc(100% - (2 * var(--viewport-gap, 20px)));
   height: calc(100% - var(--viewport-gap, 20px));
@@ -34,25 +33,12 @@ section.about-section {
   left: var(--viewport-gap, 20px);
   right: var(--viewport-gap, 20px);
   bottom: var(--viewport-gap, 20px);
-  z-index: 0;
   overflow: hidden;
   isolation: isolate;
 }
 
-/* Character-level overlay blend mode */
 .letter {
-  mix-blend-mode: overlay;
   display: inline-block;
-}
-
-/* Structural Accent Bars container */
-.accent-bars-container {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: auto;
-  pointer-events: none;
 }
 
 .tv-layout-wrapper {
@@ -60,103 +46,80 @@ section.about-section {
 }
 
 /* ==========================================================================
-   Base / Laptop Viewport Layout (MacBook Pro 14": min-width: 1366px)
+   Base Viewport Layout (Laptop / MacBook Pro: 1512px x 982px default)
    ========================================================================== */
 .image-wrapper {
-  width: 37.5%;
-  height: calc(100% - 105px);
+  width: 36%;
+  height: calc(100% - 60px);
   position: absolute;
-  top: 200px;
   left: 0;
+  bottom: 0;
   z-index: 1;
 }
 
 .background-image-element {
-  filter: saturate(30%);
-  mix-blend-mode: luminosity;
-  background-blend-mode: luminosity;
   position: absolute;
-  bottom: -57px;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-image: url("../../../../public/images/dude_framing_for_design.webp");
-  background-color: var(--color-lime-alt, rgb(164, 208, 112));
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 0;
+  filter: saturate(30%);
+  background-blend-mode: luminosity;
 }
 
 .text-content {
   position: absolute;
-  bottom: 510px;
+  top: 40px;
   right: 0;
-  width: 40%;
-  font-family: var(--font-family-roboto, "Roboto", sans-serif);
+  width: 44%;
+  max-width: 635px;
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
   font-weight: var(--font-weight-light, 300);
   font-size: var(--font-size-body, 14px);
-  line-height: 1.45;
+  line-height: 1.5;
   color: var(--color-white, rgb(255, 255, 255));
   text-align: justify;
-  z-index: 5;
-  margin: 0;
+  z-index: 3;
 }
 
 .text-content .paragraph-second {
-  margin-top: 0.8em;
+  margin-top: 1em;
 }
 
-.accent-bar-secondary {
+.about-title {
   position: absolute;
-  bottom: 20px;
   right: 0;
-  width: 100%;
-  height: 85px;
-  background-color: var(--color-blue-sky, rgb(95, 168, 211));
-  mix-blend-mode: hard-light;
-  z-index: 10;
+  bottom: 350px !important;
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-regular, 400);
+  font-size: clamp(140px, 16.5vw, 250px);
+  line-height: 0.85;
+  color: var(--color-lime-alt, rgb(164, 208, 112));
+  letter-spacing: -0.02em;
+  z-index: 4;
+  pointer-events: none;
 }
 
-.accent-bar-primary {
+.accent-bar-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 20px;
-  background-color: var(--color-accent-mint, rgb(176, 237, 203));
-  mix-blend-mode: hard-light;
+  height: 350px !important;
+  background-color: var(--color-blue-sky, rgb(95, 168, 211));
   z-index: 2;
-}
-
-.about-title {
-  font-family: var(--font-family-antonio, "Antonio", sans-serif);
-  font-weight: var(--font-weight-regular, 400);
-  color: var(--color-lime-alt, rgb(164, 208, 112));
-  font-size: clamp(140px, 17vw, 250px);
-  line-height: 0.85;
-  position: absolute;
-  bottom: 200px;
-  right: 0;
-  z-index: 10;
-  margin: 0;
-  padding: 0;
   pointer-events: none;
-  letter-spacing: -0.02em;
   mix-blend-mode: overlay;
 }
 
 /* ==========================================================================
    1. Mobile Viewport (iPhone 13 Mini: < 820px)
+   Matches: iPhone 13--about-us.png & iphone-13--about-us-structure.json
    ========================================================================== */
 @media screen and (max-width: 819px) {
-  main.about-container {
-    height: calc(100dvh - var(--header-height, 120px));
-  }
-
-  .accent-bars-container,
-  .tv-layout-wrapper {
-    display: none !important;
+  .accent-bar-bottom {
+    display: none;
   }
 
   .text-content {
@@ -164,11 +127,11 @@ section.about-section {
     top: 0;
     right: auto;
     width: 100%;
+    max-width: 100%;
     font-size: var(--font-size-body, 14px);
-    line-height: 1.35;
-    color: var(--color-white, rgb(255, 255, 255));
-    z-index: 5;
-    margin-top: 0;
+    line-height: 1.38;
+    margin-top: 4px;
+    z-index: 3;
   }
 
   .text-content .paragraph-second {
@@ -177,62 +140,53 @@ section.about-section {
 
   .image-wrapper {
     position: absolute;
-    top: 420px;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 48%;
+    height: 46%;
     z-index: 1;
   }
 
   .background-image-element {
-    background-image: url("../../../../public/images/dude_framing_for_design.webp");
     background-color: var(--color-accent-green, rgb(143, 209, 106));
-    background-size: cover;
+    background-blend-mode: luminosity;
+    filter: saturate(40%);
     background-position: center top;
   }
 
   .about-title {
     position: absolute;
-    bottom: 15%;
-    right: 0;
+    bottom: 35% !important;
+    left: 0;
+    right: auto;
     width: 100%;
-    font-size: 22vw;
+    font-size: clamp(64px, 23vw, 120px);
     line-height: 0.85;
     color: var(--color-white, rgb(255, 255, 255));
-    text-align: right;
-    z-index: 10;
-    margin: 0;
+    mix-blend-mode: overlay;
+    z-index: 4;
+    text-align: left;
   }
 }
 
 /* ==========================================================================
    2. Tablet Viewport (iPad Pro 11": 820px to 1365px)
+   Matches: iPad--about-us.png & ipad--about-us-structure.json
    ========================================================================== */
 @media screen and (min-width: 820px) and (max-width: 1365px) {
-  main.about-container {
-    height: calc(100dvh - var(--header-height, 120px));
-    width: calc(100dvw + (2 * var(--viewport-gap, 40px)));
-    position: relative;
-    left: -20px;
-    top: 47px;
-  }
-
-  .accent-bars-container,
-  .tv-layout-wrapper {
-    display: none !important;
+  .accent-bar-bottom {
+    display: none;
   }
 
   .text-content {
     position: relative;
-    bottom: -20px;
+    top: 10px;
     right: auto;
     width: 100%;
-    font-size: 18px;
+    max-width: 100%;
+    font-size: 19px;
     line-height: 1.45;
-    color: var(--color-white, rgb(255, 255, 255));
-    z-index: 5;
-    margin-top: 0;
-    padding: 0 20px;
+    z-index: 3;
   }
 
   .text-content .paragraph-second {
@@ -240,154 +194,196 @@ section.about-section {
   }
 
   .about-title {
-    position: relative;
+    position: absolute;
+    bottom: 27% !important;
+    right: 0;
+    left: 0;
     width: 100%;
-    font-size: 34vw;
+    font-size: clamp(140px, 25vw, 250px);
     line-height: 0.85;
-    color: var(--color-lime-alt, rgb(164, 208, 112));
+    color: var(--color-white, rgb(255, 255, 255));
     text-align: right;
-    margin-top: 10px;
-    z-index: 10;
-    bottom: -100px;
-    right: 10px;
+    z-index: 4;
+    bottom: auto;
+    mix-blend-mode: overlay;
+    border: 1px solid red;
   }
 
   .image-wrapper {
     position: absolute;
-    top: 420px;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 52%;
+    height: 48%;
     z-index: 1;
   }
 
   .background-image-element {
-    background-image: url("../../../../public/images/dude_framing_for_design.webp");
     background-color: var(--color-accent-green, rgb(143, 209, 106));
-    background-size: cover;
-    background-position: center;
+    background-blend-mode: luminosity;
+    filter: saturate(40%);
+    background-position: center top;
   }
 }
 
 /* ==========================================================================
-   3. Desktop Linux Viewport Overrides (Desktop 2: min-width: 1440px)
+   3. Desktop Viewport (Desktop: 1366px to 1479px, 1440px target)
+   Matches: Desktop--about-us.png & desktop--about-us-structure.json
    ========================================================================== */
-@media screen and (min-width: 1440px) and (max-width: 3839px) {
+@media screen and (min-width: 1366px) and (max-width: 1479px) {
+  .image-wrapper {
+    width: 37%;
+    height: calc(100% - 50px);
+  }
+
   .background-image-element {
     background-color: var(--color-accent-green, rgb(143, 209, 106));
+    background-blend-mode: luminosity;
+    filter: saturate(40%);
   }
 
-  .image-wrapper {
-    height: calc(100% - 257px);
-  }
-
-  .accent-bar-secondary {
-    height: 257px;
-    bottom: 0;
-    background-color: var(--color-purple-dark, rgb(70, 34, 85));
-    mix-blend-mode: hard-light;
-  }
-
-  .accent-bar-primary {
-    display: none;
+  .text-content {
+    width: 51%;
+    max-width: 736px;
+    font-size: 19px;
+    line-height: 1.5;
   }
 
   .about-title {
-    bottom: 258px;
-    color: var(--color-lime-alt, rgb(164, 208, 112));
+    bottom: 175px !important;
+    color: var(--color-accent-green, rgb(143, 209, 106));
+    font-size: clamp(180px, 17.5vw, 250px);
+    mix-blend-mode: normal;
+    border: 1px solid red;
+  }
+
+  .accent-bar-bottom {
+    display: block;
+    height: 180px !important;
+    background-color: var(--color-purple-dark, rgb(70, 34, 85));
+    z-index: 2;
   }
 }
 
 /* ==========================================================================
-   4. 4K Smart TV & Ultra-wide Displays (TV: min-width: 3840px)
+   4. Laptop Viewport (MacBook Pro: 1480px to 1919px, 1512px target)
+   Matches: MacBook Pro--about-us.png & macbook-pro--about-us-structure.json
    ========================================================================== */
-@media screen and (min-width: 3840px) {
+@media screen and (min-width: 1480px) and (max-width: 1919px) {
+  .image-wrapper {
+    width: 36%;
+    height: calc(100% - 60px);
+  }
+
+  .background-image-element {
+    background-color: transparent;
+    filter: saturate(30%);
+    mix-blend-mode: luminosity;
+  }
+
+  .text-content {
+    width: 44%;
+    max-width: 635px;
+    font-size: var(--font-size-body, 14px);
+    line-height: 1.5;
+  }
+
+  .about-title {
+    bottom: 35px;
+    color: var(--color-lime-alt, rgb(164, 208, 112));
+    font-size: clamp(140px, 16.5vw, 250px);
+    mix-blend-mode: normal;
+  }
+
+  .accent-bar-bottom {
+    display: block;
+    height: 98px;
+    background-color: var(--color-blue-sky, rgb(95, 168, 211));
+    z-index: 2;
+  }
+}
+
+/* ==========================================================================
+   5. Smart TV & Ultra-wide Displays (TV Displays: min-width: 1920px)
+   Matches: TV--about-us.png & TV--about-us-structure.json
+   ========================================================================== */
+@media screen and (min-width: 1920px) {
   main.about-container {
     height: calc(100dvh - var(--header-height, 240px));
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
   }
 
   section.about-section {
-    width: calc(100% - (2 * var(--viewport-gap, 60px)));
-    height: calc(100% - var(--viewport-gap, 60px));
-    left: var(--viewport-gap, 60px);
-    right: var(--viewport-gap, 60px);
-    bottom: var(--viewport-gap, 60px);
-  }
-
-  .image-wrapper,
-  .accent-bars-container,
-  .text-content {
     display: none !important;
   }
 
   .tv-layout-wrapper {
     display: flex !important;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    width: calc(100% - (2 * var(--viewport-gap, 60px)));
+    height: calc(100% - var(--viewport-gap, 60px));
+    position: absolute;
+    top: 0;
+    left: var(--viewport-gap, 60px);
+    right: var(--viewport-gap, 60px);
+    bottom: var(--viewport-gap, 60px);
+    overflow: hidden;
+    isolation: isolate;
   }
 
   .tv-left-column {
     width: 32%;
     height: 100%;
     position: relative;
-    background-color: var(--color-text-neon, rgb(137, 250, 198));
+    background-color: var(--color-accent-purple, rgb(151, 71, 255));
+    overflow: hidden;
   }
 
   .tv-background-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-image: url("../../../../public/images/dude_looking_up.webp");
-    background-color: var(--color-text-neon, rgb(137, 250, 198));
+    background-color: var(--color-accent-purple, rgb(151, 71, 255));
     background-blend-mode: luminosity;
-    mix-blend-mode: luminosity;
     filter: saturate(30%);
     background-size: cover;
-    background-position: center;
+    background-position: -450px center;
     background-repeat: no-repeat;
   }
 
   .tv-right-column {
     width: 68%;
     height: 100%;
-    background-color: var(--color-accent-mint, rgb(176, 237, 203));
     position: relative;
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
   }
 
   .tv-text-content {
     position: absolute;
     top: 80px;
-    left: 60px;
-    right: 60px;
-    width: auto;
-    font-family: var(--font-family-roboto, "Roboto", sans-serif);
+    left: 80px;
+    right: 80px;
+    font-family: var(--font-family-antonio, "Antonio", sans-serif);
     font-weight: var(--font-weight-light, 300);
-    font-size: 44px;
-    line-height: 1.45;
+    font-size: clamp(19px, 1.45vw, var(--font-size-body, 28px));
+    line-height: 1.5;
     color: var(--color-dark, rgb(30, 30, 30));
-    text-align: justified;
-    z-index: 5;
+    text-align: justify;
   }
 
-  .tv-text-content .paragraph-second {
-    margin-top: 1em;
+  .tv-text-content .tv-paragraph-second {
+    margin-top: 1.2em;
   }
 
-  .about-title {
-    display: block !important;
+  .tv-about-title {
     position: absolute;
-    bottom: 80px;
-    left: 1250px;
-    z-index: 10;
-    font-size: var(--font-size-logo-9em, 635px);
-    line-height: 0.85;
-    color: var(--color-dark, rgb(30, 30, 30));
+    bottom: 40px;
+    right: 60px;
+    font-family: var(--font-family-antonio, "Antonio", sans-serif);
+    font-weight: var(--font-weight-regular, 400);
+    font-size: clamp(280px, 16.5vw, var(--font-size-logo-9em, 635px));
+    line-height: 0.82;
+    color: var(--color-bg-primary, rgb(104, 94, 84));
     margin: 0;
-    padding: 0;
     pointer-events: none;
-    mix-blend-mode: overlay;
   }
 }

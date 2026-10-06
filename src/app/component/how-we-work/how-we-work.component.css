@@ -1,6 +1,6 @@
 /* ==========================================================================
    How We Work Component Layout Styles
-   Mapped strictly to variables & breakpoints in media_Queries_breakpoints.css
+   Mapped strictly to variables & breakpoints in media_Queries_breakpoint.css
    ========================================================================== */
 
 * {
@@ -15,17 +15,16 @@
   overflow: hidden;
 }
 
-/* Parent container: locks layout within dvh/dvw bounds */
+/* Parent container: locks layout within viewport bounds */
 main.how-we-work-container {
   width: 100dvw;
   height: calc(100dvh - var(--header-height, 120px));
   position: relative;
-  top: 0;
   overflow: hidden;
-  background-color: transparent;
+  background-color: var(--color-body-bg, rgb(60, 80, 60));
 }
 
-/* Inner section enforcing 20px viewport edge gaps */
+/* Inner section enforcing viewport edge gaps */
 section.how-we-work-section {
   width: calc(100% - (2 * var(--viewport-gap, 20px)));
   height: calc(100% - var(--viewport-gap, 20px));
@@ -34,368 +33,516 @@ section.how-we-work-section {
   left: var(--viewport-gap, 20px);
   right: var(--viewport-gap, 20px);
   bottom: var(--viewport-gap, 20px);
-  z-index: 0;
   overflow: hidden;
   isolation: isolate;
 }
 
-/* Character/Text level overlay blend mode */
-.letter-overlay {
-  mix-blend-mode: overlay;
-  will-change: mix-blend-mode;
-  display: inline;
-}
-
-.purple-text {
-  color: var(--color-purple-dark, rgb(70, 34, 85));
-  background-color: transparent;
+.letter {
+  display: inline-block;
 }
 
 .tv-layout-wrapper {
   display: none;
 }
 
-/* Subheading text styling */
-.headings-group {
+/* ==========================================================================
+   Base Viewport Layout (Laptop / MacBook Pro: 1480px - 1919px default)
+   Matches: MacBook Pro--how-we-work.png & macbook-pro--how-we-work-structure.json
+   ========================================================================== */
+.media-container {
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 6;
-  text-align: right;
+  right: clamp(20px, 3.5vw, 60px);
+  bottom: 0;
+  width: clamp(380px, 31vw, 475px);
+  height: clamp(380px, 31vw, 473px);
+  aspect-ratio: 1 / 1;
+  z-index: 1;
+}
+
+.media-background-image {
+  position: absolute;
+  inset: 0;
+  background-image: url("../../../../public/images/dude_framing_for_design.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.communication-heading-container {
+  position: absolute;
+  left: clamp(30px, 4.5vw, 70px);
+  bottom: 420px;
+  z-index: 4;
   pointer-events: none;
 }
 
-.subtitle-visual {
-  font-family: var(--font-family-antonio, "Antonio", sans-serif);
-  font-weight: var(--font-weight-light, 300);
-  font-size: clamp(60px, 7.9vw, 170px);
-  color: var(--color-white, rgb(255, 255, 255));
-  line-height: 1;
-  margin: 0;
-}
-
-.subtitle-comm {
-  font-family: var(--font-family-antonio, "Antonio", sans-serif);
-  font-weight: var(--font-weight-light, 300);
-  font-size: clamp(30px, 3.35vw, 53px);
-  color: var(--color-white, rgb(255, 255, 255));
-  line-height: 1;
-  margin: 0;
-}
-
-/* Main title styling with blend mode overlay */
-.title-wrapper {
-  position: absolute;
-  bottom: 120px;
-  right: 0px;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.main-title {
+.communication-subheading {
   font-family: var(--font-family-antonio, "Antonio", sans-serif);
   font-weight: var(--font-weight-regular, 400);
-  font-size: clamp(100px, 15vw, 220px);
-  line-height: 0.85;
+  font-size: clamp(40px, 3.5vw, 53px);
   color: var(--color-white, rgb(255, 255, 255));
-  mix-blend-mode: overlay;
-  will-change: mix-blend-mode;
+  line-height: 1;
   margin: 0;
-  padding: 0;
 }
 
-/* Main narrative text body */
 .text-content {
   position: absolute;
-  bottom: 420px;
-  right: 0;
-  width: 45%;
-  font-family: var(--font-family-roboto, "Roboto", sans-serif);
+  left: clamp(30px, 4.5vw, 70px);
+  bottom: 75px;
+  display: flex;
+  gap: clamp(20px, 2.8vw, 45px);
+  z-index: 3;
+}
+
+.paragraph-group-first {
+  width: clamp(330px, 26vw, 397px);
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
   font-weight: var(--font-weight-light, 300);
   font-size: var(--font-size-body, 14px);
-  line-height: 1.45;
+  line-height: 1.4;
   color: var(--color-white, rgb(255, 255, 255));
   text-align: justify;
-  z-index: 5;
+}
+
+.paragraph-group-second {
+  width: clamp(310px, 25vw, 376px);
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-light, 300);
+  font-size: var(--font-size-body, 14px);
+  line-height: 1.4;
+  color: var(--color-white, rgb(255, 255, 255));
+  text-align: justify;
+}
+
+.paragraph-group-first p + p,
+.paragraph-group-second p + p {
+  margin-top: 0.6em;
+}
+
+.bullet-list {
+  list-style: disc inside;
+  margin-top: 0.4em;
+  padding-left: 0.2em;
+}
+
+.bullet-list li {
+  margin-top: 0.25em;
+}
+
+.how-we-work-title {
+  position: absolute;
+  top: clamp(30px, 7vh, 100px);
+  right: clamp(20px, 3.5vw, 60px);
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-regular, 400);
+  font-size: clamp(120px, 13vw, 199px);
+  line-height: 0.85;
   margin: 0;
+  z-index: 3;
+  pointer-events: none;
+  letter-spacing: -0.01em;
 }
 
-/* Feature image containers with luminosity blend mode */
-.feature-image-1 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: calc(20.5% - 10px);
-  height: 180px;
-  z-index: 1;
+.how-we-work-title .word-how {
+  color: var(--color-purple-dark, rgb(70, 34, 85));
 }
 
-.image-framing {
-  position: absolute;
-  bottom: -260px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../../../public/images/dude_framing_for_design.webp");
-  background-color: var(--color-blue-sky, rgb(95, 168, 211));
-  background-blend-mode: luminosity;
-  filter: saturate(30%);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.how-we-work-title .word-we {
+  color: var(--color-lime-alt, rgb(164, 208, 112));
 }
 
-/* .feature-image-2 {
-  position: absolute;
-  bottom: 0;
-  right: 260px;
-  width: calc(20.5% - 10px);
-  height: 180px;
-  z-index: 1;
-} */
-
-.image-standing {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../../../public/images/dude_standing_at_wall.webp");
-  background-color: var(--color-blue-sky, rgb(95, 168, 211));
-  background-blend-mode: luminosity;
-  mix-blend-mode: luminosity;
-  filter: saturate(30%);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.how-we-work-title .word-work {
+  color: var(--color-purple-dark, rgb(70, 34, 85));
 }
 
-.accent-bar-primary {
+.accent-bar-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 151px;
-  background-color: var(--color-lime, rgb(164, 208, 112));
+  height: 63px;
+  background-color: var(--color-lime-alt, rgb(164, 208, 112));
   mix-blend-mode: hard-light;
   z-index: 2;
   pointer-events: none;
 }
 
-.accent-bar-secondary {
-  display: none;
-}
-
 /* ==========================================================================
-   1. Mobile Viewport Layout (iPhone 13 Mini: < 820px)
+   1. Mobile Viewport (iPhone 13 Mini: < 820px)
+   Matches: iPhone 13--how-we-work.png & iphone-13--how-we-work-structure.json
    ========================================================================== */
 @media screen and (max-width: 819px) {
-  main.how-we-work-container {
-    height: calc(100dvh - var(--header-height, 120px));
-  }
-
-  .headings-group,
-  .feature-image-1,
-  .accent-bar-primary,
-  .accent-bar-secondary,
+  .communication-heading-container,
+  .accent-bar-bottom,
+  .paragraph-group-second,
   .tv-layout-wrapper {
     display: none !important;
   }
-  .letter-overlay {
-    display: none;
-  }
+
   .text-content {
-    position: relative;
+    position: absolute;
     top: 0;
-    right: auto;
+    left: 0;
+    right: 0;
+    bottom: auto;
     width: 100%;
-    font-size: var(--font-size-body, 14px);
-    line-height: 1.35;
-    color: var(--color-white, rgb(255, 255, 255));
-    z-index: 5;
-    margin: 0;
+    max-width: 100%;
+    display: block;
+    z-index: 3;
   }
 
-  .feature-image-2 {
-    display: block;
+  .paragraph-group-first {
+    width: 100%;
+    max-width: 100%;
+    font-size: var(--font-size-body, 14px);
+    line-height: 1.35;
+    text-align: justify;
+    color: var(--color-white, rgb(255, 255, 255));
+  }
+
+  .paragraph-group-first p + p {
+    margin-top: 0.4em;
+  }
+
+  .bullet-list {
+    margin-top: 0.3em;
+  }
+
+  .bullet-list li {
+    margin-top: 0.2em;
+  }
+
+  .media-container {
     position: absolute;
-    bottom: -20px;
+    bottom: 0;
+    left: 0;
     right: 0;
     width: 100%;
-    height: 50%;
+    height: 46%;
+    aspect-ratio: auto;
     z-index: 1;
   }
 
-  .image-standing {
+  .media-background-image {
     background-image: url("../../../../public/images/dude_looking_up.webp");
     background-color: var(--color-blue-sky, rgb(95, 168, 211));
+    background-blend-mode: luminosity;
+    filter: saturate(30%);
     background-size: cover;
     background-position: center top;
   }
 
-  .title-wrapper {
+  .how-we-work-title {
     position: absolute;
-    bottom: 270px;
+    bottom: calc(41% - 24px);
     left: 0;
+    right: auto;
+    top: auto;
     width: 100%;
-    z-index: 10;
-  }
-
-  .main-title {
-    font-size: 19vw;
+    font-size: clamp(52px, 16vw, 80px);
     line-height: 0.85;
-    color: var(--color-white, rgb(255, 255, 255));
     text-align: left;
+    z-index: 4;
+    pointer-events: none;
+    mix-blend-mode: overlay;
   }
 
-  .purple-text {
+  .how-we-work-title .word-how,
+  .how-we-work-title .word-we,
+  .how-we-work-title .word-work {
     color: var(--color-white, rgb(255, 255, 255));
   }
 }
 
 /* ==========================================================================
-   2. Tablet Viewport Layout (iPad Pro 11": 820px to 1365px)
+   2. Tablet Viewport (iPad Pro 11": 820px to 1365px)
+   Matches: iPad--how-we-work.png & ipad--how-we-work-structure.json
    ========================================================================== */
 @media screen and (min-width: 820px) and (max-width: 1365px) {
-  main.how-we-work-container {
-    height: calc(100dvh - var(--header-height, 120px));
-    width: calc(100dvw + (2 * var(--viewport-gap, 40px)));
-    position: relative;
-    top: 47px;
-    left: -20px;
-  }
-
-  .headings-group,
-  .feature-image-1,
-  .accent-bar-primary,
-  .accent-bar-secondary,
+  .communication-heading-container,
+  .accent-bar-bottom,
   .tv-layout-wrapper {
     display: none !important;
   }
 
   .text-content {
-    position: relative;
-    top: 0;
-    right: auto;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: auto;
     width: 100%;
-    font-size: 17px;
-    line-height: 1.45;
-    color: var(--color-white, rgb(255, 255, 255));
-    z-index: 5;
-    margin: 0;
-    padding: 0 20px;
+    max-width: 100%;
+    display: block;
+    z-index: 3;
   }
 
-  .feature-image-2 {
-    display: block;
+  .paragraph-group-first,
+  .paragraph-group-second {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(16px, 2.1vw, 19px);
+    line-height: 1.45;
+    text-align: justify;
+    color: var(--color-white, rgb(255, 255, 255));
+  }
+
+  .paragraph-group-second {
+    display: none !important;
+    margin-top: 0.8em;
+  }
+
+  .paragraph-group-first p + p,
+  .paragraph-group-second p + p {
+    margin-top: 0.6em;
+  }
+
+  .how-we-work-title {
+    position: absolute;
+    bottom: 47%;
+    left: 0;
+    right: auto;
+    top: auto;
+    width: 100%;
+    font-size: clamp(90px, 17vw, 169px);
+    line-height: 0.85;
+    text-align: left;
+    z-index: 4;
+  }
+
+  .how-we-work-title .word-how,
+  .how-we-work-title .word-we,
+  .how-we-work-title .word-work {
+    color: var(--color-lime-alt, rgb(164, 208, 112));
+  }
+
+  .media-container {
     position: absolute;
     bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
-    height: 48%;
+    height: 47%;
+    aspect-ratio: auto;
     z-index: 1;
   }
 
-  .image-standing {
+  .media-background-image {
     background-image: url("../../../../public/images/dude_looking_up.webp");
     background-color: var(--color-blue-sky, rgb(95, 168, 211));
+    background-blend-mode: luminosity;
+    filter: saturate(30%);
     background-size: cover;
-    background-position: center;
-  }
-
-  .title-wrapper {
-    position: absolute;
-    bottom: 349px;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-  }
-
-  .main-title {
-    font-size: 21vw;
-    line-height: 0.85;
-    color: var(--color-white, rgb(255, 255, 255));
-    text-align: left;
-    padding: 0 20px;
-  }
-
-  .purple-text {
-    color: var(--color-lime-alt, rgb(164, 208, 112));
+    background-position: center top;
   }
 }
 
 /* ==========================================================================
-   3. Desktop Linux Viewport Overrides (Desktop 4 Linux: min-width: 1440px)
+   3. Desktop Viewport (Desktop: 1366px to 1479px, 1440px target)
+   Matches: Desktop--how-we-work.png & desktop--how-we-work-structure.json
    ========================================================================== */
-@media screen and (min-width: 1440px) and (max-width: 3839px) {
-  .accent-bar-primary {
-    display: none;
+@media screen and (min-width: 1366px) and (max-width: 1479px) {
+  .communication-heading-container {
+    display: none !important;
   }
 
-  .accent-bar-secondary {
+  .media-container {
+    position: absolute;
+    left: clamp(20px, 2.5vw, 40px);
+    top: 60px;
+    bottom: 0;
+    right: auto;
+    width: clamp(420px, 37vw, 533px);
+    height: calc(100% - 33px);
+    aspect-ratio: auto;
+    z-index: 1;
+  }
+
+  .media-background-image {
+    background-image: url("../../../../public/images/dude_framing_for_design.webp");
+    background-color: var(--color-accent-purple, rgb(151, 71, 255));
+    background-blend-mode: luminosity;
+    filter: saturate(30%);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .text-content {
+    position: absolute;
+    top: 60px;
+    right: clamp(20px, 2.5vw, 40px);
+    left: auto;
+    bottom: auto;
+    width: clamp(520px, 53vw, 812px);
+    display: block;
+    z-index: 3;
+  }
+
+  .paragraph-group-first,
+  .paragraph-group-second {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(16px, 1.3vw, 19px);
+    line-height: 1.45;
+    text-align: justify;
+    color: var(--color-white, rgb(255, 255, 255));
+  }
+
+  .paragraph-group-second {
+    display: block !important;
+    margin-top: 0.8em;
+  }
+
+  .paragraph-group-first p + p,
+  .paragraph-group-second p + p {
+    margin-top: 0.6em;
+  }
+
+  .how-we-work-title {
+    position: absolute;
+    bottom: 70px;
+    right: clamp(20px, 2.5vw, 40px);
+    left: auto;
+    top: auto;
+    font-size: clamp(110px, 12vw, 125px);
+    line-height: 0.85;
+    text-align: right;
+    z-index: 4;
+  }
+
+  .how-we-work-title .word-how,
+  .how-we-work-title .word-we,
+  .how-we-work-title .word-work {
+    color: var(--color-lime-alt, rgb(164, 208, 112));
+  }
+
+  .accent-bar-bottom {
     display: block;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 236px;
+    height: 78px;
     background-color: var(--color-blue-mid, rgb(77, 145, 196));
     mix-blend-mode: hard-light;
     z-index: 2;
     pointer-events: none;
   }
+}
+
+/* ==========================================================================
+   4. Laptop Viewport (MacBook Pro: 1480px to 1919px, 1512px target)
+   Matches: MacBook Pro--how-we-work.png & macbook-pro--how-we-work-structure.json
+   ========================================================================== */
+@media screen and (min-width: 1480px) and (max-width: 1919px) {
+  .media-container {
+    position: absolute;
+    right: clamp(30px, 4vw, 70px);
+    bottom: 0;
+    left: auto;
+    top: auto;
+    width: clamp(400px, 31vw, 475px);
+    height: clamp(400px, 31vw, 473px);
+    aspect-ratio: 1 / 1;
+    z-index: 1;
+  }
+
+  .media-background-image {
+    background-image: url("../../../../public/images/dude_framing_for_design.webp");
+    background-color: transparent;
+    filter: none;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .communication-heading-container {
+    display: block;
+    position: absolute;
+    left: clamp(40px, 4.5vw, 80px);
+    bottom: 420px;
+    right: auto;
+    top: auto;
+    z-index: 4;
+  }
+
+  .communication-subheading {
+    font-size: 53px;
+    color: var(--color-white, rgb(255, 255, 255));
+  }
+
   .text-content {
     position: absolute;
-    bottom: 420px;
-    right: 0;
-    width: 60%;
-    font-family: var(--font-family-roboto, "Roboto", sans-serif);
-    font-weight: var(--font-weight-light, 300);
-    font-size: var(--font-size-body, 14px);
-    line-height: 1.45;
-    color: var(--color-white, rgb(255, 255, 255));
-    text-align: justify;
-    z-index: 5;
-    margin: 0;
-  }
-
-  .feature-image-1 {
-    width: 37%;
-    height: calc(100% - 250px);
-    top: 0;
-    left: 0;
-    bottom: auto;
+    left: clamp(40px, 4.5vw, 80px);
+    bottom: 75px;
     right: auto;
+    top: auto;
+    display: flex;
+    gap: clamp(24px, 2.5vw, 40px);
+    z-index: 3;
   }
 
-  .image-framing {
-    background-image: url("../../../../public/images/dude_standing_at_wall.webp");
-    background-color: var(--color-accent-purple, rgb(151, 71, 255));
+  .paragraph-group-first {
+    width: clamp(340px, 26vw, 397px);
+    font-size: var(--font-size-body, 14px);
+    line-height: 1.4;
+    text-align: justify;
+    color: var(--color-white, rgb(255, 255, 255));
   }
 
-  .feature-image-2 {
-    display: none;
+  .paragraph-group-second {
+    display: block !important;
+    width: clamp(320px, 25vw, 376px);
+    font-size: var(--font-size-body, 14px);
+    line-height: 1.4;
+    text-align: justify;
+    color: var(--color-white, rgb(255, 255, 255));
   }
 
-  .main-title {
-    font-size: 150px;
+  .how-we-work-title {
+    position: absolute;
+    top: clamp(30px, 7vh, 100px);
+    right: clamp(30px, 4vw, 70px);
+    left: auto;
+    bottom: auto;
+    font-size: 199px;
+    line-height: 0.85;
+    text-align: right;
+    z-index: 3;
   }
 
-  .title-wrapper {
-    bottom: 236px;
+  .how-we-work-title .word-how {
+    color: var(--color-purple-dark, rgb(70, 34, 85));
   }
 
-  .purple-text {
-    color: var(--color-accent-purple, rgb(151, 71, 255));
+  .how-we-work-title .word-we {
+    color: var(--color-lime-alt, rgb(164, 208, 112));
+  }
+
+  .how-we-work-title .word-work {
+    color: var(--color-purple-dark, rgb(70, 34, 85));
+  }
+
+  .accent-bar-bottom {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 63px;
+    background-color: var(--color-lime-alt, rgb(164, 208, 112));
+    mix-blend-mode: hard-light;
+    z-index: 2;
   }
 }
 
 /* ==========================================================================
-   4. 4K Smart TV & Ultra-wide Displays (TV: min-width: 3840px)
+   5. Smart TV & Ultra-wide Displays (TV Displays: min-width: 1920px)
+   Matches: TV--how-we-work.png & TV--how-we-work-structure.json
    ========================================================================== */
-@media screen and (min-width: 3840px) {
+@media screen and (min-width: 1920px) {
   main.how-we-work-container {
     height: calc(100dvh - var(--header-height, 240px));
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
   }
 
   section.how-we-work-section {
@@ -404,68 +551,81 @@ section.how-we-work-section {
 
   .tv-layout-wrapper {
     display: flex !important;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    width: calc(100% - (2 * var(--viewport-gap, 60px)));
+    height: calc(100% - var(--viewport-gap, 60px));
+    position: absolute;
+    top: 0;
+    left: var(--viewport-gap, 60px);
+    right: var(--viewport-gap, 60px);
+    bottom: var(--viewport-gap, 60px);
+    overflow: hidden;
+    isolation: isolate;
   }
 
   .tv-left-column {
     width: 32%;
     height: 100%;
     position: relative;
-    background-color: var(--color-text-neon, rgb(137, 250, 198));
+    background-color: var(--color-accent-purple, rgb(151, 71, 255));
+    overflow: hidden;
   }
 
   .tv-background-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-image: url("../../../../public/images/dude_looking_up.webp");
-    background-color: var(--color-text-neon, rgb(137, 250, 198));
+    background-color: var(--color-accent-purple, rgb(151, 71, 255));
     background-blend-mode: luminosity;
-    mix-blend-mode: luminosity;
     filter: saturate(30%);
     background-size: cover;
-    background-position: center;
+    background-position: -450px center;
     background-repeat: no-repeat;
   }
 
   .tv-right-column {
     width: 68%;
     height: 100%;
-    background-color: var(--color-text-neon, rgb(137, 250, 198));
     position: relative;
-    padding: 60px;
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
   }
 
   .tv-text-content {
     position: absolute;
-    top: 80px;
-    left: 60px;
-    right: 60px;
+    top: 60px;
+    left: 80px;
+    right: 80px;
     font-family: var(--font-family-antonio, "Antonio", sans-serif);
     font-weight: var(--font-weight-light, 300);
-    font-size: 38px;
+    font-size: clamp(19px, 1.45vw, var(--font-size-body, 28px));
     line-height: 1.45;
     color: var(--color-dark, rgb(30, 30, 30));
     text-align: justify;
-    z-index: 5;
   }
 
-  .tv-main-title {
+  .tv-text-content p + p {
+    margin-top: 0.8em;
+  }
+
+  .tv-bullet-list {
+    list-style: disc inside;
+    margin: 0.4em 0;
+    padding-left: 0.5em;
+  }
+
+  .tv-bullet-list li {
+    margin-top: 0.25em;
+  }
+
+  .tv-how-we-work-title {
     position: absolute;
-    bottom: 40px;
-    left: 60px;
-    z-index: 10;
+    bottom: 30px;
+    right: 60px;
     font-family: var(--font-family-antonio, "Antonio", sans-serif);
-    font-size: 14vw;
+    font-weight: var(--font-weight-regular, 400);
+    font-size: clamp(160px, 13vw, 270px);
     line-height: 0.85;
-    color: var(--color-dark, rgb(30, 30, 30));
-    mix-blend-mode: overlay;
+    color: var(--color-bg-primary, rgb(104, 94, 84));
     margin: 0;
-    padding: 0;
     pointer-events: none;
   }
 }

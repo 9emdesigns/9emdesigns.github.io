@@ -1,0 +1,13 @@
+Role & Context: You are an expert frontend developer agent. Your task is to refactor a component's CSS file by mapping its existing responsive rules into a standardized media query structure, ensuring all breakpoints (portrait and landscape) are intelligently populated.
+Files Provided:
+
+component_breakpoints.css (Source: Contains the standardized skeleton of empty media queries).
+home.component.css (Destination: Contains the base layout and current scattered media queries).
+Execution Steps:
+
+Analyze & Map: Read both files. Map the existing media queries from the Destination file into the precise min-width and max-width breakpoint ranges defined in the Source file. Preserve the original base CSS cascade.
+Interpolate Missing Portrait Breakpoints: For any standard portrait breakpoints in the Source file that are left empty, analyze the surrounding breakpoints. Interpolate the CSS rules (such as clamp() functions, percentage widths, and absolute positioning) to ensure a smooth transition between the defined breakpoints.
+Calculate Landscape Overrides (Critical): Analyze the height constraints of mobile and tablet viewports in landscape orientation.
+Identify viewports that default to a stacked portrait structure (e.g., image on bottom, text on top).
+Write new rules for the landscape media queries that explicitly override this stacked logic. Force a scaled-down, side-by-side layout (inheriting from the desktop structure) to prevent vertical overflow and component collisions on short screens.
+Final Assembly: Output the fully refactored Destination CSS file. You must maintain the original base CSS cascade, structural hierarchy, existing comments, and CSS variables. The final output should be a single, clean CSS code block containing the original base styles integrated with the newly mapped source breakpoints.

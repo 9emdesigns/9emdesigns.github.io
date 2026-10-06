@@ -1,58 +1,83 @@
 <main class="what-we-do-container">
+  <!-- Core Semantic Section for Mobile, Tablet, Laptop, and Desktop -->
   <section class="what-we-do-section" aria-label="What We Do Section">
-    <!-- Subtitle headings for Laptop / Desktop layouts -->
-    <header class="headings-group">
-      <h2 class="subtitle-visual">Visual</h2>
-      <h3 class="subtitle-comm">Communication</h3>
+    <!-- Visual & Communication Subheadings (Laptop / MacBook Pro layout) -->
+    <header class="communication-heading-container">
+      <h2 class="subheading-visual">Visual</h2>
+      <h3 class="subheading-communication">Communication</h3>
     </header>
 
     <!-- Narrative text body -->
     <article class="text-content">
-      <p class="paragraph-main">
-        At 9em design, we don’t just design for you; we design for the people who matter most to your business. Our collaborative approach builds a unique bridge between your vision, your brand, and your ultimate customer. By actively looping both you and your target audience into our creative process, we eliminate guesswork and ensure every piece of branding and marketing we touch is grounded in real-world relevance. We believe that exceptional design only happens when deep collaboration meets sharp, audience-first insights.
-        <span class="letter-overlay">
-          This dual-perspective methodology allows us to build powerful design systems, brand identities, and digital experiences that do more than just look stunning—they perform. By aligning consumer expectations with your overarching business goals, we create intentional, high-impact solutions engineered to drive measurable ROI. At 9em design, we transform creative strategy into a powerful engine for your company's growth, delivering a final product that is precisely on target and built to scale.
-        </span>
+      <p class="paragraph-first">
+        At 9em design, we don’t just design for you; we design for the people who
+        matter most to your business. Through purposeful visual communication,
+        our collaborative approach builds a unique bridge between your vision,
+        your brand, and your ultimate customer. By actively looping both you and
+        your target audience into our creative process, we eliminate guesswork
+        and ensure every touchpoint is grounded in real-world relevance. We
+        believe that exceptional impact happens when deep collaboration meets
+        audience-first design.
+      </p>
+      <p class="paragraph-second">
+        This dual-perspective methodology allows us to build robust design
+        systems, elevate brand identity, and create immersive digital
+        experiences that do more than just look stunning—they perform. By
+        aligning consumer expectations with your overarching business goals, we
+        transform creative strategy into business growth solutions engineered to
+        drive measurable ROI, delivering a final product that is precisely on
+        target and built to scale.
       </p>
     </article>
 
-    <!-- Accent Bars / Background Layers -->
-    <div class="accent-bar-primary"></div>
-    <div class="accent-bar-secondary"></div>
+    <!-- Visual Media Containers -->
+    <aside class="media-container media-primary" aria-label="What We Do visual media framing">
+      <div class="media-background-framing"></div>
+    </aside>
 
-    <!-- Feature Images with background-blend-mode luminosity -->
-    <div class="image-wrapper feature-image-1" aria-hidden="true">
-      <div class="bg-image-element image-framing"></div>
-    </div>
-    <div class="image-wrapper feature-image-2" aria-hidden="true">
-      <div class="bg-image-element image-standing"></div>
-    </div>
+    <aside class="media-container media-secondary" aria-label="What We Do visual media standing">
+      <div class="media-background-standing"></div>
+    </aside>
 
-    <!-- Main Section Overlay Title -->
-    <div class="title-wrapper">
-      <h1 class="main-title">
-        <span class="purple-text">What</span>We<span class="purple-text">Do</span>
-      </h1>
-    </div>
+    <!-- Main Title Heading "WhatWeDo" -->
+    <h1 class="what-we-do-title">
+      <span class="letter word-what">What</span><span class="letter word-we">We</span><span class="letter word-do">Do</span>
+    </h1>
+
+    <!-- Decorative & Structural Accent Bar (Desktop, Laptop) -->
+    <aside class="accent-bar-bottom" aria-hidden="true"></aside>
   </section>
 
-  <!-- Dedicated 4K Smart TV Viewport Grid (min-width: 3840px) -->
-  <section class="tv-layout-wrapper" aria-hidden="true">
-    <div class="tv-left-column">
+  <!-- Dedicated Smart TV Viewport Grid (min-width: 1920px) -->
+  <section class="tv-layout-wrapper" aria-label="What We Do TV Viewport">
+    <aside class="tv-left-column" aria-label="What We Do TV visual media">
       <div class="tv-background-image"></div>
-    </div>
-    <div class="tv-right-column">
+    </aside>
+    <section class="tv-right-column">
       <article class="tv-text-content">
-        <p>
-          At 9em design, we don’t just design for you; we design for the people who matter most to your business. Our collaborative approach builds a unique bridge between your vision, your brand, and your ultimate customer. By actively looping both you and your target audience into our creative process, we eliminate guesswork and ensure every piece of branding and marketing we touch is grounded in real-world relevance. We believe that exceptional design only happens when deep collaboration meets sharp, audience-first insights.
-          <br /><br />
-          This dual-perspective methodology allows us to build powerful design systems, brand identities, and digital experiences that do more than just look stunning—they perform. By aligning consumer expectations with your overarching business goals, we create intentional, high-impact solutions engineered to drive measurable ROI. At 9em design, we transform creative strategy into a powerful engine for your company's growth, delivering a final product that is precisely on target and built to scale.
+        <p class="tv-paragraph-first">
+          At 9em design, we don’t just design for you; we design for the people
+          who matter most to your business. Through purposeful visual
+          communication, our collaborative approach builds a unique bridge
+          between your vision, your brand, and your ultimate customer. By
+          actively looping both you and your target audience into our creative
+          process, we eliminate guesswork and ensure every touchpoint is
+          grounded in real-world relevance. We believe that exceptional impact
+          happens when deep collaboration meets audience-first design.
+        </p>
+        <p class="tv-paragraph-second">
+          This dual-perspective methodology allows us to build robust design
+          systems, elevate brand identity, and create immersive digital
+          experiences that do more than just look stunning—they perform. By
+          aligning consumer expectations with your overarching business goals,
+          we transform creative strategy into business growth solutions
+          engineered to drive measurable ROI, delivering a final product that is
+          precisely on target and built to scale.
         </p>
       </article>
-      <h1 class="tv-main-title">
-        <span class="purple-text">What</span>We<span class="purple-text">Do</span>
+      <h1 class="tv-what-we-do-title">
+        <span class="tv-letter">WhatWeDo</span>
       </h1>
-    </div>
+    </section>
   </section>
 </main>
-

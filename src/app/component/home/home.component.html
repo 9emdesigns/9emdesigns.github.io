@@ -1,59 +1,50 @@
 <main class="home-container">
-  <section class="hero-section" aria-label="Hero Section">
-    <!-- Desktop & TV Title Layout (1 line) -->
-    <h1 class="title-desktop-tv">
+  <!-- Core Semantic Section for Mobile, Tablet, Desktop, and Laptop Viewports -->
+  <section class="hero-section" aria-label="Home Hero Section">
+    <!-- Desktop & Laptop Single-line Title -->
+    <h1 class="title-desktop-laptop">
       <span class="letter">9emdesign</span>
     </h1>
 
-    <!-- Tablet Title Layout (2 lines) -->
+    <!-- Desktop Subheading "Hello" (Desktop viewport: 1366px - 1479px) -->
+    <h2 class="desktop-hello-subheading">Hello</h2>
+
+    <!-- Tablet Title Layout (2 lines: "9em" / "design") (Tablet viewport: 820px - 1365px) -->
     <div class="title-tablet" aria-hidden="true">
-      <h1 class="row-1">
-        <span class="letter">9em</span>
-      </h1>
-      <h1 class="row-2">
-        <span class="letter">design</span>
-      </h1>
+      <span class="letter tablet-row-1">9em</span>
+      <span class="letter tablet-row-2">design</span>
     </div>
 
-    <!-- Mobile Title Layout (3 lines) -->
+    <!-- Mobile Title Layout (3 lines: "9em" / "des" / "ign") (Mobile viewport: < 820px) -->
     <div class="title-mobile" aria-hidden="true">
-      <h1 class="row-1">
-        <span class="letter">9em</span>
-        <!--  <span class="letter">e</span>
-        <span class="letter">m</span> -->
-      </h1>
-      <h1 class="row-2">
-        <span class="letter">des</span>
-      </h1>
-      <h1 class="row-3">ign</h1>
+      <span class="letter mobile-row-1">9em</span>
+      <span class="letter mobile-row-2">des</span>
+      <span class="letter mobile-row-3">ign</span>
     </div>
 
-    <!-- Subheading Hello (Desktop, TV) -->
-    <h2 class="hello-subheading">Hello</h2>
-
-    <!-- Decorative & Structural Content Blocks (Frame 4 & Frame 3 from JSON) -->
-    <article class="hero-block-container">
-      <div class="hero-block"></div>
-      <div class="accent-bar"></div>
-    </article>
-
-    <!-- Hero Image Container Layer (Mobile, Tablet, Desktop) -->
-    <aside class="image-wrapper">
-      <div
-        class="background-image-element"
-        aria-label="Dude looking up background image"
-      ></div>
+    <!-- Decorative & Structural Content Blocks (Laptop: blue block + lime bar; Desktop: lime-alt block) -->
+    <aside class="hero-block-container" aria-hidden="true">
+      <div class="hero-block-top"></div>
+      <div class="hero-accent-bar"></div>
     </aside>
 
-    <!-- TV Specific Ultra-Wide Layout -->
-    <div class="tv-layout-wrapper">
-      <aside class="tv-left-column">
-        <div
-          class="tv-background-image"
-          aria-label="Dude standing at wall background image"
-        ></div>
-      </aside>
-      <section class="tv-right-column"></section>
-    </div>
+    <!-- Visual Media Container Layer (dude looking up) -->
+    <aside class="image-wrapper" aria-label="Dude looking up background image">
+      <div class="background-image-element"></div>
+    </aside>
+  </section>
+
+  <!-- Dedicated Smart TV Viewport Grid (min-width: 1920px) -->
+  <section class="tv-layout-wrapper" aria-label="Home Smart TV Viewport">
+    <aside
+      class="tv-left-column"
+      aria-label="Dude framing for design visual media"
+    >
+      <div class="tv-background-image"></div>
+    </aside>
+    <section class="tv-right-column">
+      <h2 class="tv-hello-title">Hello</h2>
+      <h1 class="tv-main-title">9emdesign</h1>
+    </section>
   </section>
 </main>

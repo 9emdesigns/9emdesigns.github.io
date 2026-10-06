@@ -1,8 +1,8 @@
 /* ==========================================================================
    Home Component Layout Styles
-   Mapped strictly to variables & breakpoints in media_Queries_breakpoints.css
+   Mapped strictly to variables & breakpoints in media_Queries_breakpoint.css
    ========================================================================== */
-
+@import url(./../../../../public/styles/media_Queries_breakpoint.css);
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,14 +15,13 @@
   overflow: hidden;
 }
 
-/* Parent container: forces non-scrolling dvh/dvw bounds */
+/* Parent container: locks layout within viewport bounds */
 main.home-container {
   width: 100dvw;
   height: calc(100dvh - var(--header-height, 120px));
   position: relative;
-  top: 0;
   overflow: hidden;
-  background-color: transparent;
+  background-color: var(--color-body-bg, rgb(80, 69, 60));
 }
 
 /* Inner section implementing viewport edge gaps */
@@ -34,181 +33,100 @@ section.hero-section {
   left: var(--viewport-gap, 20px);
   right: var(--viewport-gap, 20px);
   bottom: var(--viewport-gap, 20px);
-  z-index: 0;
   overflow: hidden;
   isolation: isolate;
 }
 
-/* Character level overlay blend mode styles */
 .letter {
-  mix-blend-mode: overlay;
-  will-change: mix-blend-mode;
   display: inline-block;
 }
 
-/* Structural block container */
+/* Hide alternative breakpoint elements by default */
+.desktop-hello-subheading,
+.title-tablet,
+.title-mobile,
+.tv-layout-wrapper {
+  display: none;
+}
+
+/* ==========================================================================
+   Base Viewport Layout (Laptop / MacBook Pro: 1480px - 1919px default)
+   Matches: MacBook Pro--Home.png & macbook-pro--home-structure.json
+   ========================================================================== */
+
+/* Top blue hero block and lime accent bar */
 .hero-block-container {
-  width: 100%;
   position: absolute;
-  bottom: 125px;
+  top: 0;
   left: 0;
+  width: 100%;
+  height: 50%;
   z-index: 1;
   pointer-events: none;
 }
 
-/* ==========================================================================
-   Base Layout Setup (Standard Desktop / Laptop: min-width: 1366px)
-   ========================================================================== */
-
-/* Show desktop title layout overlaying the hero section */
-@media screen and (min-width: 1366px) {
-  .title-desktop-tv {
-    display: block;
-    font-family: var(--font-family-antonio, "Antonio", sans-serif);
-    font-weight: var(--font-weight-light, 300);
-    letter-spacing: -0.04em;
-    color: var(--color-body-bg, rgb(80, 69, 60)) !important;
-    font-size: var(--font-size-logo-9em, 300px);
-    line-height: 0.85;
-    position: absolute;
-    top: 26%;
-    left: 0;
-    z-index: 10;
-    pointer-events: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .title-tablet,
-  .title-mobile,
-  .tv-layout-wrapper {
-    display: none;
-  }
-
-  .hello-subheading {
-    font-family: var(--font-family-fredoka, "Fredoka", sans-serif);
-    font-weight: var(--font-weight-light, 300);
-    color: var(--color-accent-blue, rgb(110, 160, 197));
-    font-size: var(--font-size-hello, 40px);
-    background-color: transparent;
-    position: absolute;
-    bottom: 740px;
-    left: -10px;
-    z-index: 10;
-  }
-
-  .hero-block {
-    height: 375px;
-    width: 100%;
-    position: absolute;
-    bottom: 269px;
-    background-color: var(--color-accent-blue, rgb(110, 160, 197));
-    z-index: 1;
-  }
-
-  .accent-bar {
-    width: 100%;
-    height: 19px;
-    position: absolute;
-    bottom: 250px;
-    background-color: var(--color-lime, rgb(164, 208, 111));
-    z-index: 1;
-  }
-
-  .image-wrapper {
-    width: 100%;
-    height: 375px;
-    mix-blend-mode: hard-light;
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    background-color: transparent;
-    z-index: 2;
-  }
-
-  .background-image-element {
-    filter: saturate(30%);
-    mix-blend-mode: luminosity;
-    background-blend-mode: luminosity;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-image: url("../../../../public/images/dude_looking_up.webp");
-    background-color: var(--color-accent-blue, rgb(110, 160, 197));
-    background-position: center -40px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-  }
+.hero-block-top {
+  width: 100%;
+  height: calc(100% - 17px);
+  background-color: var(--color-accent-blue, rgb(110, 160, 197));
 }
-/* ==========================================================================
-   Standard Desktop / Laptop: min-width: 1440px)
-   ========================================================================== */
-@media screen and (max-width: 1440px) {
-  /* Show desktop title layout overlaying the hero section */
-  .title-desktop-tv {
-    display: block;
-    font-family: var(--font-family-antonio, "Antonio", sans-serif);
-    font-weight: var(--font-weight-light, 300);
-    letter-spacing: -0.04em;
-    color: var(--color-body-bg, rgb(80, 69, 60)) !important;
-    font-size: var(--font-size-logo-9em, 300px);
-    line-height: 0.85;
-    position: absolute;
-    top: 350px !important;
-    left: 0;
-    z-index: 10;
-    pointer-events: none;
-    margin: 0;
-    padding: 0;
-  }
-  .hello-subheading {
-    font-family: var(--font-family-fredoka, "Fredoka", sans-serif);
-    font-weight: var(--font-weight-light, 300);
-    color: var(--color-accent-blue, rgb(110, 160, 197));
-    font-size: var(--font-size-hello, 40px);
-    background-color: transparent;
-    position: absolute;
-    bottom: 650px;
-    left: -10px;
-    z-index: 10;
-  }
-  .background-image-element {
-    filter: saturate(30%);
-    mix-blend-mode: luminosity;
-    background-blend-mode: luminosity;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-image: url("../../../../public/images/dude_looking_up.webp");
-    background-color: var(--color-accent-blue, rgb(110, 160, 197));
-    background-position: center -40px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 0;
-    width: 100%;
-    height: 90%;
-  }
+
+.hero-accent-bar {
+  width: 100%;
+  height: 17px;
+  background-color: var(--color-lime, rgb(164, 208, 111));
+}
+
+/* Visual media container: Dude looking up */
+.image-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 2;
+  overflow: hidden;
+  background-color: var(--color-body-bg, rgb(80, 69, 60));
+}
+
+.background-image-element {
+  width: 100%;
+  height: 93%;
+  background-image: url("../../../../public/images/dude_looking_up.webp");
+  background-color: var(--color-body-bg, rgb(80, 69, 60));
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  filter: saturate(30%);
+}
+
+/* Laptop single-line title "9emdesign" overlapping blue block, lime bar, and image */
+.title-desktop-laptop {
+  position: absolute;
+  top: 160px !important;
+  left: 0;
+  width: 100%;
+  font-family: var(--font-family-antonio, "Antonio", sans-serif);
+  font-weight: var(--font-weight-regular, 400);
+  font-size: clamp(160px, 22.5vw, 350px) !important;
+  line-height: 0.85;
+  color: var(--color-body-bg, rgb(80, 69, 60));
+  letter-spacing: -0.04em;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  pointer-events: none;
 }
 
 /* ==========================================================================
    1. Mobile Viewport (iPhone 13 Mini: < 820px)
+   Matches: iPhone 13--home.png & iphone-13--home-structure.json
    ========================================================================== */
 @media screen and (max-width: 819px) {
-  main.home-container {
-    height: calc(100dvh - var(--header-height, 120px));
-    width: calc(100dvw + (2 * var(--viewport-gap, 40px)));
-    position: relative;
-    top: 47px;
-    left: -20px;
-  }
-
-  .hello-subheading,
-  .title-desktop-tv,
-  .title-tablet,
   .hero-block-container,
+  .title-desktop-laptop,
+  .desktop-hello-subheading,
+  .title-tablet,
   .tv-layout-wrapper {
     display: none !important;
   }
@@ -217,63 +135,66 @@ section.hero-section {
     display: flex !important;
     flex-direction: column;
     position: absolute;
-    top: 10px;
+    top: clamp(10px, 2.5vh, 30px);
     left: 0;
     width: 100%;
     z-index: 10;
-    pointer-events: none;
     mix-blend-mode: overlay;
+    pointer-events: none;
   }
 
-  .title-mobile h1 {
-    font-size: 51vw;
-    line-height: 1.1em;
-    color: var(--color-white, rgb(255, 255, 255));
+  .title-mobile .letter {
     font-family: var(--font-family-antonio, "Antonio", sans-serif);
-    font-weight: var(--font-weight-light, 300);
+    font-weight: var(--font-weight-regular, 400);
+    color: var(--color-white, rgb(255, 255, 255));
     letter-spacing: -0.03em;
     margin: 0;
     padding: 0;
   }
 
+  .title-mobile .mobile-row-1 {
+    font-size: clamp(90px, 32vw, 165px);
+    line-height: 0.9;
+  }
+
+  .title-mobile .mobile-row-2 {
+    font-size: clamp(110px, 38vw, 225px);
+    line-height: 0.85;
+  }
+
+  .title-mobile .mobile-row-3 {
+    font-size: clamp(110px, 38vw, 225px);
+    line-height: 0.85;
+  }
+
   .image-wrapper {
     position: absolute;
-    bottom: 0 !important;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 35%;
+    height: clamp(260px, 38vh, 380px);
     z-index: 1;
   }
 
   .background-image-element {
     background-image: url("../../../../public/images/dude_looking_up.webp");
-    background-blend-mode: luminosity;
-    background-color: transparent;
-    filter: saturate(30%);
-    width: 100%;
-    height: 100%;
+    background-color: var(--color-body-bg, rgb(80, 69, 60));
     background-size: cover;
-    background-position: center -20px;
+    background-position: center top;
     background-repeat: no-repeat;
-    bottom: 0;
+    filter: saturate(30%);
   }
 }
 
 /* ==========================================================================
-   2. Tablet Viewport (iPad Pro 11": 820px to 1365px)
+   2. Tablet Viewport (iPad Pro: 820px to 1365px)
+   Matches: iPad--home.png & ipad--home-structure.json
    ========================================================================== */
 @media screen and (min-width: 820px) and (max-width: 1365px) {
-  main.home-container {
-    height: calc(100dvh - var(--header-height, 120px));
-    width: calc(100dvw + (2 * var(--viewport-gap, 40px)));
-    position: relative;
-    left: -20px;
-    top: 20px;
-  }
-
-  .hello-subheading,
-  .title-desktop-tv,
-  .title-mobile,
   .hero-block-container,
+  .title-desktop-laptop,
+  .desktop-hello-subheading,
+  .title-mobile,
   .tv-layout-wrapper {
     display: none !important;
   }
@@ -282,157 +203,287 @@ section.hero-section {
     display: flex !important;
     flex-direction: column;
     position: absolute;
-    top: 140px;
+    bottom: 207px;
     left: 0;
     width: 100%;
-    background-color: transparent;
-    font-family: var(--font-family-antonio, "Antonio", sans-serif);
-    font-weight: var(--font-weight-light, 300);
     z-index: 10;
-    pointer-events: none;
     mix-blend-mode: overlay;
+    pointer-events: none;
   }
 
-  .title-tablet .row-1 {
+  .title-tablet .letter {
     font-family: var(--font-family-antonio, "Antonio", sans-serif);
-    font-weight: var(--font-weight-light, 300);
-    font-size: 57vw;
+    font-weight: var(--font-weight-regular, 400);
+    color: var(--color-white, rgb(255, 255, 255));
+    letter-spacing: -0.03em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title-tablet .tablet-row-1 {
+    font-size: clamp(150px, 32vw, 320px);
     line-height: 1.1em;
-    color: var(--color-white, rgb(255, 255, 255));
-    margin: 0;
-    padding: 0;
   }
 
-  .title-tablet .row-2 {
-    font-family: var(--font-family-antonio, "Antonio", sans-serif);
-    font-weight: var(--font-weight-light, 300);
-    font-size: 42vw;
+  .title-tablet .tablet-row-2 {
+    font-size: clamp(160px, 34vw, 346px);
     line-height: 0.85;
-    color: var(--color-white, rgb(255, 255, 255));
-    margin: 0;
-    padding: 0;
   }
 
   .image-wrapper {
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
-    height: 42%;
-    mix-blend-mode: hard-light;
-    background-color: var(--color-bg-primary);
+    height: clamp(380px, 46vh, 540px);
     z-index: 1;
   }
 
   .background-image-element {
     background-image: url("../../../../public/images/dude_looking_up.webp");
-    background-color: var(--color-accent-blue, rgb(110, 160, 197));
-    background-blend-mode: luminosity;
-    mix-blend-mode: luminosity;
-    filter: saturate(30%);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
+    background-color: var(--color-body-bg, rgb(80, 69, 60));
     background-size: cover;
-    background-position: center -40px;
+    background-position: center top;
     background-repeat: no-repeat;
+    filter: saturate(30%);
   }
 }
 
 /* ==========================================================================
-   3. Laptop Viewport Adjustments (1366px - 1512px)
+   3. Desktop Viewport (Desktop: 1366px to 1479px, 1440px target)
+   Matches: Desktop--home.png & desktop--home-structure.json
    ========================================================================== */
-@media screen and (min-width: 1366px) and (max-width: 1512px) {
-  .title-desktop-tv {
-    font-size: clamp(140px, 16vw, 300px);
-    top: 10px;
-  }
-
-  .hero-block {
-    height: 320px;
-    bottom: 230px;
-  }
-
-  .accent-bar {
-    bottom: 215px;
-  }
-}
-
-/* ==========================================================================
-   4. 4K Smart TV & Ultra-wide Displays (TV: min-width: 3840px)
-   ========================================================================== */
-@media screen and (min-width: 3840px) {
-  main.home-container {
-    height: calc(100dvh - var(--header-height, 240px));
-  }
-
-  section.hero-section {
-    width: calc(100% - (2 * var(--viewport-gap, 60px)));
-    height: calc(100% - var(--viewport-gap, 60px));
-    left: var(--viewport-gap, 60px);
-    right: var(--viewport-gap, 60px);
-    bottom: var(--viewport-gap, 60px);
-  }
-
+@media screen and (min-width: 1366px) and (max-width: 1479px) {
   .title-tablet,
   .title-mobile,
-  .hero-block-container,
-  .image-wrapper {
+  .tv-layout-wrapper {
     display: none !important;
   }
 
-  /* Split side-by-side columns */
-  .tv-layout-wrapper {
-    display: flex !important;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-
-  .tv-left-column {
-    width: 32%;
-    height: 100%;
-    position: relative;
-    background-color: var(--color-accent-green, rgb(143, 209, 106));
-  }
-
-  .tv-background-image {
+  .hero-block-container {
+    display: block !important;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url("../../../../public/images/dude_looking_up.webp");
-    background-color: var(--color-accent-green, rgb(143, 209, 106));
-    background-blend-mode: luminosity;
-    filter: saturate(30%);
-    background-size: cover;
-    background-position: -250px 0;
-    background-repeat: no-repeat;
+    height: 50%;
+    z-index: 1;
   }
 
-  .tv-right-column {
-    width: 68%;
+  .hero-block-top {
+    width: 100%;
     height: 100%;
     background-color: var(--color-lime-alt, rgb(164, 208, 112));
   }
 
-  .title-desktop-tv {
+  .hero-accent-bar {
+    display: none !important;
+  }
+
+  .desktop-hello-subheading {
     display: block !important;
-    font-size: var(--font-size-logo-9em, 635px);
-    top: auto;
-    bottom: 120px;
-    left: 1300px;
+    position: absolute;
+    top: clamp(20px, 3vh, 35px);
+    left: clamp(20px, 2.5vw, 35px);
+    font-family: var(--font-family-fredoka, "Fredoka", sans-serif);
+    font-weight: var(--font-weight-regular, 400);
+    font-size: var(--font-size-hello, 40px);
+    color: var(--color-white, rgb(255, 255, 255));
+    z-index: 11;
+  }
+
+  .title-desktop-laptop {
+    display: block !important;
+    position: absolute;
+    top: clamp(75px, 9vh, 115px);
+    left: 0;
+    width: 100%;
+    font-family: var(--font-family-antonio, "Antonio", sans-serif);
+    font-weight: var(--font-weight-regular, 400);
+    font-size: clamp(160px, 18.5vw, var(--font-size-logo-9em, 300px));
+    line-height: 0.85;
+    color: var(--color-body-bg, rgb(80, 69, 60));
+    letter-spacing: -0.04em;
     z-index: 10;
   }
 
-  .hello-subheading {
+  .image-wrapper {
     display: block !important;
-    font-size: var(--font-size-hello, 710px);
-    top: 80px;
-    left: 1300px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 2;
+  }
+
+  .background-image-element {
+    background-image: url("../../../../public/images/dude_looking_up.webp");
+    background-color: var(--color-lime-alt, rgb(164, 208, 112));
+    background-blend-mode: luminosity;
+    filter: saturate(30%);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+}
+
+/* ==========================================================================
+   4. Laptop Viewport (MacBook Pro: 1480px to 1919px, 1512px target)
+   Matches: MacBook Pro--Home.png & macbook-pro--home-structure.json
+   ========================================================================== */
+@media screen and (min-width: 1480px) and (max-width: 1919px) {
+  .title-tablet,
+  .title-mobile,
+  .tv-layout-wrapper,
+  .desktop-hello-subheading {
+    display: none !important;
+  }
+
+  .hero-block-container {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+  }
+
+  .hero-block-top {
+    width: 100%;
+    height: calc(100% - 17px);
+    background-color: var(--color-accent-blue, rgb(110, 160, 197));
+  }
+
+  .hero-accent-bar {
+    display: block !important;
+    width: 100%;
+    height: 17px;
+    background-color: var(--color-lime, rgb(164, 208, 111));
+  }
+
+  .title-desktop-laptop {
+    display: block !important;
+    position: absolute;
+    top: clamp(30px, 5vh, 60px);
+    left: 0;
+    width: 100%;
     font-family: var(--font-family-antonio, "Antonio", sans-serif);
+    font-weight: var(--font-weight-regular, 400);
+    font-size: clamp(160px, 18.5vw, var(--font-size-logo-9em, 300px));
+    line-height: 0.85;
     color: var(--color-body-bg, rgb(80, 69, 60));
+    letter-spacing: -0.04em;
     z-index: 10;
+  }
+
+  .image-wrapper {
+    display: block !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 2;
+  }
+
+  .background-image-element {
+    background-image: url("../../../../public/images/dude_looking_up.webp");
+    background-color: var(--color-body-bg, rgb(80, 69, 60));
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    filter: saturate(30%);
+  }
+}
+
+/* ==========================================================================
+   5. Smart TV & Ultra-wide Viewports (TV: min-width: 1920px)
+   Matches: TV--home.png & TV--home-structure.json
+   ========================================================================== */
+@media screen and (min-width: 1920px) {
+  main.home-container {
+    height: calc(100dvh - var(--header-height, 240px));
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
+  }
+
+  section.hero-section {
+    display: none !important;
+  }
+
+  .tv-layout-wrapper {
+    display: flex !important;
+    width: calc(100% - (2 * var(--viewport-gap, 60px)));
+    height: calc(100% - var(--viewport-gap, 60px));
+    position: absolute;
+    top: 0;
+    left: var(--viewport-gap, 60px);
+    right: var(--viewport-gap, 60px);
+    bottom: var(--viewport-gap, 60px);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Left column: media frame with dude framing for design */
+  .tv-left-column {
+    width: 32.1%;
+    height: 100%;
+    position: relative;
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
+    overflow: hidden;
+  }
+
+  .tv-background-image {
+    position: absolute;
+    inset: 0;
+    background-image: url("../../../../public/images/dude_framing_for_design.webp");
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
+    background-blend-mode: luminosity;
+    filter: saturate(30%);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  /* Decorative accent rectangle at top border */
+  .tv-accent-rect {
+    position: absolute;
+    top: 0;
+    left: 32.1%;
+    width: clamp(50px, 3.6vw, 69px);
+    height: clamp(60px, 4.2vw, 80px);
+    background-color: var(--color-grey-light, rgb(217, 217, 217));
+    z-index: 5;
+  }
+
+  /* Right column: Hello and 9emdesign text */
+  .tv-right-column {
+    width: 67.9%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: clamp(60px, 5vw, 120px);
+    background-color: var(--color-text-neon, rgb(137, 250, 198));
+  }
+
+  .tv-hello-title {
+    font-family: var(--font-family-antonio, "Antonio", sans-serif);
+    font-weight: var(--font-weight-regular, 400);
+    font-size: clamp(200px, 18.5vw, var(--font-size-hello, 710px));
+    color: var(--color-bg-primary, rgb(104, 94, 84));
+    line-height: 1.1em;
+    margin: 0;
+  }
+
+  .tv-main-title {
+    font-family: var(--font-family-antonio, "Antonio", sans-serif);
+    font-weight: var(--font-weight-regular, 400);
+    font-size: clamp(180px, 16.5vw, 250px);
+    color: var(--color-bg-primary, rgb(104, 94, 84));
+    line-height: 0.85;
+    margin: 0;
   }
 }

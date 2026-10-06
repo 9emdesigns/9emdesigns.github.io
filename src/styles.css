@@ -1,5 +1,5 @@
 @import "@angular/material/prebuilt-themes/cyan-orange.css";
-@import "../public/styles/media_Queries_breakpoints.css";
+@import "../public/styles/media_Queries_breakpoint.css";
 
 /* Unified Antonio Font Family */
 @font-face {
